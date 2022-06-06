@@ -1,0 +1,8 @@
+---------------------------
+.env
+no estoy usando
+HOST=localhost
+---------------------------
+config.js
+no estoy usando aun
+//const modo = parseArgs(process.argv,options).modo;
