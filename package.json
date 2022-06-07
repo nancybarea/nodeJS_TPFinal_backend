@@ -1,8 +1,8 @@
 {
   "type": "module",
-  "name": "tsh-equipo9",
+  "name": "Ecommerce",
   "version": "1.0.0",
-  "description": "TS Hackathon",
+  "description": "Proyecto Final del curso de coderhouse de backend Nodejs",
   "main": "src/app.js",
   "scripts": {
     "start": "node .",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Janegro09/TSH-Equipo9.git"
+    "url": "git+https://github.com/nancybarea/nodeJS_TPFinal_backend"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Janegro09/TSH-Equipo9/issues"
+    "url": "https://github.com/nancybarea/nodeJS_TPFinal_backend/issues"
   },
-  "homepage": "https://github.com/Janegro09/TSH-Equipo9#readme",
+  "homepage": "https://github.com/nancybarea/nodeJS_TPFinal_backend#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cluster": "^0.7.7",
