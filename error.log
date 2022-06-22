@@ -1,1 +1,35 @@
 
+[2022-06-19T13:57:14.052] [ERROR] default - Server error Error: listen EADDRINUSE: address already in use :::8080
+[2022-06-19T13:59:06.177] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found with that {"id":"A003"}',
+  detalles: undefined
+}
+[2022-06-19T14:01:21.523] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found with that {"id":"A003"}',
+  detalles: undefined
+}
+[2022-06-19T16:36:23.052] [ERROR] default - ReferenceError: productos is not defined
+    at getProductos (file:///C:/_discoNANCY/cursos/cursos_Coderhouse_backendNodejs/ProyectoFinal/backend/src/controller/webController.js:22:29)
+    at Layer.handle [as handle_request] (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\index.js:341:12)
+    at next (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\index.js:47:12)
+[2022-06-19T16:37:24.671] [ERROR] default - ReferenceError: title is not defined
+    at getProductos (file:///C:/_discoNANCY/cursos/cursos_Coderhouse_backendNodejs/ProyectoFinal/backend/src/controller/webController.js:26:43)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-06-19T17:24:58.423] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"A003"}',
+  detalles: undefined
+}
+[2022-06-19T20:22:00.808] [ERROR] default - Envio de mail fallo la verificacion del servidor Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials r9-20020a9d5cc9000000b0060b1f3924c3sm6691073oti.44 - gsmtp
+[2022-06-19T20:32:30.325] [ERROR] default - Envio de mail fallo la verificacion del servidor Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials n9-20020a4ae1c9000000b0040edc685e11sm6770214oot.13 - gsmtp

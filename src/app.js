@@ -7,6 +7,20 @@ import os  from 'os'
 const PORT = config.PORT
 const modo = config.MODO
 
+
+/*****************************************************************************************/
+// PARTE WEB
+import { createServer } from "http";
+import { Server } from 'socket.io'
+const httpServer = createServer(app);
+const io = new Server(httpServer)
+
+import MySocket from './socket.js';
+const mySocket = new MySocket(io)
+mySocket.on()
+/*****************************************************************************************/
+
+
 if (modo === "CLUSTER") {
 
     const cantidadDeCPUs = os.cpus().length

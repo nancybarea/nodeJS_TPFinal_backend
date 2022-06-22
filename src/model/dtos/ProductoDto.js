@@ -1,3 +1,5 @@
+import NUID from 'nuid'
+
 export default class ProductoDto {
 
     _id;
@@ -11,14 +13,15 @@ export default class ProductoDto {
 
     constructor({ _id, id, fechaHora, nombre, descripcion, precio, imagenURL, stock}) {
 
-        if (_id === undefined) {
-            this._id = undefined;
+
+        if (id == undefined) {
+            this.id = NUID.next();
         }
         else {
-            this._id = _id;
+            this.id = id;
+            this._id = _id
         }
 
-        this.id = id;
         this.fechaHora = fechaHora;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -28,15 +31,14 @@ export default class ProductoDto {
     }
 
     get() {
+        return this
+      }
+
+    getforCarrito(){
         return {
-            _id: this._id,
             id: this.id,
-            fechaHora: this.fechaHora,
             nombre: this.nombre,
-            descripcion: this.descripcion,
-            precio: this.precio,
-            imagenURL: this.imagenURL,
-            stock: this.stock,
+            precio: this.precio
         }
     }
 

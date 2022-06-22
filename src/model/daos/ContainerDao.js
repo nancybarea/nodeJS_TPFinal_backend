@@ -1,4 +1,4 @@
-import { MongoClient, ObjectId } from 'mongodb';
+import { MongoClient } from 'mongodb';
 import logger from '../../logger.js'
 import CustomError from '../../errores/CustomError.js'
 
@@ -27,22 +27,20 @@ export default class ContainerDao {
         }
     }
 
-    async getById(id) {
-        let wanted
-        let query= {"id": id};
-       
+    async getById(query) {
+        let respuesta       
         try {
-            wanted = await this.collection.findOne(query);
+            respuesta = await this.collection.findOne(query);
         }
         catch (err) {
             logger.error(err)
-            throw new CustomError(500, `Error when obtaining a Document by code in the collection ${this.collectionName}`, err)
+            throw new CustomError(500, `Error when obtaining a Document by id in the collection ${this.collectionName}`, err)
         }
 
-        if (!wanted) {
-            throw new CustomError(404, `Document not found with that ${JSON.stringify(query)}`)
+        if (!respuesta) {
+            throw new CustomError(404, `Document not found in ${this.coleccionName} with that ${JSON.stringify(query)}`)
         }
-        return wanted
+        return respuesta
     }
 
     async add(data) {
@@ -55,26 +53,26 @@ export default class ContainerDao {
             throw new CustomError(500, `Error adding mongo document to collection ${this.collectionName}`, err)
         }
     }
+   
+    async deleteById(query) {
 
-    async update(id, query) {
-        try {
-            this.deleteById(id);
-            this.add(query)      
-        } catch (error) {
-            logger.error(err)
-            throw new CustomError(500, `Error update mongo document to collection ${this.collectionName}`, err)
-        }
-    }
-      
-    async deleteById(id) {
-
-        let query= {"id": id};
         await this.collection.deleteOne(query, function (err, obj) {
             if (err) {
                 logger.error(err)
                 throw new CustomError(500, `Error when delete a documents in collection ${this.collectionName}`, err)
             } 
         });
+    }
+
+    async listByQuery(query){
+        try {
+            const array = await this.collection.find(query).toArray()
+            return array
+        }
+        catch (err) {
+            throw new CustomError(500, `error getting all records in collection ${this.coleccionName}`, err)
+        }
+
     }
 
 }

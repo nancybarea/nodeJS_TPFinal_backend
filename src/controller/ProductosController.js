@@ -48,9 +48,8 @@ export async function agregarProducto(req, res) {
 export async function actualizarProducto(req, res) {
     logger.info(`Se solicita actualizar los productos`)
     try{
-        let codigo = req.params.codigoProducto;
         let objeto = req.body;
-        const producto = await productos.putProducto(codigo, objeto);
+        const producto = await productos.putProducto(objeto);
         res.status(200).json(producto);
     }
     catch (err){

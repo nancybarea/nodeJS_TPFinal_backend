@@ -1,0 +1,18 @@
+<% const hayProductos=data.length> 0; %>
+    <div class="container">
+
+        <% if(hayProductos){ %>
+
+            <% for (const producto of data) {%>
+                <div>
+                     <strong class="text-primary"> <%= producto.id %> </strong>
+                     [<span class="text-danger"> <%= producto.nombre %> </span>]: 
+                     <em> <%= producto.precio %> </em>
+                </div>
+
+                <%};%>
+
+        <% } else{ %>
+            <h3 class="alert alert-danger">...escriba un mensaje para iniciar el chat</h1>
+        <% } %>
+    </div>

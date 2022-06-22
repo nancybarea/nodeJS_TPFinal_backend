@@ -1,5 +1,6 @@
 import UsuariosDao from '../model/daos/UsuariosDao.js';
 import CustomError from '../errores/CustomError.js'
+import { enviarEmail } from './email.js'
 
 export default class UsuariosApi {
 
@@ -31,6 +32,7 @@ export default class UsuariosApi {
         
         try{
             const usuario = await this.usuariosDao.add(objetoUsuario);
+            await this.enviarEmailNuevoUsuario(objetoUsuario)
             return usuario
         }
         catch (err){
@@ -38,5 +40,17 @@ export default class UsuariosApi {
         }
 
     }
+
+    //enviarEmailNuevoUsuario
+    async enviarEmailNuevoUsuario(objetoUsuario){
+        try {
+            let correoDestino = 'nancybarea@gmail.com'
+            let asunto = 'Nuevo usuario'
+            let cuerpo = `Nuevo registro de usuario <b>${objetoUsuario.username}</b>`
+            await enviarEmail(correoDestino, asunto, cuerpo)         
+        } catch (err) { 
+            logger.error(`Falló el envio de mail - error:${err}`) 
+        }
+    }   
 
 }

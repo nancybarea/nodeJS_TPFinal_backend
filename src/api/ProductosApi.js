@@ -1,4 +1,5 @@
 import ProductosDao from '../model/daos/ProductosDao.js';
+import ProductoDto from '../model/dtos/ProductoDto.js';
 
 export default class ProductosApi {
 
@@ -13,22 +14,23 @@ export default class ProductosApi {
 
     async getProducto(id) {
         const productosObj = await this.productosDao.getById(id);
-        return productosObj; 
+        return new ProductoDto(productosObj); 
     }   
 
     async addProducto(objeto) {
-        const productosObj = await this.productosDao.add(objeto);
-        return productosObj;
+        const producto = new ProductoDto(objeto)
+        await this.productosDao.add(producto);
+        return producto;
     }   
 
-    async putProducto(id, objeto) {
-        const productosObj = await this.productosDao.update(id, objeto);
-        return productosObj;
+    async putProducto(objeto) {
+        await this.productosDao.update(objeto);
+        const productosObj = await this.productosDao.getById(objeto.id)
+        return new ProductoDto(productosObj);
     }   
 
     async deleteProducto(id) {
-        const productosObj = await this.productosDao.deleteById(id);
-        return productosObj;
+        await this.productosDao.deleteById(id);
     }       
     
 }

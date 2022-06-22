@@ -7,6 +7,15 @@ const modo = parseArgs(process.argv,options).modo;
 
 dotenv.config();
 
+export const ServidorEnvioEmail = {
+  service: process.env.MAIL_SMTP,
+  port: parseInt(process.env.MAIL_PORT),
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
+  }
+}
+
 export default {
   NODE_ENV: process.env.NODE_ENV || 'development',
   HOST: process.env.HOST || 'localhost',

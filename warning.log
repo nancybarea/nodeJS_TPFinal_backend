@@ -1,2 +1,128 @@
 
 [2022-06-05T19:03:41.632] [WARN] default - Route GET / non-existent
+[2022-06-19T13:57:14.052] [ERROR] default - Server error Error: listen EADDRINUSE: address already in use :::8080
+[2022-06-19T13:59:06.177] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found with that {"id":"A003"}',
+  detalles: undefined
+}
+[2022-06-19T13:59:37.553] [WARN] default - Route POST / non-existent
+[2022-06-19T14:00:24.207] [WARN] default - Route DELETE / non-existent
+[2022-06-19T14:01:21.523] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found with that {"id":"A003"}',
+  detalles: undefined
+}
+[2022-06-19T16:27:20.902] [WARN] default - Route GET / non-existent
+[2022-06-19T16:27:46.240] [WARN] default - Route GET / non-existent
+[2022-06-19T16:30:19.228] [WARN] default - Route GET / non-existent
+[2022-06-19T16:30:19.430] [WARN] default - Route GET / non-existent
+[2022-06-19T16:30:24.628] [WARN] default - Route GET / non-existent
+[2022-06-19T16:30:24.630] [WARN] default - Route GET / non-existent
+[2022-06-19T16:31:36.444] [WARN] default - Route GET / non-existent
+[2022-06-19T16:31:41.220] [WARN] default - Route GET / non-existent
+[2022-06-19T16:36:13.781] [WARN] default - Route GET / non-existent
+[2022-06-19T16:36:19.613] [WARN] default - Route GET / non-existent
+[2022-06-19T16:36:23.052] [ERROR] default - ReferenceError: productos is not defined
+    at getProductos (file:///C:/_discoNANCY/cursos/cursos_Coderhouse_backendNodejs/ProyectoFinal/backend/src/controller/webController.js:22:29)
+    at Layer.handle [as handle_request] (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\index.js:341:12)
+    at next (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\_discoNANCY\cursos\cursos_Coderhouse_backendNodejs\ProyectoFinal\backend\node_modules\express\lib\router\index.js:47:12)
+[2022-06-19T16:37:24.671] [ERROR] default - ReferenceError: title is not defined
+    at getProductos (file:///C:/_discoNANCY/cursos/cursos_Coderhouse_backendNodejs/ProyectoFinal/backend/src/controller/webController.js:26:43)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-06-19T16:40:26.746] [WARN] default - Route GET / non-existent
+[2022-06-19T16:44:05.049] [WARN] default - Route GET / non-existent
+[2022-06-19T16:45:19.480] [WARN] default - Route GET / non-existent
+[2022-06-19T16:46:49.554] [WARN] default - Route GET / non-existent
+[2022-06-19T16:46:51.923] [WARN] default - Route GET / non-existent
+[2022-06-19T16:46:53.470] [WARN] default - Route GET / non-existent
+[2022-06-19T16:46:54.690] [WARN] default - Route GET / non-existent
+[2022-06-19T16:47:54.909] [WARN] default - Route GET / non-existent
+[2022-06-19T16:49:01.195] [WARN] default - Route GET / non-existent
+[2022-06-19T16:49:38.899] [WARN] default - Route GET / non-existent
+[2022-06-19T16:53:12.859] [WARN] default - Route GET / non-existent
+[2022-06-19T16:53:16.704] [WARN] default - Route GET / non-existent
+[2022-06-19T16:53:17.113] [WARN] default - Route GET / non-existent
+[2022-06-19T16:53:26.955] [WARN] default - Route GET / non-existent
+[2022-06-19T16:59:32.183] [WARN] default - Route GET / non-existent
+[2022-06-19T17:01:52.524] [WARN] default - Route GET / non-existent
+[2022-06-19T17:06:04.699] [WARN] default - Route GET / non-existent
+[2022-06-19T17:06:08.930] [WARN] default - Route GET / non-existent
+[2022-06-19T17:06:13.119] [WARN] default - Route GET / non-existent
+[2022-06-19T17:06:13.345] [WARN] default - Route GET / non-existent
+[2022-06-19T17:24:58.423] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"A003"}',
+  detalles: undefined
+}
+[2022-06-19T18:18:33.584] [WARN] default - Route GET / non-existent
+[2022-06-19T18:18:36.654] [WARN] default - Route GET / non-existent
+[2022-06-19T18:18:39.934] [WARN] default - Route GET / non-existent
+[2022-06-19T18:21:59.668] [WARN] default - Route GET / non-existent
+[2022-06-19T18:23:47.823] [WARN] default - Route GET / non-existent
+[2022-06-19T18:24:00.879] [WARN] default - Route GET / non-existent
+[2022-06-19T18:36:55.221] [WARN] default - Route GET / non-existent
+[2022-06-19T18:36:56.953] [WARN] default - Route GET / non-existent
+[2022-06-19T18:39:27.983] [WARN] default - Route GET / non-existent
+[2022-06-19T18:39:30.495] [WARN] default - Route GET / non-existent
+[2022-06-19T18:43:52.930] [WARN] default - Route GET / non-existent
+[2022-06-19T18:45:59.272] [WARN] default - Route POST / non-existent
+[2022-06-19T19:03:38.975] [WARN] default - Route GET / non-existent
+[2022-06-19T19:04:15.106] [WARN] default - Route GET / non-existent
+[2022-06-19T19:04:34.207] [WARN] default - Route GET / non-existent
+[2022-06-19T19:10:13.888] [WARN] default - Route GET / non-existent
+[2022-06-19T19:10:19.183] [WARN] default - Route GET / non-existent
+[2022-06-19T19:10:30.046] [WARN] default - Route GET / non-existent
+[2022-06-19T19:12:25.552] [WARN] default - Route GET / non-existent
+[2022-06-19T19:12:35.938] [WARN] default - Route GET / non-existent
+[2022-06-19T19:14:08.560] [WARN] default - Route GET / non-existent
+[2022-06-19T19:14:10.571] [WARN] default - Route GET / non-existent
+[2022-06-19T19:14:27.305] [WARN] default - Route GET / non-existent
+[2022-06-19T19:15:08.225] [WARN] default - Route GET / non-existent
+[2022-06-19T19:17:43.546] [WARN] default - Route GET / non-existent
+[2022-06-19T19:17:50.711] [WARN] default - Route GET / non-existent
+[2022-06-19T19:22:34.019] [WARN] default - Route GET / non-existent
+[2022-06-19T19:22:48.741] [WARN] default - Route GET / non-existent
+[2022-06-19T19:24:04.639] [WARN] default - Route GET / non-existent
+[2022-06-19T19:24:14.019] [WARN] default - Route GET / non-existent
+[2022-06-19T19:35:26.751] [WARN] default - Route GET / non-existent
+[2022-06-19T19:36:23.722] [WARN] default - Route POST / non-existent
+[2022-06-19T19:36:32.329] [WARN] default - Route GET / non-existent
+[2022-06-19T19:37:56.761] [WARN] default - Route POST / non-existent
+[2022-06-19T19:37:58.067] [WARN] default - Route POST / non-existent
+[2022-06-19T19:38:50.380] [WARN] default - Route GET / non-existent
+[2022-06-19T19:38:51.343] [WARN] default - Route GET / non-existent
+[2022-06-19T19:38:56.332] [WARN] default - Route POST / non-existent
+[2022-06-19T19:39:17.279] [WARN] default - Route POST / non-existent
+[2022-06-19T19:39:24.660] [WARN] default - Route GET / non-existent
+[2022-06-19T19:39:27.086] [WARN] default - Route GET / non-existent
+[2022-06-19T19:39:35.090] [WARN] default - Route GET / non-existent
+[2022-06-19T19:39:50.068] [WARN] default - Route GET / non-existent
+[2022-06-19T19:40:37.549] [WARN] default - Route GET / non-existent
+[2022-06-19T19:40:40.002] [WARN] default - Route GET / non-existent
+[2022-06-19T19:40:41.628] [WARN] default - Route GET / non-existent
+[2022-06-19T19:40:50.737] [WARN] default - Route GET / non-existent
+[2022-06-19T19:41:09.598] [WARN] default - Route GET / non-existent
+[2022-06-19T19:41:42.638] [WARN] default - Route GET / non-existent
+[2022-06-19T19:42:20.763] [WARN] default - Route GET / non-existent
+[2022-06-19T20:22:00.808] [ERROR] default - Envio de mail fallo la verificacion del servidor Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials r9-20020a9d5cc9000000b0060b1f3924c3sm6691073oti.44 - gsmtp
+[2022-06-19T20:22:21.038] [WARN] default - Route GET / non-existent
+[2022-06-19T20:23:16.605] [WARN] default - Route GET / non-existent
+[2022-06-19T20:32:30.325] [ERROR] default - Envio de mail fallo la verificacion del servidor Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials n9-20020a4ae1c9000000b0040edc685e11sm6770214oot.13 - gsmtp
+[2022-06-19T20:35:27.164] [WARN] default - Route GET / non-existent
+[2022-06-19T20:43:21.523] [WARN] default - Route GET / non-existent
+[2022-06-19T20:52:18.833] [WARN] default - Route GET / non-existent
+[2022-06-21T17:30:20.472] [WARN] default - Route GET / non-existent
+[2022-06-21T17:32:36.120] [WARN] default - Route GET / non-existent
+[2022-06-22T15:38:24.392] [WARN] default - Route GET / non-existent
+[2022-06-22T15:46:33.059] [WARN] default - Route GET / non-existent
+[2022-06-22T15:48:33.450] [WARN] default - Route GET / non-existent
