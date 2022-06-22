@@ -126,3 +126,50 @@
 [2022-06-22T15:38:24.392] [WARN] default - Route GET / non-existent
 [2022-06-22T15:46:33.059] [WARN] default - Route GET / non-existent
 [2022-06-22T15:48:33.450] [WARN] default - Route GET / non-existent
+[2022-06-22T16:23:33.012] [WARN] default - Route GET / non-existent
+[2022-06-22T16:56:12.274] [WARN] default - Route GET / non-existent
+[2022-06-22T17:00:51.783] [WARN] default - Route GET / non-existent
+[2022-06-22T17:00:59.302] [ERROR] default - MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+    at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:19:19)
+    at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:454:16)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:177:13
+    at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:496:5)
+    at FindCursor.next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:173:41)
+    at Collection.findOne (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\collection.js:233:76)
+    at CarritosDao.getById (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:33:47)
+    at CarritosApi.getProductosDelCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/CarritosApi.js:15:52)
+    at obtenerProductosDelCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/CarritosController.js:24:40)
+[2022-06-22T17:00:59.305] [ERROR] default - CustomError {
+  estado: 500,
+  descripcion: 'Error when obtaining a Document by id in the collection carritos',
+  detalles: MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+      at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:19:19)
+      at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+      at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:454:16)
+      at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:177:13
+      at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:496:5)
+      at FindCursor.next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:173:41)
+      at Collection.findOne (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\collection.js:233:76)
+      at CarritosDao.getById (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:33:47)
+      at CarritosApi.getProductosDelCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/CarritosApi.js:15:52)
+      at obtenerProductosDelCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/CarritosController.js:24:40)
+}
+[2022-06-22T17:01:43.108] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"A003"}',
+  detalles: undefined
+}
+[2022-06-22T17:29:19.545] [ERROR] default - ReferenceError: usuarios is not defined
+    at Strategy._verify (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/routes/usuarios.js:37:22)
+    at Strategy.authenticate (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport-local\lib\strategy.js:90:12)
+    at attempt (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:369:16)
+    at authenticate (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:370:7)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+[2022-06-22T17:29:19.553] [WARN] default - Route GET / non-existent
+[2022-06-22T17:30:45.997] [WARN] default - Route GET / non-existent

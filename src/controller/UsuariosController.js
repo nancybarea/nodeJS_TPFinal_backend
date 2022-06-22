@@ -1,4 +1,5 @@
 import UsersApi from '../api/UsuariosApi.js'
+import logger from '../logger.js'
 
 const users = new UsersApi();
 
@@ -9,6 +10,7 @@ export async function obtenerUsuarios(req, res) {
         res.status(200).json(usuariosList)
     }
     catch (err){
+        logger.warn(err)
         res.status(err.estado).json(err)
     }
 }

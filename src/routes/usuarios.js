@@ -2,6 +2,7 @@ import { Router } from 'express'
 import passport from 'passport';
 import { Strategy } from 'passport-local';
 import  * as userController from '../controller/UsuariosController.js'
+import logger from '../logger.js'
 
 /*****************************************************************************************/
 import UsuariosApi from '../api/UsuariosApi.js' 
@@ -30,17 +31,14 @@ passport.use('registro', new Strategy({passReqToCallback:true},async (req, usern
 }))
 
 //estrategia para login
-passport.use('login', new Strategy((username, password, done) => {
-    let usuario
+passport.use('login', new Strategy(async (email, password, done) => {
     try{
-        usuario = users.obtenerUsuarioPorEmail(username)
+        const user = await users.login(email, password)
+        return done(null, user);
     }catch (error){
-        return done(null, false) //fallo la autenticacion
+        logger.error(error);
+        return done(null, false);
     }
-    if (usuario.password == password){
-        return done(null, false)
-    }
-    done(null, usuario)
 }))
 
 //informar de que manera va a manejar transformacion session-cookies

@@ -1,5 +1,7 @@
 import UsuariosDao from '../model/daos/UsuariosDao.js';
+import UsuarioDto from '../model/dtos/UsuarioDto.js';
 import CustomError from '../errores/CustomError.js'
+import logger from '../logger.js'
 import { enviarEmail } from './email.js'
 
 export default class UsuariosApi {
@@ -14,15 +16,15 @@ export default class UsuariosApi {
     }   
 
     //dado el email devuelve el objeto usuario (incluido el password)
-    async obtenerUsuarioPorEmail(username) {
-        try{
-            const usuario = await this.usuariosDao.usuarioPorEmail(username);
-            return usuario
-        }
-        catch (err){
-            throw new CustomError(401, `Error al obtener el usuario por email`, err)
-        }
-    }
+    // async obtenerUsuarioPorEmail(email) {
+    //     try{
+    //         const usuario = await this.usuariosDao.getByEmail(email);            
+    //         return usuario
+    //     }
+    //     catch (err){
+    //         throw new CustomError(401, `Error al obtener el usuario por email`, err)
+    //     }
+    // }
 
     //alta de usuario nuevo
     async crearUsuario(objetoUsuario){
@@ -31,14 +33,32 @@ export default class UsuariosApi {
         if (!objetoUsuario.password) throw new CustomError(404, `El campo 'password' es obligatorio `)
         
         try{
-            const usuario = await this.usuariosDao.add(objetoUsuario);
-            await this.enviarEmailNuevoUsuario(objetoUsuario)
-            return usuario
+            const usuario = new UsuarioDto(objetoUsuario)
+            usuario._id = await this.usuariosDao.add(usuario)
+            logger.info(`Registro de Usuario Ok `);
+            await this.enviarEmailNuevoUsuario(usuario)
+            return usuario.get()
         }
         catch (err){
+            logger.error(`Error al crear el usuario: ${err}`);
             throw new CustomError(401, `Error al crear el usuario`, err)
         }
+    }
 
+    //login de usuario
+    async login(email, password){
+        try{
+            const data = await this.usuariosDao.getByEmail(email)
+            const usuario = new UsuarioDto(data)
+            if (!usuario.isValidPassword(password)) 
+                return false
+            else
+                return usuario.get();
+        }
+        catch(err){            
+             logger.info(`Error al loguearse: ${JSON.stringify(err)}`)    
+             throw new CustomError(401, `Error al loguearse`, err)         
+        }
     }
 
     //enviarEmailNuevoUsuario
