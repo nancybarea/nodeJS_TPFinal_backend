@@ -1,3 +1,7 @@
+idea --> para los pedidos realizados hacer una clase nueva que sea pedidos, donde figure: id carrito, fecha
+se supone que al hacer la compra cambia un estado en carrito que diga "abierto" o "cerrado"
+=> cuando hago el agregar en la clase de pedidos, hago los envios de email, sms y whatsapp.
+
 puntos pendientes para la 3er entrega
 - La imagen se podrá subir al servidor y se guardará en una carpeta pública del mismo a la cual se tenga 
 acceso por url.  --> usar multer, respositorio clase 5, diapositiva clase 8
