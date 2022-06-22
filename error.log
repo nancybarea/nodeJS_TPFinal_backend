@@ -75,3 +75,6 @@
     at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
     at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
     at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+[2022-06-22T20:45:46.267] [ERROR] default - Falló el envio de mail del nuevo pedido - error:ReferenceError: err is not defined
+[2022-06-22T20:51:57.784] [ERROR] default - Falló el envio de whatsapp del nuevo pedido - error:ReferenceError: err is not defined
+[2022-06-22T20:54:29.560] [ERROR] default - Falló el envio de whatsapp del nuevo pedido - error:ReferenceError: err is not defined

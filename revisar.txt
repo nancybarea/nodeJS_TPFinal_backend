@@ -1,23 +1,22 @@
-idea --> para los pedidos realizados hacer una clase nueva que sea pedidos, donde figure: id carrito, fecha
-se supone que al hacer la compra cambia un estado en carrito que diga "abierto" o "cerrado"
-=> cuando hago el agregar en la clase de pedidos, hago los envios de email, sms y whatsapp.
-
 puntos pendientes para la 3er entrega
 - La imagen se podrá subir al servidor y se guardará en una carpeta pública del mismo a la cual se tenga 
 acceso por url.  --> usar multer, respositorio clase 5, diapositiva clase 8
 - luego de que el usuario realiza el pedido:
-1 - al ADMIN : El email contendrá en su cuerpo la lista completa de productos a comprar 
-y en el asunto la frase 'nuevo pedido de ' y el nombre y email del usuario que los solicitó. 
 En el mensaje de whatsapp se debe enviar la misma información del asunto del email
 2 - al usuario: El usuario recibirá un mensaje de texto al número que haya registrado, indicando que 
 su pedido ha sido recibido y se encuentra en proceso
 - publicar en heroku
 
-Pendiente mejorar para la 3er entrega
+Pendiente mejora solicitada
+- email cuando hago pedido --> no envia la lista de productos a comprar. En el asunto agregar Nombre (va nombre e email ej Nancy Barea - nancybarea@gmail.com)
 - email cuando se registra un usuario: no envia imagen y roles --> usuariosApi.js --> enviarEmailNuevoUsuario.  
+
+Pendiente mejorar para la 3er entrega
 - mdw isAdmin?
 - arreglar tema router q tira fallo ruta cuando agregue todas las web
 - revisar que todas las api funcionen OK y respondan OK
+- eliminar todo lo que tenga q ver con chat/mensajes si no lo voy a mostrar
+- arreglar estilos
 
 SI LLEGO 
 - modificar clave de mongo

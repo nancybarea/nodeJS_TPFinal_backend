@@ -1,6 +1,6 @@
 import { createTransport } from 'nodemailer';
-import { ServidorEnvioEmail } from "../../config/config.js"
-import logger from "../logger.js";
+import { ServidorEnvioEmail } from "../../../config/config.js"
+import logger from "../../logger.js";
 
 const transporter = createTransport(ServidorEnvioEmail);
 
@@ -13,6 +13,8 @@ transporter.verify(function (error, success) {
 });
 
 export async function enviarEmail(correoDestino, asunto, cuerpo) {
+
+    logger.info("Enviando email con la notificación del nuevo pedido ...")
 
     const mailOptions = {
         from:'Servidor NodeJS',

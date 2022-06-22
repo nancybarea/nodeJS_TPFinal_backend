@@ -1,5 +1,10 @@
 import PedidosDao from '../model/daos/PedidosDao.js';
 import PedidosDto from '../model/dtos/PedidosDto.js';
+import CustomError from '../errores/CustomError.js'
+import logger from '../logger.js'
+import { enviarEmail } from './notificaciones/email.js'
+import { enviarWhatsapp } from './notificaciones/whatsapp.js'
+
 
 export default class PedidosApi {
 
@@ -8,19 +13,71 @@ export default class PedidosApi {
     }
 
     async getPedidos() {
-        const pedidosObj = await this.pedidosDao.getAll();
-        return pedidosObj;
+        try{
+            const pedidosObj = await this.pedidosDao.getAll();
+            return pedidosObj;
+        }
+        catch (err){
+            logger.error(`Error al solicitar todos los pedidos: ${err}`);
+            throw new CustomError(401, `Error al solicitar todos los pedidos`, err)
+        }
     }   
 
     async getPedidosPorEmail(email) {
-        const pedidosObj = await this.pedidosDao.getByEmail(email);
-        return new PedidosDto(pedidosObj); 
+
+        try{
+            const pedidosObj = await this.pedidosDao.getByEmail(email);
+            return new PedidosDto(pedidosObj); 
+        }
+        catch (err){
+            logger.error(`Error solicitar los pedidos de un usuario: ${err}`);
+            throw new CustomError(401, `Error solicitar los pedidos de un usuario`, err)
+        }
     }   
 
     async addPedido(objeto) {
-        const pedido = new PedidosDto(objeto)
-        await this.pedidosDao.add(pedido);
-        return pedido;
+
+        try{
+            const pedido = new PedidosDto(objeto)
+            await this.pedidosDao.add(pedido);
+            logger.info(`Registro de pedido Ok `);
+            await this.enviarEmailNuevoPedido(pedido)
+            await this.enviarWhatsappNuevoPedido(pedido)
+            return pedido.get();
+        }
+        catch (err){
+            logger.error(`Error al agregar un pedido: ${err}`);
+            throw new CustomError(401, `Error al agregar un pedido`, err)
+        }
     }      
-    
+
+    //enviarEmailNuevoUsuario
+    async enviarEmailNuevoPedido(pedido){
+        try {
+            let correoDestino = process.env.MAIL_USER_ADMIN
+            let asunto = `Nuevo pedido de ${pedido.email}`
+            let cuerpo = `<h1> Nuevo Pedido de ${pedido.email}</h1>
+            <p><strong>Email: </strong>${pedido.email}</p>
+            <p><strong>idCarrito: </strong>${pedido.idCarrito}</p>`
+            await enviarEmail(correoDestino, asunto, cuerpo)         
+        } catch (err) { 
+            logger.error(`Falló el envio de mail del nuevo pedido - error:${err}`) 
+        }
+    }   
+
+    //enviarEmailNuevoUsuario
+    async enviarWhatsappNuevoPedido(pedido){
+        try {                
+            let from = 'whatsapp:+14155238886'  // es el celu de twilio el que envia whatsapp
+            let to = process.env.WHATSAPP_USER_ADMIN
+            let body = `Nuevo pedido de ${pedido.email}`
+            // mediaUrl: [ '' ]
+            await enviarWhatsapp(from, to, body)         
+        } catch (err) { 
+            logger.error(`Falló el envio de whatsapp del nuevo pedido - error:${err}`) 
+        }
+    }   
+
+        
 }
+
