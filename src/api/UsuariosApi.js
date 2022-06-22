@@ -15,17 +15,6 @@ export default class UsuariosApi {
         return usuariosObj;
     }   
 
-    //dado el email devuelve el objeto usuario (incluido el password)
-    // async obtenerUsuarioPorEmail(email) {
-    //     try{
-    //         const usuario = await this.usuariosDao.getByEmail(email);            
-    //         return usuario
-    //     }
-    //     catch (err){
-    //         throw new CustomError(401, `Error al obtener el usuario por email`, err)
-    //     }
-    // }
-
     //alta de usuario nuevo
     async crearUsuario(objetoUsuario){
 
@@ -64,9 +53,18 @@ export default class UsuariosApi {
     //enviarEmailNuevoUsuario
     async enviarEmailNuevoUsuario(objetoUsuario){
         try {
-            let correoDestino = 'nancybarea@gmail.com'
-            let asunto = 'Nuevo usuario'
-            let cuerpo = `Nuevo registro de usuario <b>${objetoUsuario.username}</b>`
+            let correoDestino = process.env.MAIL_USER_ADMIN
+            let asunto = 'Nuevo registro'
+            let cuerpo = `<h1> Nuevo Registro </h1>
+            <p><strong>Email: </strong>${objetoUsuario.email}</p>
+            <p><strong>Username: </strong>${objetoUsuario.username}</p>
+            <p><strong>Nombre: </strong>${objetoUsuario.nombre}</p>
+            <p><strong>Apellido: </strong>${objetoUsuario.apellido}</p>
+            <p><strong>Direccion: </strong>${objetoUsuario.direccion}</p>
+            <p><strong>Fecha de Nacimiento: </strong>${objetoUsuario.fechaNacimiento}</p>
+            <p><strong>Teléfono: </strong>${objetoUsuario.telefono}</p>
+            <p><strong>Avatar: </strong>${objetoUsuario.imagenUrl}</p>
+            <p><strong>Roles: </strong>${objetoUsuario.roles}</p>`
             await enviarEmail(correoDestino, asunto, cuerpo)         
         } catch (err) { 
             logger.error(`Falló el envio de mail - error:${err}`) 

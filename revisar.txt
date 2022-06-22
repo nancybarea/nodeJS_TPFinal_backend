@@ -1,3 +1,32 @@
+puntos pendientes para la 3er entrega
+- La imagen se podrá subir al servidor y se guardará en una carpeta pública del mismo a la cual se tenga 
+acceso por url.  --> usar multer, respositorio clase 5, diapositiva clase 8
+- luego de que el usuario realiza el pedido:
+1 - al ADMIN : El email contendrá en su cuerpo la lista completa de productos a comprar 
+y en el asunto la frase 'nuevo pedido de ' y el nombre y email del usuario que los solicitó. 
+En el mensaje de whatsapp se debe enviar la misma información del asunto del email
+2 - al usuario: El usuario recibirá un mensaje de texto al número que haya registrado, indicando que 
+su pedido ha sido recibido y se encuentra en proceso
+- publicar en heroku
+
+Pendiente mejorar para la 3er entrega
+- email cuando se registra un usuario: no envia imagen y roles --> usuariosApi.js --> enviarEmailNuevoUsuario.  
+- mdw isAdmin?
+- arreglar tema router q tira fallo ruta cuando agregue todas las web
+- revisar que todas las api funcionen OK y respondan OK
+
+SI LLEGO 
+- modificar clave de mongo
+- mostrar productos x plantilla y poder hacer algunas funcionalidades por ahi
+- agregar jwt
+- agregar abm roles
+
+-----------------------------------------------------------------
+me logueo y tira
+{
+    "titulo": "ROUTING ERROR"
+}
+pero se loguea, lo mismo cuando me registro.
 ---------------------------
 .env
 no estoy usando
@@ -6,3 +35,43 @@ HOST=localhost
 config.js
 no estoy usando aun
 //const modo = parseArgs(process.argv,options).modo;
+--------------
+porque aparece 2 veces cuando hago npm start
+[2022-06-19T13:57:53.563] [INFO] default - Mongo Base:ecommerce collection: users instanciada
+------
+[2022-06-19T19:24:14.019] [WARN] default - Route GET / non-existent
+aparece cada vez q hago las redirecciones de web, ejemplo postLogin
+--------
+searchByName(name) --> no lo uso pero ya lo agregue en productosDao
+
+--------- preguntas RODO ---------
+en postLogin pq usa user, no me funciona
+--------
+que significaba dto ?? 
+----------
+containerDao.js
+porque hizo asi y no con try y catch
+async deleteById(query) {
+
+    await this.collection.deleteOne(query, function (err, obj) {
+        if (err) {
+            logger.error(err)
+            throw new CustomError(500, `Error when delete a documents in collection ${this.collectionName}`, err)
+        } 
+    });
+}
+-----------
+pq la query la manda de productosDao y no la hace directo en containerDao.js 
+(quiza sea algo a lo que aun no llegue a implementar)
+----------------------
+ cuando lo llamo es update(data)
+ cuando recibo es :  ¿ lo separa solo, reconoce los data.id, data.fechaHora ....)?
+ async update({
+    id,
+    fechaHora,
+    nombre,
+    descripcion,
+    precio,
+    imagenURL,
+    stock
+  })

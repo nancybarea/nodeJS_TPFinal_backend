@@ -1,7 +1,6 @@
 import { createTransport } from 'nodemailer';
 import { ServidorEnvioEmail } from "../../config/config.js"
 import logger from "../logger.js";
-import dotenv from 'dotenv';
 
 const transporter = createTransport(ServidorEnvioEmail);
 
@@ -16,8 +15,8 @@ transporter.verify(function (error, success) {
 export async function enviarEmail(correoDestino, asunto, cuerpo) {
 
     const mailOptions = {
-        from:'Servidor Node.js',
-        to: process.env.MAIL_USER_DESTINO,
+        from:'Servidor NodeJS',
+        to: correoDestino,
         subject: asunto,
         html: cuerpo
     }
