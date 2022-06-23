@@ -15,13 +15,12 @@ export async function obtenerCarritos(req, res) {
     }
 }
 
-//Dado un idCarrito por parametro devuelve todos los productos de un carrito
+//Dado un emailUsuario por parametro devuelve todos los productos de un carrito
 export async function obtenerProductosDelCarrito(req, res) {
     logger.info(`Se solicita obtener los productos del carrito`)
     try{
-        let idCarrito = req.params.idCarrito;
-        //let idUsuario = "nancybarea@gmail.com";
-        const carrito = await carritos.getProductosDelCarrito(idCarrito)
+        let emailUsuario = req.params.emailUsuario;
+        const carrito = await carritos.getProductosDelCarrito(emailUsuario)
         res.status(200).json(carrito)
     }
     catch (err){

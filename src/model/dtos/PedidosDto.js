@@ -4,11 +4,11 @@ export default class PedidosDto {
     _id;
     id;
     email;
-    idCarrito;
+    productos;
     estado; //pendiente, procesando, entregado, etc
     fechaPedida; //fecha que se hizo el pedido de compra
 
-    constructor({ _id, id, email, idCarrito, estado, fechaPedida}) {
+    constructor({ _id, id, email, productos, estado, fechaPedida}) {
 
         if (_id === undefined) {
             this._id = undefined;
@@ -24,14 +24,14 @@ export default class PedidosDto {
         }
 
         this.email = email;
-        this.idCarrito = idCarrito;
+        this.productos = productos;
     }
 
     get() {
         return {
             _id: this._id,
             email: this.email,
-            idCarrito: this.idCarrito,
+            productos: this.productos,
             estado: this.estado,
             fechaPedida: this.fechaPedida
         }

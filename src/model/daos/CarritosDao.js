@@ -7,6 +7,10 @@ export default class CarritosDao extends ContainerDao {
     super('carritos')
   }
 
+  async getByEmail(id) {
+    return await super.getById({ emailUsuario: id })
+  }
+  
   async updatePushProductoAlCarrito(idUsuario, objProductoNuevo) {
     try {
       await this.collection.updateOne(

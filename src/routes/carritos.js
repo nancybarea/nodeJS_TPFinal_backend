@@ -6,8 +6,8 @@ const CarritosRoutes = new Router();
 
 //GET '/carrito' -> devuelve todos los carritos 
 CarritosRoutes.get('/', requiereAutenticacion, carritosController.obtenerCarritos)
-//GET '/carrito/:id/productos' -> devuelve todos los productos de un carrito
-CarritosRoutes.get('/:idCarrito/productos', requiereAutenticacion, carritosController.obtenerProductosDelCarrito)
+//GET '/carrito/:emailUsuario/productos' -> devuelve todos los productos de un carrito
+CarritosRoutes.get('/:emailUsuario/productos', requiereAutenticacion, carritosController.obtenerProductosDelCarrito)
 //POST '/carrito' -> crea un carrito y devuelve el id asignado
 CarritosRoutes.post('/', requiereAutenticacion, carritosController.crearCarrito)
 //POST '/carrito/:id/productos' -> recibe y agrega un producto al carrito indicado x el body

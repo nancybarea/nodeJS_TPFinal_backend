@@ -1,4 +1,5 @@
 import PedidosDao from '../model/daos/PedidosDao.js';
+import UsuariosDao from '../model/daos/UsuariosDao.js';
 import PedidosDto from '../model/dtos/PedidosDto.js';
 import CustomError from '../errores/CustomError.js'
 import logger from '../logger.js'
@@ -11,6 +12,7 @@ export default class PedidosApi {
 
     constructor() {
         this.pedidosDao = new PedidosDao();
+        this.usuariosDao = new UsuariosDao();
     }
 
     async getPedidos() {
@@ -39,12 +41,16 @@ export default class PedidosApi {
     async addPedido(objeto) {
 
         try{
+            //cargo el pedido
             const pedido = new PedidosDto(objeto)
             await this.pedidosDao.add(pedido);
             logger.info(`Registro de pedido Ok `);
-            await this.enviarEmailNuevoPedido(pedido)
-            await this.enviarWhatsappNuevoPedido(pedido)
-            await this.enviarSMSPedidoEnProceso()
+            //obtengo los datos del usuario
+            const usuario = await this.usuariosDao.getByEmail(pedido.email) 
+            //envio de notificaciones al admin y usuario
+            await this.enviarEmailNuevoPedido(pedido, usuario.nombre, usuario.apellido)
+            //await this.enviarWhatsappNuevoPedido(pedido.email, usuario.nombre, usuario.apellido)
+            //await this.enviarSMSPedidoEnProceso(usuario.telefono)
             return pedido.get();
         }
         catch (err){
@@ -54,13 +60,25 @@ export default class PedidosApi {
     }      
 
     //enviarEmailNuevoUsuario
-    async enviarEmailNuevoPedido(pedido){
+    async enviarEmailNuevoPedido(pedido, nombre, apellido){
         try {
+            //armo listado de productos 
+            const objetoPedidos = pedido.productos
+            console.log(objetoPedidos)
+            var arrayPedido = objetoPedidos.map(function(o) {
+                return Object.keys(o).reduce(function(array, key) {
+                    return array.concat([key, o[key]]);
+                }, []);
+            })
+            console.log(arrayPedido)
+            //armo los datos que voy a enviar por email
             let correoDestino = process.env.MAIL_USER_ADMIN
-            let asunto = `Nuevo pedido de ${pedido.email}`
-            let cuerpo = `<h1> Nuevo Pedido de ${pedido.email}</h1>
-            <p><strong>Email: </strong>${pedido.email}</p>
-            <p><strong>idCarrito: </strong>${pedido.idCarrito}</p>`
+            let asunto = `Nuevo pedido de ${nombre} ${apellido} - ${pedido.email}`
+            let cuerpo = `<h1> Nuevo Pedido de ${nombre} ${apellido} - ${pedido.email}</h1>
+            <p><strong>Email del usuario: </strong>${pedido.email}</p>
+            <p><strong>Estado del pedido: </strong>${pedido.estado}</p>
+            <p><strong>Fecha de la compra por el usuario: </strong>${pedido.fechaPedida}</p>
+            <p><strong>Productos comprados: </strong>${arrayPedido}</p>`
             await enviarEmail(correoDestino, asunto, cuerpo)         
         } catch (err) { 
             logger.error(`Falló el envio de mail del nuevo pedido - error:${err}`) 
@@ -68,11 +86,11 @@ export default class PedidosApi {
     }   
 
     //enviarWhatsappNuevoPedido
-    async enviarWhatsappNuevoPedido(pedido){
+    async enviarWhatsappNuevoPedido(email, nombre, apellido){
         try {                
             let from = 'whatsapp:+14155238886'  // es el celu de twilio el que envia whatsapp
             let to = process.env.WHATSAPP_USER_ADMIN
-            let body = `Nuevo pedido de ${pedido.email}`
+            let body = `Nuevo pedido de ${nombre} ${apellido} - ${email}`
             // mediaUrl: [ '' ]
             await enviarWhatsapp(from, to, body)         
         } catch (err) { 
@@ -81,11 +99,10 @@ export default class PedidosApi {
     }   
 
         //enviarSMSPedidoEnProceso
-        async enviarSMSPedidoEnProceso(){
-            try {                
-                const telUsuario = '+541165922909'
+        async enviarSMSPedidoEnProceso(telefonoUsuario){
+            try {              
                 let from = '+18647404967'  
-                let to = telUsuario
+                let to = telefonoUsuario
                 let body = `Su pedido ha sido recibido y se encuentra en proceso`
                 // mediaUrl: [ '' ]
                 await enviarSMS(from, to, body)         

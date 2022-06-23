@@ -86,3 +86,83 @@
 [2022-06-23T00:15:50.430] [ERROR] default - Falló el envio de SMS de confirmarción al usuario - error:ReferenceError: err is not defined
 [2022-06-23T00:16:50.633] [ERROR] default - Falló el envio de SMS de confirmarción al usuario - error:ReferenceError: err is not defined
 [2022-06-23T00:18:21.346] [ERROR] default - Falló el envio de SMS de confirmarción al usuario - error:ReferenceError: err is not defined
+[2022-06-23T00:25:07.392] [ERROR] default - Falló el envio de whatsapp del nuevo pedido - error:ReferenceError: err is not defined
+[2022-06-23T02:03:22.115] [ERROR] default - ReferenceError: CarritoDto is not defined
+    at CarritosApi.addCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/CarritosApi.js:20:25)
+    at crearCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/CarritosController.js:38:40)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at requiereAutenticacion (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/UsuariosController.js:50:9)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+[2022-06-23T02:05:18.565] [ERROR] default - ReferenceError: NUID is not defined
+    at new CarritoDto (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/dtos/CarritoDto.js:14:23)
+    at CarritosApi.addCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/CarritosApi.js:22:25)
+    at crearCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/CarritosController.js:38:40)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at requiereAutenticacion (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/UsuariosController.js:50:9)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+[2022-06-23T02:06:14.580] [ERROR] default - MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+    at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:19:19)
+    at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:454:16)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:177:13
+    at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:496:5)
+    at FindCursor.next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:173:41)
+    at Collection.findOne (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\collection.js:233:76)
+    at CarritosDao.getById (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:33:47)
+    at CarritosApi.getProductosDelCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/CarritosApi.js:17:52)
+    at obtenerProductosDelCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/CarritosController.js:24:40)
+[2022-06-23T02:06:14.582] [ERROR] default - CustomError {
+  estado: 500,
+  descripcion: 'Error when obtaining a Document by id in the collection carritos',
+  detalles: MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+      at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:19:19)
+      at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+      at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:454:16)
+      at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:177:13
+      at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:496:5)
+      at FindCursor.next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:173:41)
+      at Collection.findOne (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\collection.js:233:76)
+      at CarritosDao.getById (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:33:47)
+      at CarritosApi.getProductosDelCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/CarritosApi.js:17:52)
+      at obtenerProductosDelCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/CarritosController.js:24:40)
+}
+[2022-06-23T02:09:51.272] [ERROR] default - Falló el envio de mail del nuevo pedido - error:TypeError: this.carritosDao.getByEmail is not a function
+[2022-06-23T02:24:08.389] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"email":"nancybarea@gmail.com"}',
+  detalles: undefined
+}
+[2022-06-23T02:25:54.010] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"emailUsuario":"2"}',
+  detalles: undefined
+}
+[2022-06-23T02:29:17.652] [ERROR] default - Error al agregar un pedido: TypeError: pedido.productos.toArray is not a function
+[2022-06-23T02:29:17.653] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al agregar un pedido',
+  detalles: TypeError: pedido.productos.toArray is not a function
+      at PedidosApi.addPedido (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/PedidosApi.js:48:42)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async agregarPedido (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/PedidosController.js:38:24)
+}
+[2022-06-23T02:38:26.936] [ERROR] default - Error al agregar un pedido: ReferenceError: array is not defined
+[2022-06-23T02:38:26.936] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al agregar un pedido',
+  detalles: ReferenceError: array is not defined
+      at PedidosApi.addPedido (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/PedidosApi.js:48:25)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async agregarPedido (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/PedidosController.js:38:24)
+}
+[2022-06-23T02:42:49.122] [ERROR] default - Falló el envio de mail del nuevo pedido - error:ReferenceError: pedidos is not defined
+[2022-06-23T02:43:44.994] [ERROR] default - Falló el envio de mail del nuevo pedido - error:TypeError: pedido.productos.toArray is not a function
