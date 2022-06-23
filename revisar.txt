@@ -1,13 +1,11 @@
 puntos pendientes para la 3er entrega
 - La imagen se podrá subir al servidor y se guardará en una carpeta pública del mismo a la cual se tenga 
 acceso por url.  --> usar multer, respositorio clase 5, diapositiva clase 8
-- luego de que el usuario realiza el pedido:
-En el mensaje de whatsapp se debe enviar la misma información del asunto del email
-2 - al usuario: El usuario recibirá un mensaje de texto al número que haya registrado, indicando que 
-su pedido ha sido recibido y se encuentra en proceso
 - publicar en heroku
 
 Pendiente mejora solicitada
+- sms --> ver como saco el tel del usuario, x ahora esta harcodeado
+- whatsapp cuando hago pedido --> dice Nuevo pedido de nancybarea@gmail.com, falta agregar nombre, debe ser igual al asunto del email
 - email cuando hago pedido --> no envia la lista de productos a comprar. En el asunto agregar Nombre (va nombre e email ej Nancy Barea - nancybarea@gmail.com)
 - email cuando se registra un usuario: no envia imagen y roles --> usuariosApi.js --> enviarEmailNuevoUsuario.  
 

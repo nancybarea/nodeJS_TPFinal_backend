@@ -183,3 +183,22 @@
 [2022-06-22T20:51:57.784] [ERROR] default - Falló el envio de whatsapp del nuevo pedido - error:ReferenceError: err is not defined
 [2022-06-22T20:54:23.769] [WARN] default - Route GET / non-existent
 [2022-06-22T20:54:29.560] [ERROR] default - Falló el envio de whatsapp del nuevo pedido - error:ReferenceError: err is not defined
+[2022-06-22T20:55:56.584] [WARN] default - Route GET / non-existent
+[2022-06-22T21:01:35.234] [WARN] default - Route GET / non-existent
+[2022-06-22T21:01:39.255] [ERROR] default - Falló el envio de whatsapp del nuevo pedido - error:ReferenceError: err is not defined
+[2022-06-22T23:27:02.816] [WARN] default - Route GET / non-existent
+[2022-06-22T23:27:09.183] [ERROR] default - Falló el envio de SMS de confirmarción al usuario - error:ReferenceError: enviarSMS is not defined
+[2022-06-22T23:29:56.260] [WARN] default - Route GET / non-existent
+[2022-06-22T23:52:11.094] [WARN] default - Route GET / non-existent
+[2022-06-22T23:52:17.730] [ERROR] default - Falló el envio de SMS de confirmarción al usuario - error:ReferenceError: err is not defined
+[2022-06-23T00:06:40.630] [WARN] default - Route GET / non-existent
+[2022-06-23T00:06:46.329] [ERROR] default - Falló el envio de SMS de confirmarción al usuario - error:ReferenceError: err is not defined
+[2022-06-23T00:14:56.465] [WARN] default - Route GET / non-existent
+[2022-06-23T00:15:02.697] [ERROR] default - Falló el envio de SMS de confirmarción al usuario - error:ReferenceError: err is not defined
+[2022-06-23T00:15:43.920] [WARN] default - Route GET / non-existent
+[2022-06-23T00:15:50.430] [ERROR] default - Falló el envio de SMS de confirmarción al usuario - error:ReferenceError: err is not defined
+[2022-06-23T00:16:43.682] [WARN] default - Route GET / non-existent
+[2022-06-23T00:16:50.633] [ERROR] default - Falló el envio de SMS de confirmarción al usuario - error:ReferenceError: err is not defined
+[2022-06-23T00:18:14.650] [WARN] default - Route GET / non-existent
+[2022-06-23T00:18:21.346] [ERROR] default - Falló el envio de SMS de confirmarción al usuario - error:ReferenceError: err is not defined
+[2022-06-23T00:20:10.292] [WARN] default - Route GET / non-existent

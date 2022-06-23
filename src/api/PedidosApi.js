@@ -4,6 +4,7 @@ import CustomError from '../errores/CustomError.js'
 import logger from '../logger.js'
 import { enviarEmail } from './notificaciones/email.js'
 import { enviarWhatsapp } from './notificaciones/whatsapp.js'
+import { enviarSMS } from './notificaciones/sms.js'
 
 
 export default class PedidosApi {
@@ -43,6 +44,7 @@ export default class PedidosApi {
             logger.info(`Registro de pedido Ok `);
             await this.enviarEmailNuevoPedido(pedido)
             await this.enviarWhatsappNuevoPedido(pedido)
+            await this.enviarSMSPedidoEnProceso()
             return pedido.get();
         }
         catch (err){
@@ -65,7 +67,7 @@ export default class PedidosApi {
         }
     }   
 
-    //enviarEmailNuevoUsuario
+    //enviarWhatsappNuevoPedido
     async enviarWhatsappNuevoPedido(pedido){
         try {                
             let from = 'whatsapp:+14155238886'  // es el celu de twilio el que envia whatsapp
@@ -77,6 +79,20 @@ export default class PedidosApi {
             logger.error(`Falló el envio de whatsapp del nuevo pedido - error:${err}`) 
         }
     }   
+
+        //enviarSMSPedidoEnProceso
+        async enviarSMSPedidoEnProceso(){
+            try {                
+                const telUsuario = '+541165922909'
+                let from = '+18647404967'  
+                let to = telUsuario
+                let body = `Su pedido ha sido recibido y se encuentra en proceso`
+                // mediaUrl: [ '' ]
+                await enviarSMS(from, to, body)         
+            } catch (err) { 
+                logger.error(`Falló el envio de SMS de confirmarción al usuario - error:${err}`) 
+            }
+        }   
 
         
 }
