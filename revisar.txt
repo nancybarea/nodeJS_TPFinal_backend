@@ -9,24 +9,16 @@ Pendiente mejora solicitada
 Pendiente mejorar para la 3er entrega
 - email cuando hago pedido --> mejorar como mostrar el listado de productos x email (ver si mando mas info y estatica)
 - mdw isAdmin?
-- arreglar tema router q tira fallo ruta cuando agregue todas las web
-- revisar que todas las api funcionen OK y respondan OK
+- arreglar tema router -- No existe la ruta GET /socket.io/socket.io.js
 - eliminar todo lo que tenga q ver con chat/mensajes si no lo voy a mostrar
 - arreglar estilos
 
 SI LLEGO 
-- modificar clave de mongo
 - mostrar productos x plantilla y poder hacer algunas funcionalidades por ahi
 - agregar jwt
 - agregar abm roles
 
 -----------------------------------------------------------------
-me logueo y tira
-{
-    "titulo": "ROUTING ERROR"
-}
-pero se loguea, lo mismo cuando me registro.
----------------------------
 .env
 no estoy usando
 HOST=localhost

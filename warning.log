@@ -609,3 +609,105 @@
 [2022-06-26T17:30:44.187] [WARN] default - Route GET / non-existent
 [2022-06-26T17:31:36.022] [WARN] default - Route GET / non-existent
 [2022-06-26T17:32:00.361] [WARN] default - Route GET / non-existent
+[2022-06-26T17:38:05.937] [WARN] default - Route GET / non-existent
+[2022-06-26T17:40:41.661] [WARN] default - Route GET / non-existent
+[2022-06-26T17:43:59.516] [WARN] default - Route GET / non-existent
+[2022-06-26T17:44:16.543] [WARN] default - Route GET / non-existent
+[2022-06-26T17:56:56.452] [WARN] default - Route GET / non-existent
+[2022-06-26T18:08:37.951] [WARN] default - Route GET / non-existent
+[2022-06-26T18:08:38.697] [WARN] default - Route GET / non-existent
+[2022-06-26T18:08:40.447] [WARN] default - Route GET / non-existent
+[2022-06-26T18:09:46.859] [WARN] default - Route GET / non-existent
+[2022-06-26T18:09:48.294] [WARN] default - Route GET / non-existent
+[2022-06-26T18:11:57.541] [WARN] default - Route GET / non-existent
+[2022-06-26T18:35:47.791] [WARN] default - Route GET / non-existent
+[2022-06-26T18:38:26.875] [WARN] default - Route GET / non-existent
+[2022-06-26T18:42:51.408] [WARN] default - Route GET / non-existent
+[2022-06-26T18:42:56.556] [WARN] default - Route GET / non-existent
+[2022-06-26T18:43:04.129] [WARN] default - Route GET / non-existent
+[2022-06-26T18:43:10.811] [WARN] default - Route GET / non-existent
+[2022-06-26T18:45:36.051] [WARN] default - Route GET undefined non-existent
+[2022-06-26T18:45:52.902] [WARN] default - Route GET / non-existent
+[2022-06-26T18:46:27.124] [WARN] default - Route GET undefined non-existent
+[2022-06-26T18:46:40.746] [WARN] default - Route GET undefined non-existent
+[2022-06-26T18:46:43.106] [WARN] default - Route GET undefined non-existent
+[2022-06-26T18:48:49.142] [WARN] default - Route GET / non-existent
+[2022-06-26T18:50:22.691] [WARN] default - Route GET / non-existent
+[2022-06-26T18:51:20.498] [WARN] default - Route GET / non-existent
+[2022-06-26T18:51:23.067] [WARN] default - Route GET / non-existent
+[2022-06-26T18:52:13.186] [WARN] default - Route GET /usuarios non-existent
+[2022-06-26T18:52:29.977] [WARN] default - Route GET /socket.io/socket.io.js non-existent
+[2022-06-26T18:52:49.027] [WARN] default - Route GET /usuario/successRegister non-existent
+[2022-06-26T18:56:42.077] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T18:58:22.530] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:00:54.681] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:01:56.082] [WARN] default - No existe la ruta GET /faillogin
+[2022-06-26T19:02:49.915] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:03:00.060] [WARN] default - No existe la ruta GET /usuario/faillogin
+[2022-06-26T19:03:35.358] [WARN] default - No existe la ruta GET /usuario/faillogin
+[2022-06-26T19:03:59.979] [WARN] default - No existe la ruta GET /usuarios/faillogin
+[2022-06-26T19:07:58.979] [WARN] default - No existe la ruta GET /usuarios/failLogin
+[2022-06-26T19:09:00.820] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:10:53.266] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:12:27.351] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:14:51.236] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:15:01.702] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:18:35.747] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:18:49.794] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:21:39.611] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:24:40.079] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:30:35.260] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:30:43.700] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:31:05.916] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:31:33.658] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:34:00.076] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:35:57.543] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:36:07.657] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:37:25.790] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:39:49.574] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:41:31.091] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:42:54.802] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:43:01.555] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:43:05.890] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:43:28.716] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:50:18.366] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:54:21.719] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:56:33.098] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T19:57:56.386] [WARN] default - No existe la ruta POST /login
+[2022-06-26T20:03:45.777] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:03:46.123] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:03:59.429] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:05:18.325] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:08:34.076] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:08:41.546] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:09:45.061] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:09:50.100] [WARN] default - No existe la ruta GET /usuario/successLogin
+[2022-06-26T20:11:13.621] [WARN] default - No existe la ruta GET /usuarios/successLogin
+[2022-06-26T20:12:22.906] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:12:24.424] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:13:04.884] [WARN] default - No existe la ruta GET /usuarios/successLogin
+[2022-06-26T20:13:21.030] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:13:58.357] [WARN] default - No existe la ruta GET /successLogin
+[2022-06-26T20:15:32.716] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:16:34.752] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:18:04.693] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:22:54.996] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:23:21.707] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:24:09.717] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:24:59.748] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:25:07.309] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:27:12.697] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:28:27.269] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:28:32.406] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:29:27.418] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:29:30.431] [WARN] default - No existe la ruta POST /login
+[2022-06-26T20:29:53.270] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:30:01.950] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:30:32.752] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:30:42.721] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:34:42.597] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:35:19.394] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:36:40.375] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:36:48.957] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:42:41.608] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-26T20:44:11.690] [WARN] default - No existe la ruta GET /socket.io/socket.io.js

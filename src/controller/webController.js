@@ -11,7 +11,7 @@ const chat = new ChatApi();
 
 //getInicio
 export async function getInicio(req, res) {
-  logger.info(`web: GET / (inicio)`)
+  logger.info(`web: GET / `)
   const title = 'ecomerce'
   const info = {
     'Path': process.execPath,
@@ -31,7 +31,13 @@ export async function getInicio(req, res) {
       logger.error(err);
       res.status(err.estado).json(err)
   }
+}
 
+//getRegistrarse
+export async function getRegistrarse(req, res) {
+  logger.info(`web: GET /registrarse`)
+  const title = 'Registrarse'
+  res.render('pages/registrarse', { titulo: title })
 }
 
 //getlogin
@@ -49,3 +55,14 @@ export async function postLogin(req, res) {
   res.render('pages/index', { titulo: title, user })
 }
 
+//getfailLogin
+export async function getfailLogin(req, res) {
+  const title = 'Error: usuario y/o contraseña no válidos'
+  res.render('pages/error', { titulo: title, detalle: undefined })
+}
+
+//getfailRegistro
+export async function getfailRegistro(req, res) {
+  const title = 'Error: en el registro de usuario'
+  res.render('pages/error', { titulo: title, detalle: undefined })
+}

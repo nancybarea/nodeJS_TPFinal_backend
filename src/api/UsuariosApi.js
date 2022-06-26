@@ -36,6 +36,7 @@ export default class UsuariosApi {
 
     //login de usuario
     async login(email, password){
+        logger.info(`UsuariosApi.js - login`)
         try{
             const data = await this.usuariosDao.getByEmail(email)
             const usuario = new UsuarioDto(data)
@@ -45,7 +46,7 @@ export default class UsuariosApi {
                 return usuario.get();
         }
         catch(err){            
-             logger.info(`Error al loguearse: ${JSON.stringify(err)}`)    
+             logger.error(`Error al loguearse: ${JSON.stringify(err)}`)    
              throw new CustomError(401, `Error al loguearse`, err)         
         }
     }

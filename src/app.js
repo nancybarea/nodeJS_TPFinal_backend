@@ -26,16 +26,16 @@ if (modo === "CLUSTER") {
     const cantidadDeCPUs = os.cpus().length
 
     if (cluster.isPrimary) {/* MASTER */
-        console.log(`Cantidad de CPUS: ${cantidadDeCPUs}`)
-        console.log(`PID MASTER: ${process.pid}`)
-        console.log(`MODO: ${modo}`)
+        logger.info(`Cantidad de CPUS: ${cantidadDeCPUs}`)
+        logger.info(`PID MASTER: ${process.pid}`)
+        logger.info(`MODO: ${modo}`)
 
         for (let i = 0; i < cantidadDeCPUs; i++) {
             cluster.fork()
         }
 
         cluster.on('exit', worker => {
-            console.log('Worker', worker.process.pid, 'died', new Date().toLocaleString())
+            logger.info('Worker', worker.process.pid, 'died', new Date().toLocaleString())
             cluster.fork()
         })
     } else { /* WORKERS */

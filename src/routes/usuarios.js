@@ -12,6 +12,7 @@ const users = new UsuariosApi();
 
 //estragegia de registro
 passport.use('registro', new Strategy({passReqToCallback:true},async (req, username, password, done)=>{
+    logger.info(`usuarios.js - passport registro`)
     let usuario
     //valido si existe el usuario
     try{
@@ -32,6 +33,7 @@ passport.use('registro', new Strategy({passReqToCallback:true},async (req, usern
 
 //estrategia para login
 passport.use('login', new Strategy(async (email, password, done) => {
+    logger.info(`usuarios.js - passport login`)
     try{
         const user = await users.login(email, password)
         return done(null, user);
@@ -60,16 +62,16 @@ UsersRoutes.get('/', userController.obtenerUsuarios);
 
 //POST /registro --> para dar de alta un nuevo usuario
 UsersRoutes.post('/registro', passport.authenticate('registro', {
-    failureRedirect: '/usuario/failRegister',
-    successRedirect: '/usuario/successRegister'
+    failureRedirect: '/api/usuarios/failRegister',
+    successRedirect: '/api/usuarios/successRegister'
 }));
 UsersRoutes.get('/failRegister', userController.failRegister);
 UsersRoutes.get('/successRegister', userController.successRegister);
 
 //POST '/login' --> recibe email y password del usuario
 UsersRoutes.post('/login', passport.authenticate('login', {
-    failureRedirect: '/usuario/failLogin',
-    successRedirect: '/usuario/successLogin'
+    failureRedirect: '/api/usuarios/failLogin',
+    successRedirect: '/api/usuarios/successLogin'
 }));
 
 UsersRoutes.get('/failLogin', userController.failLogin);

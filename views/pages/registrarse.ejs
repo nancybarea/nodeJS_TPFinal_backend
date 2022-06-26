@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Registrarse</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container my-5">
+    <div class=jumbotron>
+      <h2>Registrarse en Argentina Aventura</h2>
+      <br>
+
+      <form action="/registrarse" method="post">
+        <!-- email -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Correo: </span>
+          </div>
+          <input type="email" id="email" name="email" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Correo electrinico" required>
+        </div>
+        <!-- password -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">clave: </span>
+          </div>
+          <input type="password" id="password" name="password" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Clave" required>
+        </div>
+        <!-- username -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">username: </span>
+          </div>
+          <input type="text" name="username" id="username" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="username" required>
+        </div>
+        <!-- Nombre -->        
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Nombre: </span>
+          </div>
+          <input type="text" name="nombre" id="nombre" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Nombre" required>
+        </div>
+        <!-- Apellido -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Apellido: </span>
+          </div>
+          <input type="text" id="apellido" name="apellido" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Apellido" required>
+        </div>
+        <!-- Direccion -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Direccion: </span>
+          </div>
+          <input type="text" id="direccion" name="direccion" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="direccion" required>
+        </div>     
+        <!-- Fecha de Nacimiento -->
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Fecha de Nacimiento: </span>
+            </div>
+            <input type="text" id="fechaNacimiento" name="fechaNacimiento" class="form-control" aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm" placeholder="fechaNacimiento" required>
+        </div>     
+        <!-- Telefono -->
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono: </span>
+            </div>
+            <input type="text" id="telefono" name="telefono" class="form-control" aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm" placeholder="telefono" required>
+        </div>      
+        <!-- Avatar -->
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Avatar: </span>
+          </div>
+          <input type="url" id="avatar" name="avatar" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="avatar" required>
+        </div>
+        <!-- boton enviar -->
+        <div class="form-group">
+          <input type="submit" value="Enviar" class="btn btn-success">
+        </div>
+      </form>
+  </div>
+</body>
+
+</html>

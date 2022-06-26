@@ -16,7 +16,7 @@ export default class UsuarioDto {
     constructor({ _id, email, password, roles, username, nombre, apellido, direccion, fechaNacimiento, telefono, avatar }) {
         if (_id === undefined) {
             this._id = undefined;
-            this.roles = [];
+            this.roles = ["usuario"];
             this.password = createHash(password)
         }
         else {
