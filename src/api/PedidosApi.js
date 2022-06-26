@@ -17,8 +17,7 @@ export default class PedidosApi {
 
     async getPedidos() {
         try{
-            const pedidosObj = await this.pedidosDao.getAll();
-            return pedidosObj;
+            return await this.pedidosDao.getAll();
         }
         catch (err){
             logger.error(`Error al solicitar todos los pedidos: ${err}`);
@@ -26,8 +25,18 @@ export default class PedidosApi {
         }
     }   
 
-    async getPedidosPorEmail(email) {
+    async getPedido(idPedido) {
+        try{
+            return await this.pedidosDao.getById(idPedido);
+        }
+        catch (err){
+            logger.error(`Error al solicitar el pedido ${idPedido}: ${err}`);
+            throw new CustomError(401, `Error al solicitar el pedido ${idPedido}`, err)
+        }
+    }  
 
+    async getPedidosPorEmail(email) {
+        if (!email) throw new CustomError(404, `El campo 'email' es obligatorio `)
         try{
             const pedidosObj = await this.pedidosDao.getByEmail(email);
             return new PedidosDto(pedidosObj); 
@@ -59,18 +68,33 @@ export default class PedidosApi {
         }
     }      
 
+    //deletePedido
+    async deletePedido(idPedido) {
+        try{
+            return await this.pedidosDao.deleteById(idPedido);
+        }
+        catch (err){
+            logger.error(`Error al borrar el pedido ${idPedido}: ${err}`);
+            throw new CustomError(401, `Error al borrar el pedido ${idPedido}`, err)
+        }
+    }  
+
     //enviarEmailNuevoUsuario
     async enviarEmailNuevoPedido(pedido, nombre, apellido){
         try {
-            //armo listado de productos 
+            //convierto objeto a array 
             const objetoPedidos = pedido.productos
-            console.log(objetoPedidos)
             var arrayPedido = objetoPedidos.map(function(o) {
                 return Object.keys(o).reduce(function(array, key) {
                     return array.concat([key, o[key]]);
                 }, []);
             })
-            console.log(arrayPedido)
+            //armo listado de productos para enviar por email 
+            let listadoProductosHTML = ""
+            for (let i=0; i < arrayPedido.length; i++){
+                listadoProductosHTML = listadoProductosHTML + "<tr><td>"+arrayPedido[i][1]+"</td><td>"+arrayPedido[i][3]+"</td><td>"+arrayPedido[i][5]+"</td></tr>"
+            }
+             
             //armo los datos que voy a enviar por email
             let correoDestino = process.env.MAIL_USER_ADMIN
             let asunto = `Nuevo pedido de ${nombre} ${apellido} - ${pedido.email}`
@@ -78,7 +102,16 @@ export default class PedidosApi {
             <p><strong>Email del usuario: </strong>${pedido.email}</p>
             <p><strong>Estado del pedido: </strong>${pedido.estado}</p>
             <p><strong>Fecha de la compra por el usuario: </strong>${pedido.fechaPedida}</p>
-            <p><strong>Productos comprados: </strong>${arrayPedido}</p>`
+            <p><strong>Productos comprados: </strong></p>
+            <p>
+            <table border=1>
+                <tr>
+                    <th>Id Producto</th>
+                    <th>precio</th>
+                    <th>cantidad</th>
+                </tr>
+                ${listadoProductosHTML}
+            </table></p>`
             await enviarEmail(correoDestino, asunto, cuerpo)         
         } catch (err) { 
             logger.error(`Falló el envio de mail del nuevo pedido - error:${err}`) 

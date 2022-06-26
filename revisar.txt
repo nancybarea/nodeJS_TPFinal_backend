@@ -4,11 +4,10 @@ acceso por url.  --> usar multer, respositorio clase 5, diapositiva clase 8
 - publicar en heroku --> puse el github pero no me funciona, preguntar a mati o esperar rta tutor.
 
 Pendiente mejora solicitada
-- email cuando hago pedido --> manda mal la fecha, la graba mal en el alta 
 - email cuando se registra un usuario: no envia imagen y roles --> usuariosApi.js --> enviarEmailNuevoUsuario.  
 
 Pendiente mejorar para la 3er entrega
-- email cuando hago pedido --> mejorar como mostrar el listado de productos x email (ahora envia una cadena string)
+- email cuando hago pedido --> mejorar como mostrar el listado de productos x email (ver si mando mas info y estatica)
 - mdw isAdmin?
 - arreglar tema router q tira fallo ruta cuando agregue todas las web
 - revisar que todas las api funcionen OK y respondan OK

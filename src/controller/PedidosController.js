@@ -16,9 +16,23 @@ export async function obtenerPedidos(req, res) {
     }
 }
 
+//devuelve un pedido en particular enviado por parametro
+export async function obtenerPedido(req, res) {
+    let idPedido = req.params.idPedido;
+    logger.info(`GET /api/pedidos/${idPedido}`)
+    try{
+        const pedidosList = await pedidos.getPedido(idPedido)
+        res.status(200).json(pedidosList)
+    }
+    catch (err){
+        logger.error(err);
+        res.status(err.estado).json(err)
+    }
+}
+
 //devuelve los pedidos del email pasado como parametro
 export async function obtenerPedidosPorEmail(req, res) {
-    logger.info(`Get /api/pedidos/{email}`)
+    logger.info(`Get /api/pedidos/usuario/{email}`)
     try{
         let email = req.params.email;
         const pedidosList = await pedidos.getPedidosPorEmail(email)
@@ -37,6 +51,20 @@ export async function agregarPedido(req, res) {
         let objeto = req.body;
         const pedido = await pedidos.addPedido(objeto)
         res.status(200).json(pedido)
+    }
+    catch (err){
+        logger.error(err);
+        res.status(err.estado).json(err)
+    }
+}
+
+//borrar un pedido en particular pasado como parametro 
+export async function borrarPedido(req, res) {
+    let idPedido = req.params.idPedido;
+    logger.info(`DELETE /api/pedidos/${idPedido}`)
+    try{
+        const pedidosList = await pedidos.deletePedido(idPedido)
+        res.status(200).json(pedidosList)
     }
     catch (err){
         logger.error(err);

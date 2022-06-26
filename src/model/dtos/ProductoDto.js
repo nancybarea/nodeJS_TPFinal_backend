@@ -1,4 +1,5 @@
 import NUID from 'nuid'
+import moment from 'moment'
 
 export default class ProductoDto {
 
@@ -14,15 +15,17 @@ export default class ProductoDto {
     constructor({ _id, id, fechaHora, nombre, descripcion, precio, imagenURL, stock}) {
 
 
-        if (id == undefined) {
+        if (_id === undefined) {
+            this._id = undefined;
             this.id = NUID.next();
+            this.fechaHora = moment(new Date()).format('DD/MM/YYYY HH:MM:SS');
         }
         else {
-            this.id = id;
             this._id = _id
+            this.id = id;    
+            this.fechaHora = fechaHora;     
         }
-
-        this.fechaHora = fechaHora;
+        
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio = precio;

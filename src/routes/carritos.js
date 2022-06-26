@@ -6,14 +6,16 @@ const CarritosRoutes = new Router();
 
 //GET '/carrito' -> devuelve todos los carritos 
 CarritosRoutes.get('/', requiereAutenticacion, carritosController.obtenerCarritos)
-//GET '/carrito/:emailUsuario/productos' -> devuelve todos los productos de un carrito
-CarritosRoutes.get('/:emailUsuario/productos', requiereAutenticacion, carritosController.obtenerProductosDelCarrito)
+//GET '/carrito/:idCarrito' -> devuelve el contenido de un carrito
+CarritosRoutes.get('/:idCarrito', requiereAutenticacion, carritosController.obtenerCarrito)
+//GET '/carrito/:emailUsuario' -> devuelve todos los carritos de un usuario y su contenido.
+CarritosRoutes.get('/usuario/:emailUsuario', requiereAutenticacion, carritosController.obtenerCarritosDeUnUsuario)
 //POST '/carrito' -> crea un carrito y devuelve el id asignado
 CarritosRoutes.post('/', requiereAutenticacion, carritosController.crearCarrito)
-//POST '/carrito/:id/productos' -> recibe y agrega un producto al carrito indicado x el body
+//POST '/carrito/:id/productos' -> agrega un producto al carrito indicado x el body
 CarritosRoutes.post('/:idCarrito/productos', requiereAutenticacion, carritosController.agregarProductoAlCarrito)
-//DELETE '/carrito/:id/producto/:id' -> recibe y elimina un producto al carrito indicado 
-CarritosRoutes.delete('/:idCarrito/producto/:codigoProducto', requiereAutenticacion, carritosController.borrarProductoAlCarrito)
+//DELETE '/carrito/:id/producto/:id' -> elimina un producto al carrito indicado 
+CarritosRoutes.delete('/:idCarrito/producto/:idProducto', requiereAutenticacion, carritosController.borrarProductoAlCarrito)
 //DELETE '/carrito/:idCarrito' -> elimina un carrito según su id.
 CarritosRoutes.delete('/:idCarrito', requiereAutenticacion, carritosController.borrarCarrito)
 

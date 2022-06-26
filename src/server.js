@@ -11,7 +11,7 @@ import UsersRoutes from './routes/usuarios.js';
 import ProductosRoutes from './routes/productos.js';
 import CarritosRoutes from './routes/carritos.js';
 import PedidosRoutes from './routes/pedidos.js';
-import MensajesRoutes from './routes/mensajes.js';
+import ChatRoutes from './routes/chat.js';
 import webRoutes from './routes/web.js';
 
 const app = express()
@@ -40,7 +40,7 @@ app.use('/api/usuarios', UsersRoutes) //usuarios que realizan la compra de los p
 app.use('/api/productos', ProductosRoutes) //productos que tiene el sitio
 app.use('/api/carritos', CarritosRoutes) //carritos de compras de los usuarios
 app.use('/api/pedidos', PedidosRoutes) // pedidos realizados por el usuario, carrito pasa a estado Cerrado
-app.use('/api/mensajes', MensajesRoutes) // mensajes del chat 
+app.use('/api/chat', ChatRoutes) // mensajes del chat 
 
 //routes not found
 app.use('/*', DefaultRoutes)

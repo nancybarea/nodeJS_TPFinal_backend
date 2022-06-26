@@ -1,22 +1,17 @@
 import ContainerDao from './ContainerDao.js';
 
-export default class PedidosDao extends ContainerDao {
+
+export default class ChatDao extends ContainerDao {
 
   constructor() {
-    super('pedidos')
+    super('chat')
   }
-  
+
   async getById(id) {
     return await super.getById({ id: id })
   }
-
-  async getByEmail(email)
-  {
-    return await super.getById({"email":email})
-  }
-
+  
   async deleteById(id) {
     return await super.deleteById({ id: id })
   }
-
 }

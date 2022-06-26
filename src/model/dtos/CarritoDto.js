@@ -1,4 +1,5 @@
 import NUID from 'nuid'
+import moment from 'moment'
 
 export default class CarritoDto {
 
@@ -15,7 +16,7 @@ export default class CarritoDto {
             this._id = undefined;
             this.id = NUID.next();
             this.estado = "abierto"
-            this.fechaUltModif = Date.now();
+            this.fechaUltModif = moment(new Date()).format('DD/MM/YYYY HH:MM:SS');
         }
         else {
             this._id = _id;

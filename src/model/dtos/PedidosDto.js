@@ -1,4 +1,5 @@
 import NUID from 'nuid'
+import moment from 'moment'
 
 export default class PedidosDto {
     _id;
@@ -14,7 +15,7 @@ export default class PedidosDto {
             this._id = undefined;
             this.id = NUID.next();
             this.estado = "pendiente"
-            this.fechaPedida = Date.now();
+            this.fechaPedida = moment(new Date()).format('DD/MM/YYYY HH:MM:SS');
         }
         else {
             this._id = _id;

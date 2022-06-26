@@ -5,7 +5,7 @@ const productos = new ProductosApi();
 
 //devuelve todos los productos de la coleccion
 export async function obtenerProductos(req, res) {
-    logger.info(`Se solicita obtener los productos`)
+    logger.info(`GET api/productos`)
     try{
         const productosList = await productos.getProductos()
         res.status(200).json(productosList)
@@ -18,10 +18,10 @@ export async function obtenerProductos(req, res) {
 
 //dado un id devuelve los datos de ese producto
 export async function obtenerUnProducto(req, res) {
-    logger.info(`Se solicita obtener un producto en particular`)
+    logger.info(`GET api/productos/{idProducto}`)
     try{
-        let codigo = req.params.codigoProducto;
-        const producto = await productos.getProducto(codigo)
+        let id = req.params.idProducto;
+        const producto = await productos.getProducto(id)
         res.status(200).json(producto)
     }
     catch (err){
@@ -32,7 +32,7 @@ export async function obtenerUnProducto(req, res) {
 
 //Con los datos del body agrega un producto a la coleccion y devuelve el id creado 
 export async function agregarProducto(req, res) {
-    logger.info(`Se solicita agregar un producto en particular`)
+    logger.info(`POST api/productos`)
     try{
         let objeto = req.body;
         const producto = await productos.addProducto(objeto)
@@ -46,7 +46,7 @@ export async function agregarProducto(req, res) {
 
 //dado un id producto por parametro actualiza el producto con los datos enviados en el body
 export async function actualizarProducto(req, res) {
-    logger.info(`Se solicita actualizar los productos`)
+    logger.info(`PUT api/productos`)
     try{
         let objeto = req.body;
         const producto = await productos.putProducto(objeto);
@@ -60,10 +60,10 @@ export async function actualizarProducto(req, res) {
 
 //dado un id por parametro borra el mismo de la coleccion
 export async function borrarProducto(req, res) {
-    logger.info(`Se solicita borrar un producto en particular`)
+    logger.info(`DELETE api/productos`)
     try{
-        let codigo = req.params.codigoProducto;
-        const producto = await productos.deleteProducto(codigo)
+        let id = req.params.idProducto;
+        const producto = await productos.deleteProducto(id)
         res.status(200).json(producto)
     }
     catch (err){

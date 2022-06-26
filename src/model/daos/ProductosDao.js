@@ -21,7 +21,6 @@ export default class ProductosDao extends ContainerDao {
 
   async update({
     id,
-    fechaHora,
     nombre,
     descripcion,
     precio,
@@ -37,7 +36,6 @@ export default class ProductosDao extends ContainerDao {
         {
           '$set':
           {
-            fechaHora: fechaHora,
             nombre: nombre,
             descripcion: descripcion,
             precio: precio,

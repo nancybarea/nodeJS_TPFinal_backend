@@ -28,6 +28,7 @@ export default class ContainerDao {
     }
 
     async getById(query) {
+        console.log(query)
         let respuesta       
         try {
             respuesta = await this.collection.findOne(query);

@@ -307,3 +307,213 @@
 [2022-06-23T02:43:43.284] [WARN] default - Route GET / non-existent
 [2022-06-23T02:43:44.994] [ERROR] default - Falló el envio de mail del nuevo pedido - error:TypeError: pedido.productos.toArray is not a function
 [2022-06-23T02:44:17.687] [WARN] default - Route GET / non-existent
+[2022-06-24T15:12:35.818] [WARN] default - Route GET / non-existent
+[2022-06-24T15:16:17.802] [WARN] default - Route GET / non-existent
+[2022-06-24T15:16:19.436] [ERROR] default - Falló el envio de mail del nuevo pedido - error:TypeError: pedido.fechaPedida.toDateString is not a function
+[2022-06-24T15:16:42.150] [WARN] default - Route GET / non-existent
+[2022-06-24T15:16:44.671] [ERROR] default - Falló el envio de mail del nuevo pedido - error:TypeError: pedido.fechaPedida.toDateString is not a function
+[2022-06-24T15:21:44.019] [WARN] default - Route GET / non-existent
+[2022-06-24T15:21:47.697] [ERROR] default - Error al agregar un pedido: TypeError: Date.now(...).toDateString is not a function
+[2022-06-24T15:21:47.697] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al agregar un pedido',
+  detalles: TypeError: Date.now(...).toDateString is not a function
+      at new PedidosDto (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/dtos/PedidosDto.js:17:43)
+      at PedidosApi.addPedido (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/PedidosApi.js:45:28)
+      at agregarPedido (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/PedidosController.js:38:38)
+      at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+      at requiereAutenticacion (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/UsuariosController.js:50:9)
+      at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+      at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+      at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+}
+[2022-06-24T15:24:14.602] [WARN] default - Route GET / non-existent
+[2022-06-24T15:24:16.404] [ERROR] default - Error al agregar un pedido: TypeError: Date.now is not a constructor
+[2022-06-24T15:24:16.406] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al agregar un pedido',
+  detalles: TypeError: Date.now is not a constructor
+      at new PedidosDto (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/dtos/PedidosDto.js:17:32)
+      at PedidosApi.addPedido (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/PedidosApi.js:45:28)
+      at agregarPedido (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/PedidosController.js:38:38)
+      at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+      at requiereAutenticacion (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/UsuariosController.js:50:9)
+      at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+      at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+      at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+}
+[2022-06-24T15:26:21.670] [WARN] default - Route GET / non-existent
+[2022-06-24T15:40:11.447] [WARN] default - Route GET / non-existent
+[2022-06-24T15:41:25.579] [WARN] default - Route GET / non-existent
+[2022-06-24T15:43:19.202] [WARN] default - Route GET / non-existent
+[2022-06-24T15:54:42.109] [WARN] default - Route GET / non-existent
+[2022-06-24T15:57:27.202] [WARN] default - Route GET / non-existent
+[2022-06-24T15:58:36.583] [WARN] default - Route GET / non-existent
+[2022-06-24T15:59:51.603] [WARN] default - Route GET / non-existent
+[2022-06-24T16:00:59.681] [WARN] default - Route GET / non-existent
+[2022-06-24T16:02:16.552] [WARN] default - Route GET / non-existent
+[2022-06-24T16:02:46.222] [WARN] default - Route GET / non-existent
+[2022-06-24T16:03:55.338] [WARN] default - Route GET / non-existent
+[2022-06-24T17:10:27.029] [WARN] default - Route GET / non-existent
+[2022-06-24T17:21:08.884] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"62b61a3698737ca836c85980"}',
+  detalles: undefined
+}
+[2022-06-24T17:26:33.601] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"Z4PLU7V8PFS1SBS23PTK7Q"}',
+  detalles: undefined
+}
+[2022-06-24T17:38:11.302] [WARN] default - Route GET / non-existent
+[2022-06-24T17:41:55.727] [WARN] default - Route GET / non-existent
+[2022-06-24T17:51:25.414] [WARN] default - Route GET / non-existent
+[2022-06-24T17:56:56.883] [WARN] default - Route GET / non-existent
+[2022-06-24T18:09:58.897] [WARN] default - Route GET / non-existent
+[2022-06-24T18:10:19.361] [WARN] default - Route GET / non-existent
+[2022-06-24T18:10:29.762] [ERROR] default - TypeError: carritos.getById is not a function
+    at obtenerCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/CarritosController.js:24:45)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at requiereAutenticacion (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/UsuariosController.js:50:9)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at param (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:360:14)
+[2022-06-24T18:14:36.511] [WARN] default - Route GET / non-existent
+[2022-06-24T18:15:08.921] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"nancybarea@gmail.com"}',
+  detalles: undefined
+}
+[2022-06-24T18:18:59.424] [WARN] default - Route GET / non-existent
+[2022-06-24T18:19:06.638] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"nancybarea@gmail.com"}',
+  detalles: undefined
+}
+[2022-06-24T18:20:16.866] [WARN] default - Route GET / non-existent
+[2022-06-24T18:22:17.073] [WARN] default - Route GET / non-existent
+[2022-06-24T18:27:18.574] [ERROR] default - MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+    at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:19:19)
+    at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:454:16)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:177:13
+    at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:496:5)
+    at FindCursor.next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:173:41)
+    at Collection.findOne (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\collection.js:233:76)
+    at CarritosDao.getById (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:33:47)
+    at CarritosDao.updatePushProductoAlCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/CarritosDao.js:27:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-06-26T14:06:35.934] [WARN] default - Route GET / non-existent
+[2022-06-26T14:09:42.023] [WARN] default - Route DELETE / non-existent
+[2022-06-26T14:51:28.177] [ERROR] default - MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+    at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:19:19)
+    at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:454:16)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:177:13
+    at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:496:5)
+    at FindCursor.next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:173:41)
+    at Collection.findOne (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\collection.js:233:76)
+    at CarritosDao.getById (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:33:47)
+    at CarritosDao.updatePushProductoAlCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/CarritosDao.js:27:26)
+    at runMicrotasks (<anonymous>)
+[2022-06-26T14:51:28.179] [ERROR] default - CustomError {
+  estado: 500,
+  descripcion: 'Error adding product to cart',
+  detalles: CustomError {
+    estado: 500,
+    descripcion: 'Error when obtaining a Document by id in the collection carritos',
+    detalles: MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+        at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:19:19)
+        at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+        at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:454:16)
+        at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:177:13
+        at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:496:5)
+        at FindCursor.next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:173:41)
+        at Collection.findOne (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\collection.js:233:76)
+        at CarritosDao.getById (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:33:47)
+        at CarritosDao.updatePushProductoAlCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/CarritosDao.js:27:26)
+        at runMicrotasks (<anonymous>)
+  }
+}
+[2022-06-26T14:56:26.789] [WARN] default - Route GET / non-existent
+[2022-06-26T14:56:36.347] [WARN] default - Route DELETE / non-existent
+[2022-06-26T15:00:25.380] [ERROR] default - Error solicitar los pedidos de un usuario: [object Object]
+[2022-06-26T15:00:25.381] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error solicitar los pedidos de un usuario',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"nancybarea@gmail.com"}',
+    detalles: undefined
+  }
+}
+[2022-06-26T15:12:54.512] [WARN] default - Route GET / non-existent
+[2022-06-26T15:12:58.264] [ERROR] default - Error al solicitar el pedido nancybarea@gmail.com: [object Object]
+[2022-06-26T15:12:58.264] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al solicitar el pedido nancybarea@gmail.com',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"id":"nancybarea@gmail.com"}',
+    detalles: undefined
+  }
+}
+[2022-06-26T15:16:05.634] [WARN] default - Route GET / non-existent
+[2022-06-26T15:16:07.253] [ERROR] default - Error al solicitar el pedido nancybarea@gmail.com: [object Object]
+[2022-06-26T15:16:07.254] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al solicitar el pedido nancybarea@gmail.com',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"id":"nancybarea@gmail.com"}',
+    detalles: undefined
+  }
+}
+[2022-06-26T15:16:26.597] [ERROR] default - Error solicitar los pedidos de un usuario: [object Object]
+[2022-06-26T15:16:26.598] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error solicitar los pedidos de un usuario',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"nancybarea@gmail.com"}',
+    detalles: undefined
+  }
+}
+[2022-06-26T15:16:45.385] [ERROR] default - Error solicitar los pedidos de un usuario: [object Object]
+[2022-06-26T15:16:45.386] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error solicitar los pedidos de un usuario',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"nancybarea@gmail.com"}',
+    detalles: undefined
+  }
+}
+[2022-06-26T15:18:35.350] [ERROR] default - Error al solicitar el pedido M44G2T9F9W2T6HFOSKWYVR: [object Object]
+[2022-06-26T15:18:35.351] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al solicitar el pedido M44G2T9F9W2T6HFOSKWYVR',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"id":"M44G2T9F9W2T6HFOSKWYVR"}',
+    detalles: undefined
+  }
+}
+[2022-06-26T15:40:40.914] [WARN] default - Route GET / non-existent
+[2022-06-26T15:40:53.090] [WARN] default - Route GET / non-existent
+[2022-06-26T15:47:06.582] [WARN] default - Route GET / non-existent
+[2022-06-26T15:48:08.953] [WARN] default - Route GET / non-existent
+[2022-06-26T15:48:23.536] [WARN] default - Route GET / non-existent
+[2022-06-26T15:48:31.568] [WARN] default - Route GET / non-existent
+[2022-06-26T15:48:32.656] [WARN] default - Route GET / non-existent
+[2022-06-26T15:50:14.622] [WARN] default - Route GET / non-existent
+[2022-06-26T15:51:43.293] [WARN] default - Route GET / non-existent
+[2022-06-26T15:52:58.826] [WARN] default - Route GET / non-existent

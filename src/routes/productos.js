@@ -7,13 +7,13 @@ const ProductosRoutes = new Router();
 //GET '/producto' -> devuelve todos los productos
 ProductosRoutes.get('/', productosController.obtenerProductos)
 //GET '/producto/:id' -> devuelve un producto según su id.
-ProductosRoutes.get('/:codigoProducto', productosController.obtenerUnProducto)
+ProductosRoutes.get('/:idProducto', productosController.obtenerUnProducto)
 //POST '/producto' -> recibe y agrega un producto, y lo devuelve con su id asignado
 ProductosRoutes.post('/', requiereAutenticacion, productosController.agregarProducto)
 //PUT '/producto/' -> recibe y actualiza un producto según su id.
 ProductosRoutes.put('/', requiereAutenticacion, productosController.actualizarProducto)
 //DELETE '/producto/:id' -> elimina un producto según su id.
-ProductosRoutes.delete('/:codigoProducto', requiereAutenticacion, productosController.borrarProducto)
+ProductosRoutes.delete('/:idProducto', requiereAutenticacion, productosController.borrarProducto)
 
 
 export default ProductosRoutes 
