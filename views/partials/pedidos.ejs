@@ -1,7 +1,7 @@
-<% const hayProductos=producto.length> 0; %>
+<% const hayPedidos=pedido.length> 0; %>
+    <h3>Pedidos solicitados</h3>
     <div class="container">
-        <h3>Listado de productos</h3>
-        <% if(hayProductos){ %>
+        <% if(hayPedidos){ %>
             <div>
                 <table>
                     <tr>
@@ -9,16 +9,16 @@
                         <th>Nombre</th>
                         <th>Precio</th>
                     </tr>
-                    <% for (const item of producto) {%>
+                    <% for (const item of pedido) {%>
                         <tr>
                             <td><%= item.id %></td>
-                            <td><%= item.nombre %></td>
-                            <td><%= item.precio %></td>
+                            <td><%= item.estado %></td>
+                            <td><%= item.productos %></td>
                         </tr>
                     <%};%>
                 </table>
             </div>
         <% } else{ %>
-            <h3 class="alert alert-danger">No hay productos dados de alta</h1>
+            <h3 class="alert alert-danger">No hay pedidos pendientes</h1>
         <% } %>
     </div>

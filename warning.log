@@ -517,3 +517,95 @@
 [2022-06-26T15:50:14.622] [WARN] default - Route GET / non-existent
 [2022-06-26T15:51:43.293] [WARN] default - Route GET / non-existent
 [2022-06-26T15:52:58.826] [WARN] default - Route GET / non-existent
+[2022-06-26T15:55:11.102] [WARN] default - Route GET / non-existent
+[2022-06-26T15:56:53.093] [WARN] default - Route GET / non-existent
+[2022-06-26T15:58:05.652] [WARN] default - Route GET / non-existent
+[2022-06-26T15:58:26.652] [WARN] default - Route GET / non-existent
+[2022-06-26T15:59:07.799] [WARN] default - Route GET / non-existent
+[2022-06-26T16:01:43.475] [WARN] default - Route GET / non-existent
+[2022-06-26T16:01:49.229] [WARN] default - Route GET / non-existent
+[2022-06-26T16:01:52.697] [WARN] default - Route GET / non-existent
+[2022-06-26T16:01:58.407] [WARN] default - Route GET / non-existent
+[2022-06-26T16:03:26.829] [WARN] default - Route GET / non-existent
+[2022-06-26T16:03:43.744] [WARN] default - Route GET / non-existent
+[2022-06-26T16:11:16.859] [WARN] default - Route GET / non-existent
+[2022-06-26T16:13:04.135] [WARN] default - Route GET / non-existent
+[2022-06-26T16:13:10.647] [ERROR] default - TypeError: carritos.getPedidos is not a function
+    at getPedidos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/webController.js:96:40)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:47:12)
+[2022-06-26T16:24:14.159] [WARN] default - Route GET / non-existent
+[2022-06-26T16:24:44.728] [ERROR] default - TypeError: carritos.getPedidos is not a function
+    at getPedidos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/webController.js:96:40)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:47:12)
+[2022-06-26T16:26:48.445] [WARN] default - Route GET / non-existent
+[2022-06-26T16:31:07.155] [WARN] default - Route GET / non-existent
+[2022-06-26T16:31:16.047] [WARN] default - Route GET / non-existent
+[2022-06-26T16:39:06.971] [WARN] default - Route GET / non-existent
+[2022-06-26T16:39:18.514] [WARN] default - Route GET / non-existent
+[2022-06-26T16:43:20.510] [WARN] default - Route GET / non-existent
+[2022-06-26T16:44:49.107] [WARN] default - Route GET / non-existent
+[2022-06-26T16:50:40.348] [WARN] default - Route GET / non-existent
+[2022-06-26T16:56:47.933] [WARN] default - Route GET / non-existent
+[2022-06-26T16:57:50.104] [WARN] default - Route GET / non-existent
+[2022-06-26T16:58:05.132] [WARN] default - Route GET / non-existent
+[2022-06-26T17:01:01.508] [WARN] default - Route GET / non-existent
+[2022-06-26T17:01:32.534] [WARN] default - Route GET / non-existent
+[2022-06-26T17:01:33.471] [WARN] default - Route GET / non-existent
+[2022-06-26T17:02:36.181] [WARN] default - Route GET / non-existent
+[2022-06-26T17:02:37.279] [WARN] default - Route GET / non-existent
+[2022-06-26T17:02:45.862] [WARN] default - Route GET / non-existent
+[2022-06-26T17:02:48.575] [WARN] default - Route GET / non-existent
+[2022-06-26T17:02:49.759] [WARN] default - Route GET / non-existent
+[2022-06-26T17:04:44.078] [WARN] default - Route GET / non-existent
+[2022-06-26T17:07:49.720] [WARN] default - Route GET / non-existent
+[2022-06-26T17:08:12.280] [WARN] default - Route GET / non-existent
+[2022-06-26T17:09:45.809] [WARN] default - Route GET / non-existent
+[2022-06-26T17:10:17.341] [WARN] default - Route GET / non-existent
+[2022-06-26T17:10:18.515] [WARN] default - Route GET / non-existent
+[2022-06-26T17:11:16.007] [WARN] default - Route GET / non-existent
+[2022-06-26T17:11:59.012] [WARN] default - Route GET / non-existent
+[2022-06-26T17:12:11.749] [WARN] default - Route GET / non-existent
+[2022-06-26T17:12:18.193] [WARN] default - Route GET / non-existent
+[2022-06-26T17:13:52.338] [WARN] default - Route GET / non-existent
+[2022-06-26T17:14:10.305] [WARN] default - Route GET / non-existent
+[2022-06-26T17:18:00.819] [WARN] default - Route GET / non-existent
+[2022-06-26T17:19:30.044] [WARN] default - Route GET / non-existent
+[2022-06-26T17:19:30.243] [WARN] default - Route GET / non-existent
+[2022-06-26T17:22:08.725] [WARN] default - Route GET / non-existent
+[2022-06-26T17:22:08.726] [WARN] default - Route GET / non-existent
+[2022-06-26T17:22:10.721] [WARN] default - Route GET / non-existent
+[2022-06-26T17:22:10.722] [WARN] default - Route GET / non-existent
+[2022-06-26T17:23:01.099] [WARN] default - Route GET / non-existent
+[2022-06-26T17:23:01.101] [WARN] default - Route GET / non-existent
+[2022-06-26T17:24:22.151] [WARN] default - Route GET / non-existent
+[2022-06-26T17:24:22.153] [WARN] default - Route GET / non-existent
+[2022-06-26T17:24:23.287] [WARN] default - Route GET / non-existent
+[2022-06-26T17:24:23.289] [WARN] default - Route GET / non-existent
+[2022-06-26T17:24:24.084] [WARN] default - Route GET / non-existent
+[2022-06-26T17:24:24.085] [WARN] default - Route GET / non-existent
+[2022-06-26T17:25:07.667] [WARN] default - Route GET / non-existent
+[2022-06-26T17:25:11.109] [WARN] default - Route GET / non-existent
+[2022-06-26T17:25:18.000] [WARN] default - Route GET / non-existent
+[2022-06-26T17:25:24.262] [WARN] default - Route GET / non-existent
+[2022-06-26T17:25:42.172] [WARN] default - Route GET / non-existent
+[2022-06-26T17:28:35.445] [WARN] default - Route GET / non-existent
+[2022-06-26T17:28:36.589] [WARN] default - Route GET / non-existent
+[2022-06-26T17:30:44.187] [WARN] default - Route GET / non-existent
+[2022-06-26T17:31:36.022] [WARN] default - Route GET / non-existent
+[2022-06-26T17:32:00.361] [WARN] default - Route GET / non-existent

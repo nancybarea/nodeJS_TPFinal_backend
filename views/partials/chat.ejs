@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Centro de mensajes</h1>
+    <h3>Centro de mensajes</h3>
 
     <form onsubmit="return agregarMensaje(this)">
 
@@ -13,6 +13,22 @@
 
 
         <div class="form-group" id='messages'></div>
+        <% const hayMensajes=mensajesChat.length> 0; %>
+        <div class="container">
+            <% if(hayMensajes){ %>
+                <% for (const item of mensajesChat) {%>
+                    <div>
+                        <strong class="text-primary"> <%= item.email %> </strong>
+                        [<span class="text-danger"> <%= item.fechaHora %> </span>]: 
+                        <em> <%= item.mensaje %> </em>
+                    </div>
+
+                    <%};%>
+
+            <% } else{ %>
+                <h3 class="alert alert-danger">...escriba un mensaje para iniciar el chat</h1>
+            <% } %>
+        </div>
 
         <div class="input-group input-group-sm mb-3">
 

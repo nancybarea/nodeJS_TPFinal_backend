@@ -1,9 +1,13 @@
 import logger from './logger.js'
 import ProductosApi from './api/ProductosApi.js'
-import chatApi from './api/ChatApi.js'
+import CarritosApi from './api/CarritosApi.js'
+// import PedidosApi from './api/PedidosApi.js'
+// import chatApi from './api/ChatApi.js'
 
 const productos = new ProductosApi();
-const chat = new chatApi();
+const carritos = new CarritosApi();
+// const pedidos = new PedidosApi();
+// const chat = new chatApi();
 
 export default class MySocket {
 
@@ -13,19 +17,23 @@ export default class MySocket {
 
     on() {
         this.io.on('connection', async socket => {
-            logger.info(`Se conecto al socket y solicito listado de productos y mensajes del chat`)
+            logger.info(`Se conecto al socket`)
 
             // LISTADO DE PRODUCTOS
             let listadoTodosLosProductos = await productos.getAll();
-            socket.emit('listadoProductos', listadoTodosLosProductos)/* Envio los productos al cliente que se conectó */
+            socket.emit('listadoProductos', listadoTodosLosProductos);/* Envio los productos al cliente que se conectó */
 
-            //LISTADO DE MENSAJES 
-            let listadoTodosLosMensajes = await chat.getAll();
-            socket.emit('listadoMensajes', listadoTodosLosMensajes)/* Envio los mensajes al cliente que se conectó */           
-            socket.on('nuevoMensaje', async data => { /* Escucho los mensajes enviado por el cliente y se los propago a todos */
-                listadoTodosLosProductos = await chat.agregarMensaje(data)
-                this.io.sockets.emit('listadoMensajes', listadoTodosLosProductos)
-            })
+            //LISTADO DE CARRITOS
+            let listadoTodosLosCarritos = await carritos.getAll();
+            socket.emit('listadoCarritos', listadoTodosLosCarritos);
+
+            // LISTADO DE MENSAJES DEL CHAT
+            // let listadoTodosLosMensajesChat = await chat.getAll();
+            // socket.emit('listadoMensajesChat', listadoTodosLosMensajesChat)/* Envio los mensajes al cliente que se conectó */           
+            // socket.on('nuevoMensajeChat', async data => { /* Escucho los mensajes enviado por el cliente y se los propago a todos */
+            //     listadoTodosLosMensajesChat = await chat.addMensajeChat(data)
+            //     this.io.sockets.emit('listadoMensajesChat', listadoTodosLosMensajesChat)
+            // })
 
         })
     }

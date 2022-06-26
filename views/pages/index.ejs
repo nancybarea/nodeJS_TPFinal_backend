@@ -24,6 +24,31 @@
         <% } %>
     </div>
 
+    <!-- Listado de los productos -->
+    <div class="container p-3 my-3 bg-light text-black">
+        <%- include('../partials/productos',{producto:productosList}) %> 
+    </div>
+
+    <!-- Carrito de compras -->
+    <div class="container p-3 my-3 bg-light text-black">
+        <%- include('../partials/carritos',{carrito:carritosList}) %> 
+    </div>
+
+    <!-- Carrito de compras -->
+    <div class="container p-3 my-3 bg-light text-black">
+        <%- include('../partials/pedidos',{pedido:pedidosList}) %> 
+    </div>
+
+     <!-- Listado de mensajes de chat -->
+    <div class="container p-3 my-3 bg-light text-black">
+         <%- include('../partials/chat',{user:user, mensajesChat:mensajesChatList}) %>
+    </div>
+
+    <!-- Informacion del servidor -->
+    <div class="container p-3 my-3 bg-light text-black">
+        <%- include('../partials/info',{info:info}) %> 
+    </div>
+
 </body>
 
 </html>
