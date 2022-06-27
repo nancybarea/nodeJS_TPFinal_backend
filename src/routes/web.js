@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import passport from 'passport';
 import * as webController from '../controller/webController.js'
+import logger from '../logger.js'
 
 const webRoutes = new Router();
 
@@ -24,8 +25,8 @@ webRoutes.get('/', webController.getInicio);
 //REGISTRARSE
 webRoutes.get('/registrarse', webController.getRegistrarse)
 // POST '/registrarse' -> genera un nuevo usuario y renderiza la pantalla de inicio logeado
-webRoutes.post('/registrarse', 
-    passport.authenticate('registro', {failureRedirect: '/failRegistro'}),
+webRoutes.post('/registrarse',  
+    passport.authenticate('registro', {failureRedirect: '/failRegistro'}),    
     webController.getLogin);
 
 //LOGUEARSE
@@ -36,6 +37,7 @@ webRoutes.post('/login', passport.authenticate('login', {failureRedirect: '/fail
 //SUBIR ARCHIVOS
 webRoutes.get('/subirArchivos', webController.getSubirArchivo);
 webRoutes.post('/subirArchivos', upload.single('miArchivo'), (req, res, next) => {
+    logger.info(`POST /subirArchivos`)
     const file = req.file
     if (!file) {
       const error = new Error('Error subiendo archivo')

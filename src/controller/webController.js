@@ -73,3 +73,5 @@ export async function getSubirArchivo(req, res) {
   const title = 'Subir Archivo'
   res.render('pages/subirArchivos', { titulo: title })
 }
+
+
