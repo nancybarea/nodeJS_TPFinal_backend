@@ -28,12 +28,12 @@ export default class MySocket {
             socket.emit('listadoCarritos', listadoTodosLosCarritos);
 
             // LISTADO DE MENSAJES DEL CHAT
-            // let listadoTodosLosMensajesChat = await chat.getAll();
-            // socket.emit('listadoMensajesChat', listadoTodosLosMensajesChat)/* Envio los mensajes al cliente que se conectó */           
-            // socket.on('nuevoMensajeChat', async data => { /* Escucho los mensajes enviado por el cliente y se los propago a todos */
-            //     listadoTodosLosMensajesChat = await chat.addMensajeChat(data)
-            //     this.io.sockets.emit('listadoMensajesChat', listadoTodosLosMensajesChat)
-            // })
+            let listadoTodosLosMensajesChat = await chat.getAll();
+            socket.emit('listadoMensajesChat', listadoTodosLosMensajesChat)/* Envio los mensajes al cliente que se conectó */           
+            socket.on('nuevoMensajeChat', async data => { /* Escucho los mensajes enviado por el cliente y se los propago a todos */
+                 listadoTodosLosMensajesChat = await chat.addMensajeChat(data)
+                 this.io.sockets.emit('listadoMensajesChat', listadoTodosLosMensajesChat)
+            })
 
         })
     }
