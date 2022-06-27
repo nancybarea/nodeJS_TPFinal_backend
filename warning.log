@@ -787,3 +787,20 @@
 [2022-06-27T00:41:56.182] [WARN] default - No existe la ruta GET /subirArchivos/registrarse/avatar2
 [2022-06-27T00:41:59.842] [WARN] default - No existe la ruta GET /subirArchivos/registrarse/avatar2
 [2022-06-27T00:49:18.583] [WARN] default - No existe la ruta GET /subirArchivos/registrarse/avatar2
+[2022-06-27T01:55:37.515] [WARN] default - No existe la ruta GET /abmProductos
+[2022-06-27T01:56:20.046] [ERROR] default - TypeError: productos.getUsuarios is not a function
+    at abmUsuarios (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/webController.js:83:42)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:47:12)
+[2022-06-27T02:15:31.238] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-27T02:33:00.318] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-27T02:33:22.419] [WARN] default - No existe la ruta GET /infoServer
+[2022-06-27T02:36:25.898] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-27T02:36:59.440] [WARN] default - No existe la ruta GET /socket.io/socket.io.js

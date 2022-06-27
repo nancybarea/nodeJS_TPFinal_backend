@@ -47,6 +47,16 @@ webRoutes.post('/subirArchivos', upload.single('miArchivo'), (req, res, next) =>
     res.send(`Archivo <b>${file.originalname}</b> subido exitosamente`)
   })
 
+//INFO SERVER
+webRoutes.get('/infoServer', webController.infoServer);
+
+//ABM
+webRoutes.get('/abmProductos', webController.abmProductos);
+webRoutes.get('/abmUsuarios', webController.abmUsuarios);
+webRoutes.get('/abmCarritos', webController.abmCarritos);
+webRoutes.get('/abmPedidos', webController.abmPedidos);
+webRoutes.get('/abmMensajes', webController.abmMensajes);
+
 //ERRORES
 //renderiza desde el back la pantalla de error en login
 webRoutes.get('/failLogin', webController.getfailLogin)
