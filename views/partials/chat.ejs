@@ -2,44 +2,26 @@
     <h3>Centro de mensajes</h3>
 
     <form onsubmit="return agregarMensaje(this)">
-
+        <!-- email -->
         <div class="input-group input-group-sm mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-sm">E-mail: </span>
             </div>
-            <input type="email" id="email" class="form-control" aria-label="Small"
-                aria-describedby="inputGroup-sizing-sm" placeholder="Your Email" value="" readonly>
+            <input type="email" id="email" name="email" class="form-control" aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm" placeholder="Your Email" value="nancybarea@gmail.com" readonly>
         </div>
-
-
-        <div class="form-group" id='messages'></div>
-        <% const hayMensajes=mensajesChat.length> 0; %>
-        <div class="container">
-            <% if(hayMensajes){ %>
-                <% for (const item of mensajesChat) {%>
-                    <div>
-                        <strong class="text-primary"> <%= item.email %> </strong>
-                        [<span class="text-danger"> <%= item.fechaHora %> </span>]: 
-                        <em> <%= item.mensaje %> </em>
-                    </div>
-
-                    <%};%>
-
-            <% } else{ %>
-                <h3 class="alert alert-danger">...escriba un mensaje para iniciar el chat</h1>
-            <% } %>
-        </div>
-
+        <!--mensaje a enviar-->
         <div class="input-group input-group-sm mb-3">
-
-            <input type="text" id="mensaje" class="form-control" ria-label="msj:" aria-describedby="inputGroup-sizing-sm"
+            <input type="text" id="mensaje" name="mensaje" class="form-control" ria-label="msj:" aria-describedby="inputGroup-sizing-sm"
                 placeholder="Ingresa un mensaje..." required>
         </div>
-
-        <div class="form-group">
+        <!--boton para enviar mensaje nuevo -->
+        <div class="form-group">            
             <input type="submit" value="Enviar" class="btn btn-success">
         </div>
-
+        <!-- listado de mensajes enviados-->
+        <br><h6>Listado de mensajes enviados</h6>
+        <div class="form-group" id='listadoDeMensajes'></div>
     </form>
 
 </div>

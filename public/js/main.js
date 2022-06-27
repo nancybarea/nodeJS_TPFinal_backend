@@ -1,9 +1,10 @@
 const socket = io.connect();
 
 socket.on('listadoMensajesChat', async msjs => {
+    console.log("entro a listadoMensajesChat")
     const plantilla = await buscarPlantillaMensajes()
     const html = armarHTML(plantilla, msjs)
-    document.getElementById('messages').innerHTML = html;
+    document.getElementById('listadoDeMensajes').innerHTML = html;
 });
 
 function buscarPlantillaMensajes() {
@@ -11,19 +12,18 @@ function buscarPlantillaMensajes() {
         .then(respuesta => respuesta.text())
 }
 
-function armarHTML(plantilla, data) {
+function armarHTML(plantilla, mensajesChat) {
     const render = ejs.compile(plantilla);
-    const html = render({ data }) 
+    const html = render({ mensajesChat }) 
     return html
 }
 
 function agregarMensaje(e) {
-
     const mensaje = {
        email: document.getElementById('email').value,
-       text: document.getElementById('mensaje').value
+       mensaje: document.getElementById('mensaje').value
     };
-    document.getElementById('messages').value = ''
+    document.getElementById('listadoDeMensajes').value = ''
     socket.emit('nuevoMensajeChat', mensaje);
     return false;
 }

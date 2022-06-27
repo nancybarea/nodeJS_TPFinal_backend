@@ -66,3 +66,10 @@ export async function getfailRegistro(req, res) {
   const title = 'Error: en el registro de usuario'
   res.render('pages/error', { titulo: title, detalle: undefined })
 }
+
+//getfailRegistro
+export async function getSubirArchivo(req, res) {
+  logger.info(`web: GET /subirArchivo`)
+  const title = 'Subir Archivo'
+  res.render('pages/subirArchivos', { titulo: title })
+}

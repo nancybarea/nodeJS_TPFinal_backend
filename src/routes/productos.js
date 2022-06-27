@@ -15,5 +15,4 @@ ProductosRoutes.put('/', requiereAutenticacion, productosController.actualizarPr
 //DELETE '/producto/:id' -> elimina un producto según su id.
 ProductosRoutes.delete('/:idProducto', requiereAutenticacion, productosController.borrarProducto)
 
-
 export default ProductosRoutes 
