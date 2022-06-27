@@ -13,7 +13,7 @@ function buscarPlantillaMensajes() {
 
 function armarHTML(plantilla, data) {
     const render = ejs.compile(plantilla);
-    const html = render({ data })
+    const html = render({ data }) 
     return html
 }
 

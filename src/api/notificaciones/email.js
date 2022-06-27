@@ -8,7 +8,7 @@ transporter.verify(function (error, success) {
     if (error) { logger.error(`Envio de mail fallo la verificacion del servidor ${error}`);
          return;
     } else {
-        logger.info("Server is ready to take our messages");
+        logger.info("Server is ready to take our messages.");
     }
 });
 
