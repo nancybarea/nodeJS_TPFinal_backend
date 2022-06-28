@@ -10,16 +10,13 @@
     <!-- header -->
     <%- include('../partials/header') %>
 
-    <main class="main__banner" ;>
-        <div>
-            <h1 class="banner__tit banner__tit--principal">Argentina Aventura</h1>
-            <h2 class="banner__tit banner__tit--secundario">¡¡ Bienvenidos a La Aventura !!</h2>
-        </div>
-    </main>
+    <!-- Listado de mensajes de chat -->
+    <div class="container p-3 my-3 bg-light text-black">
+         <%- include('../partials/chat',{mensajesChat:mensajesChatList}) %>
+    </div>
 
     <!-- footer -->
     <%- include('../partials/footer') %>
-
 </body>
 
 </html>

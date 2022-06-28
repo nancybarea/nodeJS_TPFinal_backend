@@ -47,6 +47,9 @@ webRoutes.post('/subirArchivos', upload.single('miArchivo'), (req, res, next) =>
     res.send(`Archivo <b>${file.originalname}</b> subido exitosamente`)
   })
 
+//CHAT
+webRoutes.get('/chat', webController.mensajesChat);
+
 //INFO SERVER
 webRoutes.get('/infoServer', webController.infoServer);
 

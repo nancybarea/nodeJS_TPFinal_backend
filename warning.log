@@ -1341,3 +1341,77 @@
 [2022-06-28T02:11:10.598] [WARN] default - No existe la ruta GET /mensajeChat/styles/styles.css
 [2022-06-28T02:11:10.600] [WARN] default - No existe la ruta GET /mensajeChat/borrar/js/main.js
 [2022-06-28T02:11:10.602] [WARN] default - No existe la ruta GET /mensajeChat/img/logo.png
+[2022-06-28T02:12:12.280] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:12:12.282] [WARN] default - No existe la ruta GET /styles/styles.css
+[2022-06-28T02:12:15.368] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:12:15.369] [WARN] default - No existe la ruta GET /styles/styles.css
+[2022-06-28T02:30:51.883] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:30:51.886] [WARN] default - No existe la ruta GET /styles/styles.css
+[2022-06-28T02:30:54.541] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:30:54.543] [WARN] default - No existe la ruta GET /styles/styles.css
+[2022-06-28T02:31:11.531] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:31:11.535] [WARN] default - No existe la ruta GET /styles/styles.css
+[2022-06-28T02:35:05.528] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:35:05.531] [WARN] default - No existe la ruta GET /styles/styles.css
+[2022-06-28T02:41:36.472] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:41:36.582] [WARN] default - No existe la ruta GET /js/main.js
+[2022-06-28T02:41:36.984] [WARN] default - No existe la ruta GET /img/logo.png
+[2022-06-28T02:41:45.297] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:41:45.298] [WARN] default - No existe la ruta GET /js/main.js
+[2022-06-28T02:41:45.741] [WARN] default - No existe la ruta GET /img/logo.png
+[2022-06-28T02:42:53.280] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:43:13.704] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:43:22.628] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:44:12.444] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:44:19.888] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:44:22.041] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:44:31.852] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:44:43.235] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:47:21.266] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:47:54.416] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:51:52.583] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:51:52.699] [WARN] default - No existe la ruta GET /public/styles/styles.css
+[2022-06-28T02:51:52.701] [WARN] default - No existe la ruta GET /public/js/main.js
+[2022-06-28T02:51:52.954] [WARN] default - No existe la ruta GET /public/img/logo.png
+[2022-06-28T02:52:23.814] [WARN] default - No existe la ruta GET /public/js/main.js
+[2022-06-28T02:52:23.815] [WARN] default - No existe la ruta GET /public/styles/styles.css
+[2022-06-28T02:52:23.916] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:52:24.213] [WARN] default - No existe la ruta GET /public/img/logo.png
+[2022-06-28T02:52:35.269] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:52:35.550] [WARN] default - No existe la ruta GET /public/img/logo.png
+[2022-06-28T02:52:51.370] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:55:20.124] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:55:33.907] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:55:47.246] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:55:49.159] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:55:50.672] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:57:04.626] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T02:57:12.604] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:02:09.948] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:02:11.492] [ERROR] default - TypeError: usuarios.getMensajesChat is not a function
+    at mensajesChat (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/webController.js:116:45)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:47:12)
+[2022-06-28T03:02:40.262] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:03:42.862] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:03:44.999] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:03:52.024] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:04:03.718] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:05:53.407] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:06:08.739] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:06:13.038] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:06:59.377] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:06:59.558] [WARN] default - No existe la ruta GET /img/banner_escalada.jpg
+[2022-06-28T03:08:50.843] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:08:50.956] [WARN] default - No existe la ruta GET /img/banner_escalada.jpg
+[2022-06-28T03:09:32.879] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:09:33.172] [WARN] default - No existe la ruta GET /img/banner_escalada.jpg
+[2022-06-28T03:09:35.487] [WARN] default - No existe la ruta GET /socket.io/socket.io.js
+[2022-06-28T03:09:35.696] [WARN] default - No existe la ruta GET /img/banner_escalada.jpg

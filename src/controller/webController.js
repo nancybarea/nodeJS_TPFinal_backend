@@ -107,6 +107,21 @@ export async function infoServer(req, res) {
   }
 }
 
+//mensajesChat
+export async function mensajesChat(req, res) {
+  logger.info(`web: GET /chat`)
+
+  try{
+    const title = 'Mensajes del Chat'
+    const mensajesChatList = await chat.getMensajesChat()
+    res.render('pages/chat', { titulo: title, mensajesChatList })
+  }
+  catch (err){
+      logger.error(err);
+      res.status(err.estado).json(err)
+  }
+}
+
 //abmUsuarios
 export async function abmUsuarios(req, res) {
   logger.info(`web: GET /abmUsuarios`)
