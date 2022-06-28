@@ -365,3 +365,14 @@
     at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)
     at Function.handle (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:174:3)
     at router (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:47:12)
+[2022-06-28T01:07:16.822] [ERROR] default - ReferenceError: productosList is not defined
+    at productoBorrar (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/webController.js:152:55)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at param (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:360:14)
+    at param (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:371:14)
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:416:3)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)

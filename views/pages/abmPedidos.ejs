@@ -10,12 +10,13 @@
         <%- include('../partials/header') %>
 
         <div class="container mt-3">
-            <h2>ABM de Pedidos</h2>
+            <h1><strong>ABM de Pedidos</strong></h1>
+            <br>
             <p>Listado de pedidos (carritos que se solicitó la compra) realizadas por los usuarios de Argentina Aventura   </p>
             <% const hayProductos=pedidosList.length> 0; %>
             <div class="table-responsive">
                 <% if(hayProductos){ %>                
-                    <table class="table table-bordered">
+                    <table class="table table-bordered tablaABM">
                         <thead>
                             <tr>
                                 <th>Id Pedido</th>
@@ -35,7 +36,7 @@
                                 <td>
                                     <a href="#">modificar</a>
                                     &nbsp;&nbsp;<a href="#">Ver Productos</a>
-                                    &nbsp;&nbsp;<a href="#">borrar</a>
+                                    &nbsp;&nbsp;<a href='/pedido/borrar/<%= item.id %>'>borrar</a>
                                 </td>
                             </tr>
                         <%};%>
@@ -45,6 +46,7 @@
                     <h3 class="alert alert-danger">No hay pedidos dados de alta</h1>
                 <% } %>
             </div>
+            <br>
             <button type="button" class="btn btn-dark">Nuevo Pedido</button>
         </div>
             

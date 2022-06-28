@@ -10,12 +10,13 @@
         <%- include('../partials/header') %>
 
         <div class="container mt-3">
-            <h2>ABM de Productos</h2>
-            <p>Listado de Productos de Argentina Aventura   </p>
+            <h1><strong>ABM de Productos</strong></h1>
+            <p>Listado de Productos de Argentina Aventura</p>
+            <br>
             <% const hayProductos=productosList.length> 0; %>
             <div class="table-responsive">
                 <% if(hayProductos){ %>                
-                    <table class="table table-bordered">
+                    <table class="table table-bordered tablaABM">
                         <thead>
                             <tr>
                                 <th>Id Product</th>
@@ -30,7 +31,7 @@
                         <tbody>
                         <% for (const item of productosList) {%>
                             <tr>
-                                <td><%= item.id %></td>
+                                <td id="idProducto"><%= item.id %></td>
                                 <td><%= item.nombre %></td>
                                 <td><%= item.descripcion %></td>
                                 <td><%= item.precio %></td>
@@ -38,7 +39,7 @@
                                 <td><%= item.imagenURL %></td>
                                 <td>
                                     <a href="#">modificar</a>
-                                    &nbsp;&nbsp;<a href="#">borrar</a>
+                                    &nbsp;&nbsp;<a href='/producto/borrar/<%= item.id %>'>borrar</a>
                                 </td>
                             </tr>
                         <%};%>
@@ -48,6 +49,7 @@
                     <h3 class="alert alert-danger">No hay productos dados de alta</h1>
                 <% } %>
             </div>
+            <br>
             <button type="button" class="btn btn-dark">Nuevo Producto</button>
         </div>
             
@@ -55,5 +57,7 @@
         <%- include('../partials/footer') %>
         
     </body>
+
+
 
 </html>

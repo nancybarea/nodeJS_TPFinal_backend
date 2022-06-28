@@ -122,12 +122,47 @@ export async function abmUsuarios(req, res) {
   }
 }
 
+//usuarioBorrar
+export async function usuarioBorrar(req, res) {
+  const email = req.params.email
+  logger.info(`web: GET /usuario/borrar/${email}`)
+
+  try{
+    const title = 'ABM de Usuarios'
+    await usuarios.deleteUsuario(email)
+    const usuariosList = await usuarios.getUsuarios()
+    res.render('pages/abmUsuarios', { titulo: title, usuariosList })
+  }
+  catch (err){
+      logger.error(err);
+      res.status(err.estado).json(err)
+  }
+}
+
+
 //abmProductos
 export async function abmProductos(req, res) {
   logger.info(`web: GET /abmProductos`)
 
   try{
     const title = 'ABM de Productos'
+    const productosList = await productos.getProductos()
+    res.render('pages/abmProductos', { titulo: title, productosList })
+  }
+  catch (err){
+      logger.error(err);
+      res.status(err.estado).json(err)
+  }
+}
+
+//productoBorrar
+export async function productoBorrar(req, res) {
+  const id = req.params.id
+  logger.info(`web: GET /producto/borrar/${id}`)
+
+  try{
+    const title = 'ABM de Productos'
+    await productos.deleteProducto(id)
     const productosList = await productos.getProductos()
     res.render('pages/abmProductos', { titulo: title, productosList })
   }
@@ -152,6 +187,23 @@ export async function abmCarritos(req, res) {
   }
 }
 
+//carritoBorrar
+export async function carritoBorrar(req, res) {
+  const id = req.params.id
+  logger.info(`web: GET /carrito/borrar/${id}`)
+
+  try{
+    const title = 'ABM de Carritos'
+    await carritos.deleteCarrito(id)
+    const carritosList = await carritos.getCarritos()
+    res.render('pages/abmCarritos', { titulo: title, carritosList })
+  }
+  catch (err){
+      logger.error(err);
+      res.status(err.estado).json(err)
+  }
+}
+
 //abmPedidos
 export async function abmPedidos(req, res) {
   logger.info(`web: GET /abmPedidos`)
@@ -167,12 +219,46 @@ export async function abmPedidos(req, res) {
   }
 }
 
+//pedidoBorrar
+export async function pedidoBorrar(req, res) {
+  const id = req.params.id
+  logger.info(`web: GET /pedido/borrar/${id}`)
+
+  try{
+    const title = 'ABM de Pedidos'
+    await pedidos.deletePedido(id)
+    const pedidosList = await pedidos.getPedidos()
+    res.render('pages/abmPedidos', { titulo: title, pedidosList })
+  }
+  catch (err){
+      logger.error(err);
+      res.status(err.estado).json(err)
+  }
+}
+
 //abmMensajes
 export async function abmMensajes(req, res) {
   logger.info(`web: GET /abmMensajes`)
 
   try{
     const title = 'ABM de Mensajes'
+    const mensajesChatList = await chat.getMensajesChat()
+    res.render('pages/abmMensajes', { titulo: title, mensajesChatList })
+  }
+  catch (err){
+      logger.error(err);
+      res.status(err.estado).json(err)
+  }
+}
+
+//pedidoBorrar
+export async function mensajeChatBorrar(req, res) {
+  const id = req.params.id
+  logger.info(`web: GET /mensajeChat/borrar/${id}`)
+
+  try{
+    const title = 'ABM de Mensajes de Chat'
+    await chat.deleteMensajesChat(id)
     const mensajesChatList = await chat.getMensajesChat()
     res.render('pages/abmMensajes', { titulo: title, mensajesChatList })
   }

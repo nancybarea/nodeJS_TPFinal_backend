@@ -34,6 +34,17 @@ export default class UsuariosApi {
         }
     }
 
+    //deletePedido
+    async deleteUsuario(email) {
+        try{
+            return await this.usuariosDao.deleteByEmail(email);
+        }
+        catch (err){
+            logger.error(`Error al borrar el usuario con email: ${email}: ${err}`);
+            throw new CustomError(401, `Error al borrar el usuario con email: ${email}`, err)
+        }
+    }  
+
     //login de usuario
     async login(email, password){
         logger.info(`UsuariosApi.js - login`)

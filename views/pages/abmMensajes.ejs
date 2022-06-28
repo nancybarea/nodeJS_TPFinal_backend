@@ -10,16 +10,18 @@
         <%- include('../partials/header') %>
 
         <div class="container mt-3">
-            <h2>ABM de Mensajes del Chat</h2>
+            <h1><strong>ABM de Mensajes del Chat</strong></h1>
+            <br>
             <p>Listado de mensajes del chat en Argentina Aventura   </p>
             <% const hayProductos=mensajesChatList.length> 0; %>
             <div class="table-responsive">
                 <% if(hayProductos){ %>                
-                    <table class="table table-bordered">
+                    <table class="table table-bordered tablaABM">
                         <thead>
                             <tr>
                                 <th>Id Mensaje</th>
                                 <th>email</th>
+                                <th>Fecha y hora</th>
                                 <th>mensaje</th>
                                 <th>Acciones</th>
                             </tr>
@@ -29,10 +31,11 @@
                             <tr>
                                 <td><%= item.id %></td>
                                 <td><%= item.email %></td>
+                                <td><%= item.fechaHora %></td>                                
                                 <td><%= item.mensaje %></td>
                                 <td>
                                     <a href="#">modificar</a>
-                                    &nbsp;&nbsp;<a href="#">borrar</a>
+                                    &nbsp;&nbsp;<a href='/mensajeChat/borrar/<%= item.id %>'>borrar</a>
                                 </td>
                             </tr>
                         <%};%>
@@ -42,6 +45,7 @@
                     <h3 class="alert alert-danger">No hay mensajes dados de alta</h1>
                 <% } %>
             </div>
+            <br>
             <button type="button" class="btn btn-dark">Nuevo Mensaje</button>
         </div>
             

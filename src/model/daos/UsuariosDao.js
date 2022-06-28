@@ -12,4 +12,8 @@ export default class UsuariosDao extends ContainerDao {
     return super.getById({"email":email})
   }
 
+  async deleteByEmail(email) {
+    return await super.deleteById({ email: email })
+  }
+
 }

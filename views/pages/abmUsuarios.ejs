@@ -12,12 +12,13 @@
         <%- include('../partials/header') %>
 
         <div class="container mt-3">
-            <h2>ABM de Usuarios</h2>
+            <h1><strong>ABM de Usuarios</strong></h1>
+            <br>
             <p>Listado de Usuarios de Argentina Aventura   </p>
             <% const hayProductos=usuariosList.length> 0; %>
             <div class="table-responsive">
                 <% if(hayProductos){ %>                
-                    <table class="table table-bordered">
+                    <table class="table table-bordered tablaABM">
                         <thead>
                             <tr>
                                 <th>email</th>
@@ -36,7 +37,7 @@
                                 <td><%= item.roles %></td>
                                 <td>
                                     <a href="#">modificar</a>
-                                    &nbsp;&nbsp;<a href="#">borrar</a>
+                                    &nbsp;&nbsp;<a href='/usuario/borrar/<%= item.email %>'>borrar</a>
                                 </td>
                             </tr>
                         <%};%>
@@ -46,6 +47,7 @@
                     <h3 class="alert alert-danger">No hay usuarios dados de alta</h1>
                 <% } %>
             </div>
+            <br>
             <button type="button" class="btn btn-dark">Nuevo Usuario</button>
         </div>
             
