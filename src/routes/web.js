@@ -32,7 +32,10 @@ webRoutes.post('/registrarse',
 //LOGUEARSE
 webRoutes.get('/login', webController.getLogin);
 //POST '/login' -> genera el login del usuario y renderiza la pantalla de inicio logeado
-webRoutes.post('/login', passport.authenticate('login', {failureRedirect: '/failLogin'}), webController.getRegistrarse);
+webRoutes.post('/login', passport.authenticate('login', {failureRedirect: '/failLogin'}), webController.postLogin);
+
+//DESLOGUEARSE
+webRoutes.get('/logout', webController.getLogout);
 
 //SUBIR ARCHIVOS
 webRoutes.get('/subirArchivos', webController.getSubirArchivo);

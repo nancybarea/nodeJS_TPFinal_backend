@@ -13,28 +13,16 @@ const productos = new ProductosApi();
 const carritos = new CarritosApi();
 const pedidos = new PedidosApi();
 const chat = new ChatApi();
+let rolUsuario = undefined
+let nombreUsuario = ""
 
 //getInicio
 export async function getInicio(req, res) {
   logger.info(`web: GET / `)
   const title = 'ecomerce'
-  const info = {    
-    'argumentos_entrada':process.argv.slice(2),
-    'plataforma':process.platform,
-    'version_node': process.version,
-    'memoria_total_reservada':process.memoryUsage().rss,
-    'path_ejecucion': process.execPath,
-    'process_id':process.pid,
-    'carpeta_proyecto': process.cwd(),
-    'cantidad_cpus': cantidadDeCPUs
-  }
 
   try{
-    const productosList = await productos.getProductos()
-    const carritosList = await carritos.getCarritos()
-    const pedidosList = await pedidos.getPedidos()
-    const mensajesChatList = await chat.getMensajesChat()
-    res.render('pages/index', { titulo: title, user: undefined, info, productosList,carritosList,pedidosList,mensajesChatList })
+    res.render('pages/index', { titulo: title, rol: rolUsuario, nombre: nombreUsuario })
   }
   catch (err){
       logger.error(err);
@@ -46,41 +34,52 @@ export async function getInicio(req, res) {
 export async function getRegistrarse(req, res) {
   logger.info(`web: GET /registrarse`)
   const title = 'Registrarse'
-  res.render('pages/registrarse', { titulo: title })
+  res.render('pages/registrarse', { titulo: title, rol: rolUsuario, nombre: nombreUsuario })
 }
 
 //getlogin
 export async function getLogin(req, res) {
   logger.info(`web: GET /login`)
   const title = 'Login'
-  res.render('pages/login', { titulo: title })
+  rolUsuario = "admin" //para probar pq no me anda el login
+  res.render('pages/login', { titulo: title, rol: rolUsuario, nombre: nombreUsuario })
 }
 
 //postlogin
 export async function postLogin(req, res) {
   logger.info(`web: POST /login`)
-  const user = req.body.email;
+  //const email = req.body.email;
+  //const usuario = await usuarios.getUsuarios(email)
+  //nombreUsuario = usuario.nombre
+  rolUsuario = "admin" //esto seria el rol q tiene usuario o admin , si son ambos toma admin q ve todo
   const title = 'ecomerce'
-  res.render('pages/index', { titulo: title, user })
+  res.render('pages/index', { titulo: title, rol: rolUsuario, nombre: rolUsuario })
+}
+
+//getLogout
+export async function getLogout(req, res) {
+  logger.info(`web: GET /logout`)
+  const title = 'Logout'
+  res.render('pages/index', { titulo: title, rol: undefined, nombre: "" })
 }
 
 //getfailLogin
 export async function getfailLogin(req, res) {
   const title = 'Error: usuario y/o contraseña no válidos'
-  res.render('pages/error', { titulo: title, detalle: undefined })
+  res.render('pages/error', { titulo: title, detalle: undefined, rol: rolUsuario, nombre: nombreUsuario })
 }
 
 //getfailRegistro
 export async function getfailRegistro(req, res) {
   const title = 'Error: en el registro de usuario'
-  res.render('pages/error', { titulo: title, detalle: undefined })
+  res.render('pages/error', { titulo: title, detalle: undefined, rol: rolUsuario, nombre: nombreUsuario })
 }
 
 //getfailRegistro
 export async function getSubirArchivo(req, res) {
   logger.info(`web: GET /subirArchivo`)
   const title = 'Subir Archivo'
-  res.render('pages/subirArchivos', { titulo: title })
+  res.render('pages/subirArchivos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario })
 }
 
 //infoServer
@@ -99,7 +98,7 @@ export async function infoServer(req, res) {
   }
 
   try{
-    res.render('pages/infoServer', { titulo: title, user: undefined, info })
+    res.render('pages/infoServer', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, info })
   }
   catch (err){
       logger.error(err);
@@ -114,7 +113,7 @@ export async function mensajesChat(req, res) {
   try{
     const title = 'Mensajes del Chat'
     const mensajesChatList = await chat.getMensajesChat()
-    res.render('pages/chat', { titulo: title, mensajesChatList })
+    res.render('pages/chat', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, mensajesChatList })
   }
   catch (err){
       logger.error(err);
@@ -129,7 +128,7 @@ export async function abmUsuarios(req, res) {
   try{
     const title = 'ABM de Usuarios'
     const usuariosList = await usuarios.getUsuarios()
-    res.render('pages/abmUsuarios', { titulo: title, usuariosList })
+    res.render('pages/abmUsuarios', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, usuariosList })
   }
   catch (err){
       logger.error(err);
@@ -146,7 +145,7 @@ export async function usuarioBorrar(req, res) {
     const title = 'ABM de Usuarios'
     await usuarios.deleteUsuario(email)
     const usuariosList = await usuarios.getUsuarios()
-    res.render('pages/abmUsuarios', { titulo: title, usuariosList })
+    res.render('pages/abmUsuarios', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, usuariosList })
   }
   catch (err){
       logger.error(err);
@@ -162,7 +161,7 @@ export async function abmProductos(req, res) {
   try{
     const title = 'ABM de Productos'
     const productosList = await productos.getProductos()
-    res.render('pages/abmProductos', { titulo: title, productosList })
+    res.render('pages/abmProductos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, productosList })
   }
   catch (err){
       logger.error(err);
@@ -179,7 +178,7 @@ export async function productoBorrar(req, res) {
     const title = 'ABM de Productos'
     await productos.deleteProducto(id)
     const productosList = await productos.getProductos()
-    res.render('pages/abmProductos', { titulo: title, productosList })
+    res.render('pages/abmProductos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, productosList })
   }
   catch (err){
       logger.error(err);
@@ -194,7 +193,7 @@ export async function abmCarritos(req, res) {
   try{
     const title = 'ABM de Carritos'
     const carritosList = await carritos.getCarritos()
-    res.render('pages/abmCarritos', { titulo: title, carritosList })
+    res.render('pages/abmCarritos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, carritosList })
   }
   catch (err){
       logger.error(err);
@@ -211,7 +210,7 @@ export async function carritoBorrar(req, res) {
     const title = 'ABM de Carritos'
     await carritos.deleteCarrito(id)
     const carritosList = await carritos.getCarritos()
-    res.render('pages/abmCarritos', { titulo: title, carritosList })
+    res.render('pages/abmCarritos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, carritosList })
   }
   catch (err){
       logger.error(err);
@@ -226,7 +225,7 @@ export async function abmPedidos(req, res) {
   try{
     const title = 'ABM de Pedidos'
     const pedidosList = await pedidos.getPedidos()
-    res.render('pages/abmPedidos', { titulo: title, pedidosList })
+    res.render('pages/abmPedidos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, pedidosList })
   }
   catch (err){
       logger.error(err);
@@ -243,7 +242,7 @@ export async function pedidoBorrar(req, res) {
     const title = 'ABM de Pedidos'
     await pedidos.deletePedido(id)
     const pedidosList = await pedidos.getPedidos()
-    res.render('pages/abmPedidos', { titulo: title, pedidosList })
+    res.render('pages/abmPedidos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, pedidosList })
   }
   catch (err){
       logger.error(err);
@@ -258,7 +257,7 @@ export async function abmMensajes(req, res) {
   try{
     const title = 'ABM de Mensajes'
     const mensajesChatList = await chat.getMensajesChat()
-    res.render('pages/abmMensajes', { titulo: title, mensajesChatList })
+    res.render('pages/abmMensajes', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, mensajesChatList })
   }
   catch (err){
       logger.error(err);
@@ -275,7 +274,7 @@ export async function mensajeChatBorrar(req, res) {
     const title = 'ABM de Mensajes de Chat'
     await chat.deleteMensajesChat(id)
     const mensajesChatList = await chat.getMensajesChat()
-    res.render('pages/abmMensajes', { titulo: title, mensajesChatList })
+    res.render('pages/abmMensajes', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, mensajesChatList })
   }
   catch (err){
       logger.error(err);

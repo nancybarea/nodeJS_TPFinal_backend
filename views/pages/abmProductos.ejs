@@ -9,8 +9,10 @@
         <!-- header -->
         <%- include('../partials/header') %>
 
+        <!--main -->
         <div class="container mt-3">
             <h1><strong>ABM de Productos</strong></h1>
+            <!-- Listado de productos -->
             <p>Listado de Productos de Argentina Aventura</p>
             <br>
             <% const hayProductos=productosList.length> 0; %>
@@ -49,6 +51,7 @@
                     <h3 class="alert alert-danger">No hay productos dados de alta</h1>
                 <% } %>
             </div>
+            <!-- boton para crear Nuevo Producto -->
             <br>
             <button type="button" class="btn btn-dark">Nuevo Producto</button>
         </div>
