@@ -18,7 +18,7 @@ let nombreUsuario = ""
 
 //getInicio
 export async function getInicio(req, res) {
-  logger.info(`web: GET / `)
+  logger.info(`webController.js: getInicio`)
   const title = 'ecomerce'
 
   try{
@@ -32,14 +32,14 @@ export async function getInicio(req, res) {
 
 //getRegistrarse
 export async function getRegistrarse(req, res) {
-  logger.info(`web: GET /registrarse`)
+  logger.info(`webController.js: getRegistrarse`)
   const title = 'Registrarse'
   res.render('pages/registrarse', { titulo: title, rol: rolUsuario, nombre: nombreUsuario })
 }
 
 //getlogin
 export async function getLogin(req, res) {
-  logger.info(`web: GET /login`)
+  logger.info(`webController.js: getLogin`)
   const title = 'Login'
   rolUsuario = "admin" //para probar pq no me anda el login
   res.render('pages/login', { titulo: title, rol: rolUsuario, nombre: nombreUsuario })
@@ -47,7 +47,7 @@ export async function getLogin(req, res) {
 
 //postlogin
 export async function postLogin(req, res) {
-  logger.info(`web: POST /login`)
+  logger.info(`webController.js: postLogin`)
   //const email = req.body.email;
   //const usuario = await usuarios.getUsuarios(email)
   //nombreUsuario = usuario.nombre
@@ -58,26 +58,28 @@ export async function postLogin(req, res) {
 
 //getLogout
 export async function getLogout(req, res) {
-  logger.info(`web: GET /logout`)
+  logger.info(`webController.js: getLogout`)
   const title = 'Logout'
   res.render('pages/index', { titulo: title, rol: undefined, nombre: "" })
 }
 
 //getfailLogin
 export async function getfailLogin(req, res) {
-  const title = 'Error: usuario y/o contraseña no válidos'
+  logger.info(`webController.js: getfailLogin`)
+  const title = 'El usuario y/o contraseña ingresada son incorrectas'
   res.render('pages/error', { titulo: title, detalle: undefined, rol: rolUsuario, nombre: nombreUsuario })
 }
 
 //getfailRegistro
 export async function getfailRegistro(req, res) {
-  const title = 'Error: en el registro de usuario'
+  logger.info(`webController.js: getfailRegistro`)
+  const title = 'No fue posible registrar el usuario, intente más tarde o comuniquesé con el administrador.'
   res.render('pages/error', { titulo: title, detalle: undefined, rol: rolUsuario, nombre: nombreUsuario })
 }
 
 //getfailRegistro
 export async function getSubirArchivo(req, res) {
-  logger.info(`web: GET /subirArchivo`)
+  logger.info(`webController.js: getSubirArchivo`)
   const title = 'Subir Archivo'
   res.render('pages/subirArchivos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario })
 }
@@ -108,7 +110,7 @@ export async function infoServer(req, res) {
 
 //mensajesChat
 export async function mensajesChat(req, res) {
-  logger.info(`web: GET /chat`)
+  logger.info(`webController.js: mensajesChat`)
 
   try{
     const title = 'Mensajes del Chat'
@@ -123,7 +125,7 @@ export async function mensajesChat(req, res) {
 
 //abmUsuarios
 export async function abmUsuarios(req, res) {
-  logger.info(`web: GET /abmUsuarios`)
+  logger.info(`webController.js: abmUsuarios`)
 
   try{
     const title = 'ABM de Usuarios'
@@ -139,7 +141,7 @@ export async function abmUsuarios(req, res) {
 //usuarioBorrar
 export async function usuarioBorrar(req, res) {
   const email = req.params.email
-  logger.info(`web: GET /usuario/borrar/${email}`)
+  logger.info(`webController.js: usuarioBorrar - ${email}`)
 
   try{
     const title = 'ABM de Usuarios'
@@ -156,7 +158,7 @@ export async function usuarioBorrar(req, res) {
 
 //abmProductos
 export async function abmProductos(req, res) {
-  logger.info(`web: GET /abmProductos`)
+  logger.info(`webController.js: abmProductos`)
 
   try{
     const title = 'ABM de Productos'
@@ -172,7 +174,7 @@ export async function abmProductos(req, res) {
 //productoBorrar
 export async function productoBorrar(req, res) {
   const id = req.params.id
-  logger.info(`web: GET /producto/borrar/${id}`)
+  logger.info(`webController.js: productoBorrar - ${id}`)
 
   try{
     const title = 'ABM de Productos'
@@ -188,7 +190,7 @@ export async function productoBorrar(req, res) {
 
 //abmCarritos
 export async function abmCarritos(req, res) {
-  logger.info(`web: GET /abmCarritos`)
+  logger.info(`webController.js: abmCarritos`)
 
   try{
     const title = 'ABM de Carritos'
@@ -204,7 +206,7 @@ export async function abmCarritos(req, res) {
 //carritoBorrar
 export async function carritoBorrar(req, res) {
   const id = req.params.id
-  logger.info(`web: GET /carrito/borrar/${id}`)
+  logger.info(`webController.js: carritoBorrar - ${id}`)
 
   try{
     const title = 'ABM de Carritos'
@@ -220,7 +222,7 @@ export async function carritoBorrar(req, res) {
 
 //abmPedidos
 export async function abmPedidos(req, res) {
-  logger.info(`web: GET /abmPedidos`)
+  logger.info(`webController.js: abmPedidos`)
 
   try{
     const title = 'ABM de Pedidos'
@@ -236,7 +238,7 @@ export async function abmPedidos(req, res) {
 //pedidoBorrar
 export async function pedidoBorrar(req, res) {
   const id = req.params.id
-  logger.info(`web: GET /pedido/borrar/${id}`)
+  logger.info(`webController.js: pedidoBorrar - ${id}`)
 
   try{
     const title = 'ABM de Pedidos'
@@ -252,7 +254,7 @@ export async function pedidoBorrar(req, res) {
 
 //abmMensajes
 export async function abmMensajes(req, res) {
-  logger.info(`web: GET /abmMensajes`)
+  logger.info(`webController.js: abmMensajes`)
 
   try{
     const title = 'ABM de Mensajes'
@@ -268,7 +270,7 @@ export async function abmMensajes(req, res) {
 //pedidoBorrar
 export async function mensajeChatBorrar(req, res) {
   const id = req.params.id
-  logger.info(`web: GET /mensajeChat/borrar/${id}`)
+  logger.info(`webController.js: mensajeChatBorrar - ${id}`)
 
   try{
     const title = 'ABM de Mensajes de Chat'

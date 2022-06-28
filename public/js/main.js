@@ -1,23 +1,24 @@
+//------------------------------------------------------------
+//--------------------  DEFINICIONES -------------------------
 const socket = io.connect();
 
-socket.on('listadoMensajesChat', async msjs => {
-    console.log("entro a listadoMensajesChat")
-    const plantilla = await buscarPlantillaMensajes()
-    const html = armarHTML(plantilla, msjs)
-    document.getElementById('listadoDeMensajes').innerHTML = html;
-});
+//------------------------------------------------------------
+//--------------------  FUNCIONES ----------------------------
 
+//buscarPlantillaMensajes
 function buscarPlantillaMensajes() {
     return fetch('/plantillas/mensajesChat.ejs')
         .then(respuesta => respuesta.text())
 }
 
+//armarHTML
 function armarHTML(plantilla, mensajesChat) {
     const render = ejs.compile(plantilla);
     const html = render({ mensajesChat }) 
     return html
 }
 
+//agregarMensaje
 function agregarMensaje(e) {
     const mensaje = {
        email: document.getElementById('email').value,
@@ -27,3 +28,13 @@ function agregarMensaje(e) {
     socket.emit('nuevoMensajeChat', mensaje);
     return false;
 }
+
+//------------------------------------------------------------
+//--------------------  PRINCIPAL-----------------------------
+socket.on('listadoMensajesChat', async mensajesChat => {
+    const plantilla = await buscarPlantillaMensajes()
+    const html = armarHTML(plantilla, mensajesChat)
+    document.getElementById('listadoDeMensajes').innerHTML = html;
+});
+//------------------------------------------------------------
+

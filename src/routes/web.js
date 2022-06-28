@@ -1,6 +1,6 @@
 import { Router } from 'express'
-import passport from 'passport';
 import * as webController from '../controller/webController.js'
+import passport from '../controller/PassportController.js'
 import logger from '../logger.js'
 
 const webRoutes = new Router();
@@ -31,8 +31,11 @@ webRoutes.post('/registrarse',
 
 //LOGUEARSE
 webRoutes.get('/login', webController.getLogin);
-//POST '/login' -> genera el login del usuario y renderiza la pantalla de inicio logeado
-webRoutes.post('/login', passport.authenticate('login', {failureRedirect: '/failLogin'}), webController.postLogin);
+//POST '/login' --> recibe email y password del usuario
+webRoutes.post('/login', passport.authenticate('login', {
+  failureRedirect: '/failLogin'}),
+  webController.postLogin
+);
 
 //DESLOGUEARSE
 webRoutes.get('/logout', webController.getLogout);

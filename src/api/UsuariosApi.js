@@ -11,13 +11,14 @@ export default class UsuariosApi {
     }
 
     async getUsuarios() {
+        logger.info(`UsuariosApi.js - getUsuarios`);
         const usuariosObj = await this.usuariosDao.getAll();
         return usuariosObj;
     }   
 
     //alta de usuario nuevo
     async crearUsuario(objetoUsuario){
-
+        logger.info(`UsuariosApi.js - crearUsuario`);
         if (!objetoUsuario.username) throw new CustomError(404, `El campo 'email' es obligatorio `)
         if (!objetoUsuario.password) throw new CustomError(404, `El campo 'password' es obligatorio `)
         
@@ -36,6 +37,8 @@ export default class UsuariosApi {
 
     //deletePedido
     async deleteUsuario(email) {
+        logger.info(`UsuariosApi.js - deleteUsuario`);
+
         try{
             return await this.usuariosDao.deleteByEmail(email);
         }
@@ -64,6 +67,7 @@ export default class UsuariosApi {
 
     //enviarEmailNuevoUsuario
     async enviarEmailNuevoUsuario(objetoUsuario){
+        logger.info(`UsuariosApi.js - enviarEmailNuevoUsuario`);
         try {
             let correoDestino = process.env.MAIL_USER_ADMIN
             let asunto = 'Nuevo registro'
