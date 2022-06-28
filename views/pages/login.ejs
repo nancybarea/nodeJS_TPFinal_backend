@@ -2,53 +2,34 @@
 
 <html lang="es">
 
-  <head>
-    <title>Login</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
+  <head> 
+    <%- include('../partials/head') %>
+</head>
 
-  <body>
-    <div class="container my-5">
-      <div class=jumbotron>
-        <h1>LOGIN</h1>
-        
-        <br>
+  <body class="fondo__degrade">
 
-        <form action="/login" method="post" class="form">
-          <!-- email -->
-          <div class="form-group">
-            <input id='email' name='email' placeholder="email" class="form-control" type="text" required>
-          </div>
-          <!--password -->
-          <div class="form-group">
-            <input id='password' name='password' placeholder="password" class="form-control" type="password" required>
-          </div>
-          <!-- botón login -->
-          <div class="form-group">
-            <input type="submit" value="Aceptar" class="btn btn-success my-3" >
-          </div>
-        </form>
+    <!-- header -->
+    <%- include('../partials/header') %>
 
-        <hr>
-        <!-- boton registrarse -->
-        <div class="text-center"></div>
-          <button class="btn btn-success my-3" onclick="registrarse()">Registrarse</button>
-        </div>
+    <!-- cuerpo de la pagina  -->
+    <main class="main__login fondo__degrade">
+      <h1 class="section-heading text-uppercase pt-4 pb-4"><strong>Iniciar Sesión</strong></h1>
+      <fieldset>
+          <form action="/login" method="post" enctype="text/plain">
+              <label for="usuario"><i class="fas fa-user"></i> Usuario : </label>
+              <input type="text" class="mb-4 p-1" name="email" id="email" placeholder="Ingrese su email">
+              <label for="clave"><i class="fas fa-key"></i> Contraseña : </label>
+              <input type="password" class="mb-4 p-1" name="password" id="password" placeholder="Ingrese su contraseña">
+              <br>
+              <input type="submit" class="login__btn mt-4 p-2" name="Aceptar" value="Aceptar">
+          </form>
+      </fieldset>
+      <a href="#">¿Olvidaste tu contraseña?</a>
+      <a href="registrarse">Registrarse</a>
+    </main>
 
-    </div>
-
-    <script>
-      function redireccionar(pagina) {
-        location.href = pagina;
-      }
-      function registrarse() {
-        redireccionar('/registrarse');
-      }
-    </script>
+    <!-- header -->
+    <%- include('../partials/footer') %>
 
   </body>
 </html>

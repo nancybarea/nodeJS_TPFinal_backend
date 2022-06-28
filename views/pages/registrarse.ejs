@@ -2,14 +2,13 @@
 <html lang="es">
 
 <head>
-  <title>Registrarse</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <%- include('../partials/head') %>
 </head>
 
-<body>
+<body class="fondo__degrade">
+  <!-- header -->
+  <%- include('../partials/header') %>
+
   <div class="container my-5">
     <div class=jumbotron>
       <h2>Registrarse en Argentina Aventura</h2>
@@ -96,6 +95,11 @@
         </div>
       </form>
   </div>
+</div>
+
+  <!-- header -->
+  <%- include('../partials/footer') %>
+
 </body>
 
 </html>
