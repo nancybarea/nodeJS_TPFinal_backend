@@ -3,16 +3,15 @@
 const socket = io.connect();
 
 //------------------------------------------------------------
-//--------------------  FUNCIONES ----------------------------
-
+//----------  FUNCIONES PARA EL CHAT -------------------------
 //buscarPlantillaMensajes
 function buscarPlantillaMensajes() {
-    return fetch('/plantillas/mensajesChat.ejs')
+    return fetch('/plantillas/listadoMensajesChat.ejs')
         .then(respuesta => respuesta.text())
 }
 
-//armarHTML
-function armarHTML(plantilla, mensajesChat) {
+//armarHTML del chat
+function armarHTMLChat(plantilla, mensajesChat) { //mantener el nombre mensajesChat como dice plantilla ejs
     const render = ejs.compile(plantilla);
     const html = render({ mensajesChat }) 
     return html
@@ -32,8 +31,9 @@ function agregarMensaje(e) {
 //------------------------------------------------------------
 //--------------------  PRINCIPAL-----------------------------
 socket.on('listadoMensajesChat', async mensajesChat => {
+    console.log("entro a socket on main.js")
     const plantilla = await buscarPlantillaMensajes()
-    const html = armarHTML(plantilla, mensajesChat)
+    const html = armarHTMLChat(plantilla, mensajesChat)
     document.getElementById('listadoDeMensajes').innerHTML = html;
 });
 //------------------------------------------------------------

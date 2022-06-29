@@ -40,7 +40,7 @@ if (modo === "CLUSTER") {
         })
     } else { /* WORKERS */
 
-        const server = app.listen(PORT, () => {
+        const server = httpServer.listen(PORT, () => {
             logger.info(`Http server listening on port ${server.address().port} - PID WORKER ${process.pid}`)
         })
         
@@ -49,7 +49,7 @@ if (modo === "CLUSTER") {
 
 } else {
 
-    const server = app.listen(PORT, () => {
+    const server = httpServer.listen(PORT, () => {
         logger.info(`Http server listening on port ${server.address().port} - PID WORKER ${process.pid} - MODO ${modo}`)
     })
     

@@ -387,3 +387,14 @@
     at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)
     at Function.handle (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:174:3)
     at router (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:47:12)
+[2022-06-28T21:33:50.536] [ERROR] default - Error: No default engine was specified and no extension was provided.
+    at new View (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\view.js:61:11)
+    at Function.render (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\application.js:570:12)
+    at ServerResponse.render (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\response.js:1017:7)
+    at getInicio (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/webController.js:25:9)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)

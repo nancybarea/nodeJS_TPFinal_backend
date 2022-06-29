@@ -16,7 +16,6 @@ import webRoutes from './routes/web.js';
 
 const app = express()
 app.use(express.static('public'))
-//app.use('/public', express.static('public'))
 app.use(json()) //mdw para extraer el json que viene en las peticiones
 app.use(urlencoded({ extended: true }))  //mdw para poder extraer los datos que vienen en la url cuando se envia un formulario (el true para poder enviar objetos anidados)
 //app.use(cors()); //para comunicarme con el front 
