@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import  * as chatController from '../controller/ChatController.js'
 import passport from '../controller/PassportController.js'
+import { esAdministrador } from '../controller/UsuariosController.js'
 
 const ChatRoutes = new Router();
 
@@ -15,6 +16,7 @@ ChatRoutes.post('/',
 //GET '/producto' -> devuelve todos los productos
 ChatRoutes.delete('/:idMensajeChat', 
         passport.authenticate('jwt', { session: false }), 
+        esAdministrador,
         chatController.borrarMensajeChat)
 
 export default ChatRoutes 

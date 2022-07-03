@@ -1767,3 +1767,15 @@
   descripcion: 'Document not found in undefined with that {"id":"ECYG7O5A5EK9W73HI9ZWV2"}',
   detalles: undefined
 }
+[2022-07-03T01:10:01.564] [ERROR] default - Error al solicitar el pedido 1O158620OO26F8T7PUIYQ3: [object Object]
+[2022-07-03T01:10:01.565] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al solicitar el pedido 1O158620OO26F8T7PUIYQ3',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"id":"1O158620OO26F8T7PUIYQ3"}',
+    detalles: undefined
+  }
+}
+[2022-07-03T01:10:39.982] [WARN] default - El usuario usuario@gmail.com no tiene permisos de administrador y quizo acceder a una ruta no autorizada.
+[2022-07-03T01:11:19.621] [WARN] default - El usuario usuario@gmail.com no tiene permisos de administrador y quizo acceder a una ruta no autorizada.

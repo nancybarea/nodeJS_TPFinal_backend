@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import  * as productosController from '../controller/ProductosController.js'
 import passport from '../controller/PassportController.js'
+import { esAdministrador } from '../controller/UsuariosController.js'
 
 const ProductosRoutes = new Router();
 
@@ -13,14 +14,17 @@ ProductosRoutes.get('/:idProducto',
 //POST '/producto' -> recibe y agrega un producto, y lo devuelve con su id asignado
 ProductosRoutes.post('/', 
         passport.authenticate('jwt', { session: false }), 
+        esAdministrador,
         productosController.agregarProducto)
 //PUT '/producto/' -> recibe y actualiza un producto según su id.
 ProductosRoutes.put('/', 
         passport.authenticate('jwt', { session: false }), 
+        esAdministrador,
         productosController.actualizarProducto)
 //DELETE '/producto/:id' -> elimina un producto según su id.
 ProductosRoutes.delete('/:idProducto', 
         passport.authenticate('jwt', { session: false }), 
+        esAdministrador,
         productosController.borrarProducto)
 
 export default ProductosRoutes 

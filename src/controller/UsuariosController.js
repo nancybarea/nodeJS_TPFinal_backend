@@ -78,10 +78,27 @@ export async function borrarUsuario(req, res) {
 }
 
 export function validarToken(token, cb) {
-
+    logger.info(`UsuariosController.js: validarToken`)
     if (token.exp < Math.floor(Date.now() / 1000)) {
         logger.warn('El token ha caducado, debe volver a loguearse para generar un nuevo token')
         return cb(null, false)
     }
     else return cb(null, token.user);
+}
+
+export function esAdministrador(req, res, next) {
+    logger.info(`UsuariosController.js: esAdministrador`)
+    let administrador = false
+    req.user.roles.forEach(element => {
+        if (element == 'admin')
+            administrador = true
+    });
+
+    if(administrador)
+        next()
+    else{
+        logger.warn(`El usuario ${req.user.email} no tiene permisos de administrador y quizo acceder a una ruta no autorizada.`);
+        res.status(403).json({ error: `Ruta no autorizada. El usuario ${req.user.email} no tiene permisos de administrador.` })
+    }
+
 }

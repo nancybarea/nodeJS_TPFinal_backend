@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import  * as pedidosController from '../controller/PedidosController.js'
 import passport from '../controller/PassportController.js'
+import { esAdministrador } from '../controller/UsuariosController.js'
 
 const PedidosRoutes = new Router();
 
@@ -23,6 +24,7 @@ PedidosRoutes.post('/',
 //GET '/pedidos/{email}' -> devuelve un pedido pasado como parametro (lo puede ver administrador)
 PedidosRoutes.delete('/:idPedido', 
             passport.authenticate('jwt', { session: false }), 
+            esAdministrador,
             pedidosController.borrarPedido)
 
 export default PedidosRoutes 
