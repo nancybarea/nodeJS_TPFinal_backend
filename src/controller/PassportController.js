@@ -1,8 +1,10 @@
 import passport from 'passport';
 import { Strategy } from 'passport-local';
+import { Strategy as JWTstrategy } from 'passport-jwt';
 import logger from '../logger.js'
-
+import { jwtOpts } from '../../config/config.js'
 import UsuariosApi from '../api/UsuariosApi.js' 
+import {validarToken} from '../controller/UsuariosController.js' 
 const users = new UsuariosApi();
 
 //creacion de las estragias de passport
@@ -51,5 +53,7 @@ passport.deserializeUser((user, done) => {
     //user = obtenerUsuarioPorEmail(email) // en vez de ser (user,done) seria (email, done)
     done(null, user)
 })
+
+passport.use(new JWTstrategy(jwtOpts, validarToken));
 
 export default passport;

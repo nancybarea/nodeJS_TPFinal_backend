@@ -1,18 +1,17 @@
 import express, { json, urlencoded } from 'express';
 import session from 'express-session';
-import cors from 'cors'; //para comunicarme con el front
 
 //controllers
 import passport from './controller/PassportController.js';
 
 // routes
-import DefaultRoutes from "./routes/default.js";
 import UsersRoutes from './routes/usuarios.js';
 import ProductosRoutes from './routes/productos.js';
 import CarritosRoutes from './routes/carritos.js';
 import PedidosRoutes from './routes/pedidos.js';
 import ChatRoutes from './routes/chat.js';
 import webRoutes from './routes/web.js';
+import DefaultRoutes from "./routes/default.js";
 
 const app = express()
 app.use(express.static('public'))

@@ -398,3 +398,23 @@
     at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
     at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
     at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+[2022-07-02T22:27:50.009] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"Admin@gmail.com\"}"}
+[2022-07-02T22:27:50.011] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"Admin@gmail.com"}',
+    detalles: undefined
+  }
+}
+[2022-07-02T22:34:23.109] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"Admin@gmail.com\"}"}
+[2022-07-02T22:34:23.109] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"Admin@gmail.com"}',
+    detalles: undefined
+  }
+}

@@ -4,6 +4,8 @@ import ProductosApi from '../api/ProductosApi.js'
 import CarritosApi from '../api/CarritosApi.js'
 import PedidosApi from '../api/PedidosApi.js'
 import ChatApi from '../api/ChatApi.js'
+import jwt from 'jsonwebtoken'
+import { jwtOpts } from '../../config/config.js'
 
 import os  from 'os'
 const cantidadDeCPUs = os.cpus().length
@@ -15,6 +17,7 @@ const pedidos = new PedidosApi();
 const chat = new ChatApi();
 let rolUsuario = undefined
 let nombreUsuario = ""
+let emailUsuario = ""
 
 //getInicio
 export async function getInicio(req, res) {
@@ -41,19 +44,20 @@ export async function getRegistrarse(req, res) {
 export async function getLogin(req, res) {
   logger.info(`webController.js: getLogin`)
   const title = 'Login'
-  rolUsuario = "admin" //para probar pq no me anda el login
   res.render('pages/login', { titulo: title, rol: rolUsuario, nombre: nombreUsuario })
 }
 
 //postlogin
 export async function postLogin(req, res) {
   logger.info(`webController.js: postLogin`)
-  //const email = req.body.email;
-  //const usuario = await usuarios.getUsuarios(email)
-  //nombreUsuario = usuario.nombre
-  rolUsuario = "admin" //esto seria el rol q tiene usuario o admin , si son ambos toma admin q ve todo
+  emailUsuario = req.body.username;
+  const usuario = await usuarios.getUsuario(emailUsuario)
+  nombreUsuario = usuario.nombre
+  let rolesUsuario = usuario.roles
+  if (rolesUsuario.includes("admin")){rolUsuario="admin"}else{rolUsuario="usuario"}
   const title = 'ecomerce'
-  res.render('pages/index', { titulo: title, rol: rolUsuario, nombre: rolUsuario })
+  const token = jwt.sign({ user: emailUsuario }, jwtOpts.secretOrKey, { expiresIn: jwtOpts.expireIn });
+  res.render('pages/index', { titulo: title, rol: rolUsuario, nombre: nombreUsuario })
 }
 
 //getLogout
@@ -115,7 +119,7 @@ export async function mensajesChat(req, res) {
   try{
     const title = 'Mensajes del Chat'
     const mensajesChatList = await chat.getMensajesChat()
-    res.render('pages/chat', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, mensajesChatList })
+    res.render('pages/chat', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, email: emailUsuario, mensajesChatList })
   }
   catch (err){
       logger.error(err);

@@ -1,11 +1,19 @@
 import dotenv from 'dotenv';
 import parseArgs from 'minimist';
+import { ExtractJwt as ExtractJWT } from 'passport-jwt';
 
 const options= {alias:{p:"port", m:"modo"}};
 const puerto = parseArgs(process.argv,options).port;
 const modo = parseArgs(process.argv,options).modo;
 
 dotenv.config();
+
+export const jwtOpts = {
+  secretOrKey: process.env.SECRET || 'TOP_SECRET',
+  jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+  ignoreExpiration: process.env.JWT_IGNORE_EXPIRE || false,
+  expireIn: parseInt(process.env.JWT_TIME_EXPIRE) || 3600,
+}
 
 export const ServidorEnvioEmail = {
   service: process.env.MAIL_SMTP,

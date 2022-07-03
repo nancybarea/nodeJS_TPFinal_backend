@@ -1716,3 +1716,29 @@
 [2022-06-28T23:06:11.618] [WARN] default - No existe la ruta GET /styles/styles.css.map
 [2022-06-28T23:06:14.025] [WARN] default - No existe la ruta GET /styles/styles.css.map
 [2022-06-28T23:06:16.034] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-06-28T23:07:01.804] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-06-28T23:07:04.638] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-06-28T23:07:05.792] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-06-28T23:07:15.047] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-06-28T23:07:18.656] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-06-28T23:07:20.861] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-07-02T22:27:50.009] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"Admin@gmail.com\"}"}
+[2022-07-02T22:27:50.011] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"Admin@gmail.com"}',
+    detalles: undefined
+  }
+}
+[2022-07-02T22:34:23.109] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"Admin@gmail.com\"}"}
+[2022-07-02T22:34:23.109] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"Admin@gmail.com"}',
+    detalles: undefined
+  }
+}

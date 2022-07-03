@@ -16,6 +16,13 @@ export default class UsuariosApi {
         return usuariosObj;
     }   
 
+    //obtiene los datos de un usuario segun email ingresado
+    async getUsuario(email) {
+        logger.info(`UsuariosApi.js - getUsuario(${email})`);
+        const usuariosObj = await this.usuariosDao.getByEmail(email);
+        return usuariosObj;
+    }   
+
     //alta de usuario nuevo
     async crearUsuario(objetoUsuario){
         logger.info(`UsuariosApi.js - crearUsuario`);

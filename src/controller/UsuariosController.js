@@ -1,5 +1,7 @@
 import UsersApi from '../api/UsuariosApi.js'
 import logger from '../logger.js'
+import jwt from 'jsonwebtoken'
+import { jwtOpts } from '../../config/config.js'
 
 const users = new UsersApi();
 
@@ -31,7 +33,9 @@ export async function failRegister(req, res){
 //successLogin
 export function successLogin(req, res){
     logger.info(`UsuariosController.js: successLogin`)
-    res.status(200).json({msg: `El usuario ya se encuentra logueado.`})
+    logger.info(req)
+    const token = jwt.sign({ user: req.user }, jwtOpts.secretOrKey, { expiresIn: jwtOpts.expireIn });
+    res.status(200).json({msg: `Para poder acceder a las api privadas debe ingresar el token ${token}`})
 }
 
 //failLogin
@@ -71,4 +75,13 @@ export async function borrarUsuario(req, res) {
         logger.error(err);
         res.status(err.estado).json(`Error al borrar el usuario: ${err}`)
     }
+}
+
+export function validarToken(token, cb) {
+
+    if (token.exp < Math.floor(Date.now() / 1000)) {
+        logger.warn('El token ha caducado, debe volver a loguearse para generar un nuevo token')
+        return cb(null, false)
+    }
+    else return cb(null, token.user);
 }

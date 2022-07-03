@@ -16,11 +16,10 @@ UsersRoutes.get('/failRegister', userController.failRegister);
 UsersRoutes.get('/successRegister', userController.successRegister);
 
 //POST '/login' --> recibe email y password del usuario
-UsersRoutes.post('/login', passport.authenticate('login', {
-    failureRedirect: '/api/usuarios/failLogin'}),
+UsersRoutes.post('/login', 
+    passport.authenticate('login', {failureRedirect: '/api/usuarios/failLogin'}),
     userController.successLogin
 );
-
 UsersRoutes.get('/failLogin', userController.failLogin);
 UsersRoutes.get('/successLogin', userController.successLogin);
 
