@@ -53,15 +53,15 @@ export function logout(req, res){
     res.status(200).json({msg: `El usuario ya se encuentra deslogueado.`})
 }
 
-//requiere autenticacion para acceder a ciertas paginas
-export function requiereAutenticacion (req, res, next){
-    logger.info(`UsuariosController.js: requiereAutenticacion`)
-    if (req.isAuthenticated()){
-        next()
-    }else{
-        res.status(401).json({msg: 'Para poder realizar dicha acción debe autenticarse'})
-    }
-}
+// //requiere autenticacion para acceder a ciertas paginas
+// export function requiereAutenticacion (req, res, next){
+//     logger.info(`UsuariosController.js: requiereAutenticacion`)
+//     if (req.isAuthenticated()){
+//         next()
+//     }else{
+//         res.status(401).json({msg: 'Para poder realizar dicha acción debe autenticarse'})
+//     }
+// }
 
 //dado un id por parametro borra el mismo de la coleccion
 export async function borrarUsuario(req, res) {    

@@ -54,6 +54,6 @@ passport.deserializeUser((user, done) => {
     done(null, user)
 })
 
-passport.use(new JWTstrategy(jwtOpts, validarToken));
+passport.use('jwt', new JWTstrategy(jwtOpts, validarToken));
 
 export default passport;

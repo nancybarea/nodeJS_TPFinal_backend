@@ -1,5 +1,5 @@
 import express, { json, urlencoded } from 'express';
-import session from 'express-session';
+//import session from 'express-session';
 
 //controllers
 import passport from './controller/PassportController.js';
@@ -21,16 +21,16 @@ app.use(urlencoded({ extended: true }))  //mdw para poder extraer los datos que 
 
 app.set('view engine', 'ejs') //Configuracion del motor de vistas 
 
-app.use( //para passport que tambien usa session
-    session({
-        secret: 'shhhhhhhhhhhhhhh',
-        resave: false, 
-        saveUninitialized: false,
-    })
-)
+// app.use( //para passport que tambien usa session
+//     session({
+//         secret: 'shhhhhhhhhhhhhhh',
+//         resave: false, 
+//         saveUninitialized: false,
+//     })
+// )
 
 app.use(passport.initialize()) 
-app.use(passport.session())
+//app.use(passport.session())
 
 // routes apiRestFull
 app.use('/', webRoutes)
