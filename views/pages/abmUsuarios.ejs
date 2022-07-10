@@ -36,7 +36,7 @@
                                 <td><%= item.apellido %></td>
                                 <td><%= item.roles %></td>
                                 <td>
-                                    <a href="#">modificar</a>
+                                    <a href='/usuario/modificar/<%= item.email %>'">modificar</a>
                                     &nbsp;&nbsp;<a href='/usuario/borrar/<%= item.email %>'>borrar</a>
                                 </td>
                             </tr>
@@ -48,7 +48,9 @@
                 <% } %>
             </div>
             <br>
-            <button type="button" class="btn btn-dark">Nuevo Usuario</button>
+            <form action="/usuario/alta" method="get">
+                <input type="submit" class="btn btn-dark" name="nuevoUsuario" value="Nuevo Usuario">
+            </form>
         </div>
             
         <!-- footer -->

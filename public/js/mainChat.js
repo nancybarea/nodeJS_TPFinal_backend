@@ -21,6 +21,7 @@ function armarHTMLChat(plantilla, mensajesChat) { //mantener el nombre mensajesC
 function agregarMensaje(e) {
     const mensaje = {
        email: document.getElementById('email').value,
+       tipo: document.getElementById('email').value,
        mensaje: document.getElementById('mensaje').value
     };
     document.getElementById('listadoDeMensajes').value = ''

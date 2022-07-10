@@ -11,8 +11,10 @@ export default class ProductoDto {
     precio;
     imagenURL;
     stock;
+    categoria;
+    caracteristicas;
 
-    constructor({ _id, id, fechaHora, nombre, descripcion, precio, imagenURL, stock}) {
+    constructor({ _id, id, fechaHora, nombre, descripcion, precio, imagenURL, stock, categoria, caracteristicas}) {
 
 
         if (_id === undefined) {
@@ -31,6 +33,8 @@ export default class ProductoDto {
         this.precio = precio;
         this.imagenURL = imagenURL;
         this.stock = stock;
+        this.categoria = categoria;
+        this.caracteristicas = caracteristicas;
     }
 
     get() {
@@ -40,8 +44,14 @@ export default class ProductoDto {
     getforCarrito(){
         return {
             id: this.id,
+            fechaHora: this.fechaHora,
             nombre: this.nombre,
-            precio: this.precio
+            descripcion: this.descripcion,
+            precio: this.precio,
+            imagenURL: this.imagenURL,
+            stock: this.stock,
+            categoria: this.categoria,
+            caracteristicas: this.caracteristicas
         }
     }
 

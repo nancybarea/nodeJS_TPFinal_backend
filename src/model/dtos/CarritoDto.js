@@ -9,8 +9,9 @@ export default class CarritoDto {
     emailUsuario;
     productos;
     fechaUltModif;
+    direccionEntrega;
 
-    constructor({ _id, id, estado, emailUsuario, productos, fechaUltModif}) {
+    constructor({ _id, id, estado, emailUsuario, productos, fechaUltModif, direccionEntrega}) {
 
         if (_id === undefined) {
             this._id = undefined;
@@ -27,17 +28,11 @@ export default class CarritoDto {
 
         this.emailUsuario = emailUsuario;
         this.productos = productos;
+        this.direccionEntrega = direccionEntrega;
     }
 
     get() {
-        return {
-            _id: this._id,
-            id: this.id,
-            estado: this.estado,
-            emailUsuario: this.emailUsuario,
-            fechaUltModif: this.fechaUltModif,
-            productos: this.productos,
-        }
+        return this
     }
 
 }

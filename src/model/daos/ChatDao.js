@@ -10,6 +10,10 @@ export default class ChatDao extends ContainerDao {
   async getById(id) {
     return await super.getById({ id: id })
   }
+
+  async getByEmail(email) {
+    return await super.listByQuery({ email: email })
+  }
   
   async deleteById(id) {
     return await super.deleteById({ id: id })

@@ -62,12 +62,18 @@ webRoutes.get('/infoServer', webController.infoServer);
 //ABM
 webRoutes.get('/abmProductos', webController.abmProductos);
 webRoutes.get('/producto/borrar/:id', webController.productoBorrar);
+
 webRoutes.get('/abmUsuarios', webController.abmUsuarios);
+webRoutes.get('/usuario/alta', webController.amUsuario);
+webRoutes.get('/usuario/modificar/:email', webController.amUsuario);
 webRoutes.get('/usuario/borrar/:email', webController.usuarioBorrar);
+
 webRoutes.get('/abmCarritos', webController.abmCarritos);
 webRoutes.get('/carrito/borrar/:id', webController.carritoBorrar);
+
 webRoutes.get('/abmPedidos', webController.abmPedidos);
 webRoutes.get('/pedido/borrar/:id', webController.pedidoBorrar);
+
 webRoutes.get('/abmMensajes', webController.abmMensajes);
 webRoutes.get('/mensajeChat/borrar/:id', webController.mensajeChatBorrar);
 

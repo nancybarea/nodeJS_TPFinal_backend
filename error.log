@@ -453,3 +453,35 @@
     detalles: undefined
   }
 }
+[2022-07-03T02:36:08.205] [ERROR] default - ReferenceError: logger is not defined
+    at ChatApi.getMensajesChatPorEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/ChatApi.js:28:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async obtenerMensajesChatPorEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ChatController.js:24:34)
+[2022-07-03T02:38:12.754] [ERROR] default - Error al obtener todos los mensajes del chat de admin@gmai.com: [object Object]
+[2022-07-03T02:38:55.537] [ERROR] default - Error al obtener todos los mensajes del chat de admin@gmai.com: [object Object]
+[2022-07-03T02:38:55.538] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al obtener todos los mensajes del chat de admin@gmai.com:',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"admin@gmai.com"}',
+    detalles: undefined
+  }
+}
+[2022-07-03T03:30:04.645] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"trekking"}',
+  detalles: undefined
+}
+[2022-07-03T03:58:28.045] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {}',
+  detalles: undefined
+}
+[2022-07-03T04:07:15.482] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"email":"favicon.ico"}',
+  detalles: undefined
+}
+[2022-07-10T20:02:45.110] [ERROR] default - Error al ejecutar validaciones de usuarios ReferenceError: usuarios is not defined
+[2022-07-10T20:06:16.266] [ERROR] default - Error al ejecutar validaciones de usuarios TypeError: usuarios.existeEmail is not a function

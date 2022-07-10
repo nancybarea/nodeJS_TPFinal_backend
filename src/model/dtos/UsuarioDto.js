@@ -36,19 +36,8 @@ export default class UsuarioDto {
 
     }
 
-    get() {
-       
-        return {
-            email:this.email,
-            roles: this.roles,
-            username:this.username,
-            nombre:this.nombre,
-            apellido:this.apellido,
-            direccion: this.direccion,
-            fechaNacimiento: this.fechaNacimiento,
-            telefono:this.telefono,
-            avatar: this.avatar
-        }
+    get() {       
+        return this
     }
 
     isValidPassword(password) {

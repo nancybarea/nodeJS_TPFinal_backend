@@ -5,15 +5,19 @@ import { esAdministrador } from '../controller/UsuariosController.js'
 
 const ChatRoutes = new Router();
 
-//GET '/producto' -> devuelve todos los productos
+//GET '/mensajes' -> devuelve todos los mensajes
 ChatRoutes.get('/', 
         passport.authenticate('jwt', { session: false }), 
         chatController.obtenerMensajesChat)
-//GET '/producto' -> devuelve todos los productos
+//GET '/mensajes' -> devuelve todos los mensajes de un usuario en particular
+ChatRoutes.get('/:email', 
+        passport.authenticate('jwt', { session: false }), 
+        chatController.obtenerMensajesChatPorEmail)
+//POST '/mensajes' -> alta de nuevo mensaje de chat 
 ChatRoutes.post('/', 
         passport.authenticate('jwt', { session: false }), 
         chatController.agregarMensajesChat)
-//GET '/producto' -> devuelve todos los productos
+//GET '/mensajes/:idMensajeChat' -> devuelve un mensaje del chat x id
 ChatRoutes.delete('/:idMensajeChat', 
         passport.authenticate('jwt', { session: false }), 
         esAdministrador,

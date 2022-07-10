@@ -14,7 +14,7 @@ export default class PedidosDto {
         if (_id === undefined) {
             this._id = undefined;
             this.id = NUID.next();
-            this.estado = "pendiente"
+            this.estado = "generada"
             this.fechaPedida = moment(new Date()).format('DD/MM/YYYY HH:MM:SS');
         }
         else {
@@ -29,13 +29,7 @@ export default class PedidosDto {
     }
 
     get() {
-        return {
-            _id: this._id,
-            email: this.email,
-            productos: this.productos,
-            estado: this.estado,
-            fechaPedida: this.fechaPedida
-        }
+        return this
     }
 
 }

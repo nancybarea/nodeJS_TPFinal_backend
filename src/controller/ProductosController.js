@@ -18,10 +18,24 @@ export async function obtenerProductos(req, res) {
 
 //dado un id devuelve los datos de ese producto
 export async function obtenerUnProducto(req, res) {
-    logger.info(`GET api/productos/{idProducto}`)
+    logger.info(`GET api/productos/id/{idProducto}`)
     try{
         let id = req.params.idProducto;
         const producto = await productos.getProducto(id)
+        res.status(200).json(producto)
+    }
+    catch (err){
+        logger.error(err);
+        res.status(err.estado).json(err)
+    }
+}
+
+//obtenerProductosPorCategoria --> devuelve todos los productos de una categoria
+export async function obtenerProductosPorCategoria(req, res) {
+    let categoria = req.params.categoria;
+    logger.info(`GET api/productos/categoria/${categoria}`)
+    try{
+        const producto = await productos.getProductoPorCategoria(categoria)
         res.status(200).json(producto)
     }
     catch (err){

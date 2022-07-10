@@ -33,7 +33,6 @@ export async function failRegister(req, res){
 //successLogin
 export function successLogin(req, res){
     logger.info(`UsuariosController.js: successLogin`)
-    logger.info(req)
     const token = jwt.sign({ user: req.user }, jwtOpts.secretOrKey, { expiresIn: jwtOpts.expireIn });
     res.status(200).json({msg: `Para poder acceder a las api privadas debe ingresar el token ${token}`})
 }

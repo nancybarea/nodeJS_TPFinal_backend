@@ -1,6 +1,7 @@
 import CarritosDao from '../model/daos/CarritosDao.js';
 import CarritoDto from '../model/dtos/CarritoDto.js';
-
+import logger from '../logger.js'
+import CustomError from '../errores/CustomError.js'
 
 export default class CarritosApi {
 

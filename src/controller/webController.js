@@ -142,6 +142,24 @@ export async function abmUsuarios(req, res) {
   }
 }
 
+//amUsuario --> alta y modificacion de usuario
+export async function amUsuario(req, res) {
+  logger.info(`webController.js: amUsuario`)
+
+  try{
+    const title = 'AM de Usuario'
+    const email = req.params.email
+    let usuario = []
+    if (email != undefined) { usuario = await usuarios.getUsuario(email)}    
+    res.render('pages/amUsuario', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, usuario })
+  }
+  catch (err){
+      logger.error(err);
+      res.status(err.estado).json(err)
+  }
+}
+
+
 //usuarioBorrar
 export async function usuarioBorrar(req, res) {
   const email = req.params.email

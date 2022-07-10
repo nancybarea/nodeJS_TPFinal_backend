@@ -5,10 +5,11 @@ export default class ChatDto {
     _id;
     id;
     email;
+    tipo;
     fechaHora;
     mensaje; 
 
-    constructor({ _id, id, email, fechaHora, mensaje}) {
+    constructor({ _id, id, email, tipo, fechaHora, mensaje}) {
 
         if (_id === undefined) {
             this._id = undefined;
@@ -22,17 +23,13 @@ export default class ChatDto {
         }
 
         this.email = email;
+        this.tipo = tipo;
         this.mensaje = mensaje;
     }
 
     get() {
-        return {
-            _id: this._id,
-            id: this.id,
-            email: this.email,
-            fechaHora: this.fechaHora,
-            mensaje: this.mensaje
-        }
+        return this
     }
 
 }
+

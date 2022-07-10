@@ -11,6 +11,10 @@ export default class ProductosDao extends ContainerDao {
     return await super.getById({ id: id })
   }
 
+  async getByCategoria(categoria) {
+    return await super.listByQuery({ categoria: categoria })
+  }
+  
   async deleteById(id) {
     return await super.deleteById({ id: id })
   }

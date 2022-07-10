@@ -94,4 +94,30 @@ export default class UsuariosApi {
         }
     }   
 
+    async existeEmail(email) {
+        logger.info(`UsuariosApi.js - existeEmail ${email}`);
+        try {
+            await this.usuariosDao.getByEmail(email);
+            return true;
+        }
+        catch (err) {
+            logger.error(`Falló al validar si el email ya existe en la Base de datos - error:${err}`)
+            if (err.estado == 404) return false;
+            else throw err
+        }
+    }
+    
+    async existeUsername(username) {
+        logger.info(`UsuariosApi.js - existeUsername ${username}`);
+        try {
+            await this.usuariosDao.getByUsername(username);
+            return true;
+        }
+        catch (err) {
+            logger.error(`Falló al validar si el username ya existe en la Base de datos - error:${err}`)
+            if (err.estado == 404) return false;
+            else throw err
+        }
+    }
+
 }
