@@ -1,6 +1,6 @@
 import Joi from 'joi'
 
-const schema = Joi.object(
+const schemaNewUser = Joi.object(
     {
         email: Joi.string()
             .email()
@@ -23,4 +23,4 @@ const schema = Joi.object(
     }
 )
 
-export default schema;
+export default schemaNewUser;

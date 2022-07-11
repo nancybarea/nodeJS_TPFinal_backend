@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import  * as carritosController from '../controller/CarritosController.js'
 import passport from '../controller/PassportController.js'
+import {mdwValidateSchemaNewCarrito} from "../middleware/carritosMDW.js"
 
 const CarritosRoutes = new Router();
 
@@ -19,6 +20,7 @@ CarritosRoutes.get('/usuario/:emailUsuario',
 //POST '/carrito' -> crea un carrito y devuelve el id asignado
 CarritosRoutes.post('/', 
         passport.authenticate('jwt', { session: false }),  
+        mdwValidateSchemaNewCarrito,
         carritosController.crearCarrito)
 //POST '/carrito/:id/productos' -> agrega un producto al carrito indicado x el body
 CarritosRoutes.post('/:idCarrito/productos', 

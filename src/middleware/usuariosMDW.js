@@ -1,14 +1,14 @@
-import schema from '../schemas/usuario.js'
+import schemaNewUser from '../schemas/usuariosSchemas.js'
 import UsuariosApi from '../api/UsuariosApi.js'
 import logger from '../logger.js'
 
 const usuarios = new UsuariosApi();
 
-export async function mdwValidarSchemaUsuario(req, res, next) {
-    logger.info(`middleware/usuarios.js: mdwValidarSchemaUsuario`)
+export async function mdwValidateSchemaNewUsuario(req, res, next) {
+    logger.info(`middleware/usuarios.js: mdwValidateSchemaNewUsuario`)
     let data
     try {
-        data = await schema.validateAsync(req.body)
+        data = await schemaNewUser.validateAsync(req.body)
     }
     catch (err) {
         logger.warn(`Error al validar el esquema de usuarios - Error: ${err.details}`)

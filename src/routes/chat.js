@@ -2,7 +2,7 @@ import { Router } from 'express'
 import  * as chatController from '../controller/ChatController.js'
 import passport from '../controller/PassportController.js'
 import { esAdministrador } from '../controller/UsuariosController.js'
-import {mdwValidarSchemaMensaje} from "../middleware/chats.js"
+import {mdwValidateSchemaNewMensaje} from "../middleware/chatsMDW.js"
 
 const ChatRoutes = new Router();
 
@@ -17,7 +17,7 @@ ChatRoutes.get('/:email',
 //POST '/mensajes' -> alta de nuevo mensaje de chat 
 ChatRoutes.post('/', 
         passport.authenticate('jwt', { session: false }), 
-        mdwValidarSchemaMensaje,
+        mdwValidateSchemaNewMensaje,
         chatController.agregarMensajesChat)
 //GET '/mensajes/:idMensajeChat' -> devuelve un mensaje del chat x id
 ChatRoutes.delete('/:idMensajeChat', 

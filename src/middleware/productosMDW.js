@@ -1,10 +1,10 @@
-import schema from '../schemas/producto.js'
+import schemaNewProduct from '../schemas/productosSchemas.js'
 import logger from '../logger.js'
 
-export async function mdwValidarSchemaProducto(req, res, next) {
-    logger.info(`middleware/productos.js: mdwValidarSchemaProducto`)
+export async function mdwValidateSchemaNewProduct(req, res, next) {
+    logger.info(`middleware/productos.js: mdwValidateSchemaNewProduct`)
     try {
-        await schema.validateAsync(req.body)
+        await schemaNewProduct.validateAsync(req.body)
     }
     catch (err) {
         logger.warn(`Error al validar el esquema de productos - Error: ${err}`)

@@ -1,6 +1,6 @@
 import Joi from 'joi'
 
-const schema = Joi.object(
+const schemaNewProduct = Joi.object(
     {
         nombre: Joi.string()
             .required(),
@@ -22,4 +22,4 @@ const schema = Joi.object(
     }
 )
 
-export default schema;
+export default schemaNewProduct;

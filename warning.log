@@ -1849,3 +1849,11 @@
 [2022-07-10T23:27:04.124] [WARN] default - El token ha caducado, debe volver a loguearse para generar un nuevo token
 [2022-07-10T23:27:36.293] [WARN] default - Error al validar el esquema de productos - Error: ValidationError: "nombre" is required
 [2022-07-10T23:27:50.151] [WARN] default - Error al validar el esquema de productos - Error: ValidationError: "id" is not allowed
+[2022-07-11T00:02:20.459] [WARN] default - Error al validar el esquema de alta de chats - Error: ValidationError: "email" is required
+[2022-07-11T00:02:39.871] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-11T00:02:45.969] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-11T00:02:51.225] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-11T00:02:51.294] [ERROR] default - Falló al validar si el username ya existe en la Base de datos - error:[object Object]
+[2022-07-11T00:03:06.300] [WARN] default - Error al validar el esquema de productos - Error: ValidationError: "nombre" is required
+[2022-07-11T00:03:31.781] [WARN] default - El token ha caducado, debe volver a loguearse para generar un nuevo token
+[2022-07-11T00:04:13.622] [WARN] default - Error al validar el esquema de carritos - Error: ValidationError: "direccionEntrega" is required

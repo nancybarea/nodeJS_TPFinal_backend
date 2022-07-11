@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import passport from '../controller/PassportController.js'
 import  * as userController from '../controller/UsuariosController.js'
-import {mdwValidarSchemaUsuario} from "../middleware/usuarios.js"
+import {mdwValidateSchemaNewUsuario} from "../middleware/usuariosMDW.js"
 
 const UsersRoutes = new Router();
 
@@ -10,7 +10,7 @@ UsersRoutes.get('/', userController.obtenerUsuarios);
 
 //POST /registro --> para dar de alta un nuevo usuario
 UsersRoutes.post('/registro',  
-    mdwValidarSchemaUsuario,
+    mdwValidateSchemaNewUsuario,
     passport.authenticate('registro', {
     failureRedirect: '/api/usuarios/failRegister'}),
     userController.successRegister

@@ -487,3 +487,7 @@
 [2022-07-10T20:06:16.266] [ERROR] default - Error al ejecutar validaciones de usuarios TypeError: usuarios.existeEmail is not a function
 [2022-07-10T20:10:18.905] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
 [2022-07-10T20:10:18.960] [ERROR] default - Falló al validar si el username ya existe en la Base de datos - error:[object Object]
+[2022-07-11T00:02:39.871] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-11T00:02:45.969] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-11T00:02:51.225] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-11T00:02:51.294] [ERROR] default - Falló al validar si el username ya existe en la Base de datos - error:[object Object]
