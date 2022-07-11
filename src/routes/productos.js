@@ -2,6 +2,7 @@ import { Router } from 'express'
 import  * as productosController from '../controller/ProductosController.js'
 import passport from '../controller/PassportController.js'
 import { esAdministrador } from '../controller/UsuariosController.js'
+import {mdwValidarSchemaProducto} from "../middleware/productos.js"
 
 const ProductosRoutes = new Router();
 
@@ -18,6 +19,7 @@ ProductosRoutes.get('/categoria/:categoria',
 ProductosRoutes.post('/', 
         passport.authenticate('jwt', { session: false }), 
         esAdministrador,
+        mdwValidarSchemaProducto,
         productosController.agregarProducto)
 //PUT '/producto/' -> recibe y actualiza un producto según su id.
 ProductosRoutes.put('/', 

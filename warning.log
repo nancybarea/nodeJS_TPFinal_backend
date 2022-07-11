@@ -1835,3 +1835,17 @@
 [2022-07-10T19:59:45.580] [WARN] default - Error al validaciones esquema de usuarios
 [2022-07-10T20:02:45.110] [ERROR] default - Error al ejecutar validaciones de usuarios ReferenceError: usuarios is not defined
 [2022-07-10T20:06:16.266] [ERROR] default - Error al ejecutar validaciones de usuarios TypeError: usuarios.existeEmail is not a function
+[2022-07-10T20:10:18.905] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-10T20:10:18.960] [ERROR] default - Falló al validar si el username ya existe en la Base de datos - error:[object Object]
+[2022-07-10T23:05:25.164] [WARN] default - No existe la ruta GET /favicon.ico
+[2022-07-10T23:05:30.050] [WARN] default - El token ha caducado, debe volver a loguearse para generar un nuevo token
+[2022-07-10T23:06:11.570] [WARN] default - Error al validar el esquema de usuarios - Error: [object Object]
+[2022-07-10T23:06:57.979] [WARN] default - Error al validar el esquema de usuarios - Error: [object Object]
+[2022-07-10T23:07:11.641] [WARN] default - Error al validar el esquema de usuarios - Error: ValidationError: "password" is required
+[2022-07-10T23:11:42.334] [WARN] default - Error al validar el esquema de chats - Error: ValidationError: "password" is required
+[2022-07-10T23:15:57.749] [WARN] default - Error al validar el esquema de chats - Error: ValidationError: "password" is required
+[2022-07-10T23:16:11.184] [WARN] default - Error al validar el esquema de chats - Error: ValidationError: "password" is required
+[2022-07-10T23:17:52.428] [WARN] default - Error al validar el esquema de chats - Error: ValidationError: "email" is required
+[2022-07-10T23:27:04.124] [WARN] default - El token ha caducado, debe volver a loguearse para generar un nuevo token
+[2022-07-10T23:27:36.293] [WARN] default - Error al validar el esquema de productos - Error: ValidationError: "nombre" is required
+[2022-07-10T23:27:50.151] [WARN] default - Error al validar el esquema de productos - Error: ValidationError: "id" is not allowed
