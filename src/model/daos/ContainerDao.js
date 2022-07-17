@@ -6,6 +6,7 @@ const mongo_url = process.env.MONGO_URL
 const base = process.env.MONGO_BASE
 
 const client = new MongoClient(mongo_url, { serverSelectionTimeOutMS: 5000 });
+
 await client.connect();
 
 export default class ContainerDao {

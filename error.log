@@ -491,3 +491,24 @@
 [2022-07-11T00:02:45.969] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
 [2022-07-11T00:02:51.225] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
 [2022-07-11T00:02:51.294] [ERROR] default - Falló al validar si el username ya existe en la Base de datos - error:[object Object]
+[2022-07-11T00:14:39.849] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"email":"favicon.ico"}',
+  detalles: undefined
+}
+[2022-07-16T20:03:01.034] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"Z4PLU7V8PFS1SBS23PTKA"}',
+  detalles: undefined
+}
+[2022-07-16T20:20:33.973] [ERROR] default - Server error Error: listen EADDRINUSE: address already in use :::8080
+[2022-07-16T23:05:45.719] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"username\"}"}
+[2022-07-16T23:05:45.720] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"username"}',
+    detalles: undefined
+  }
+}

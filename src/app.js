@@ -1,11 +1,12 @@
 import logger from './logger.js'
-import app from './server.js'
+import {crearServidor} from './server.js'
 import config from '../config/config.js'
 import cluster from 'cluster' 
 import os  from 'os'
 
 const PORT = config.PORT
 const modo = config.MODO
+const app = crearServidor()
 
 
 /*****************************************************************************************/

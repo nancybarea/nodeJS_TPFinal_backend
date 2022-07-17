@@ -1857,3 +1857,33 @@
 [2022-07-11T00:03:06.300] [WARN] default - Error al validar el esquema de productos - Error: ValidationError: "nombre" is required
 [2022-07-11T00:03:31.781] [WARN] default - El token ha caducado, debe volver a loguearse para generar un nuevo token
 [2022-07-11T00:04:13.622] [WARN] default - Error al validar el esquema de carritos - Error: ValidationError: "direccionEntrega" is required
+[2022-07-11T00:14:31.670] [WARN] default - No existe la ruta GET /usuario/favicon.ico
+[2022-07-11T00:14:39.849] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"email":"favicon.ico"}',
+  detalles: undefined
+}
+[2022-07-16T20:03:01.034] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"Z4PLU7V8PFS1SBS23PTKA"}',
+  detalles: undefined
+}
+[2022-07-16T20:20:33.973] [ERROR] default - Server error Error: listen EADDRINUSE: address already in use :::8080
+[2022-07-16T21:38:28.860] [WARN] default - No existe la ruta GET /api/productos/Z4PLU7V8PFS1SBS23PTKAT
+[2022-07-16T21:38:37.057] [WARN] default - No existe la ruta GET /api/productos/trekking
+[2022-07-16T21:39:06.975] [WARN] default - No existe la ruta GET /api/productos/Z4PLU7V8PFS1SBS23PTKAT
+[2022-07-16T22:55:20.873] [WARN] default - El token ha caducado, debe volver a loguearse para generar un nuevo token
+[2022-07-16T22:55:33.786] [WARN] default - El token ha caducado, debe volver a loguearse para generar un nuevo token
+[2022-07-16T22:55:38.623] [WARN] default - El token ha caducado, debe volver a loguearse para generar un nuevo token
+[2022-07-16T23:05:45.719] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"username\"}"}
+[2022-07-16T23:05:45.720] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"username"}',
+    detalles: undefined
+  }
+}
+[2022-07-16T23:09:51.622] [WARN] default - El token ha caducado, debe volver a loguearse para generar un nuevo token
+[2022-07-16T23:12:01.458] [WARN] default - Error al validar el esquema de carritos - Error: ValidationError: "emailUsuario" is required
