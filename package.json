@@ -7,7 +7,7 @@
   "scripts": {
     "//": "test: nodemon --exec mocha // jest --detectOpenHandles",
     "test": "nodemon --exec mocha",
-    "start": "nodemon . -e 'yaml,ts,js,json'",
+    "start": "nodemon . -e 'yaml,js,json'",
     "start:cluster": "node src/app.js --modo CLUSTER",
     "dev": "NODE_ENV=development nodemon ."
   },
