@@ -8,6 +8,8 @@ import PedidosRoutes from './routes/pedidos.js';
 import ChatRoutes from './routes/chat.js';
 import webRoutes from './routes/web.js';
 import DefaultRoutes from "./routes/default.js";
+import swaggerUi from "swagger-ui-express";
+import swaggerSpecs from './swaggerSpecs.js';
 
 export function crearServidor() {
 
@@ -29,8 +31,13 @@ export function crearServidor() {
     app.use('/api/pedidos', PedidosRoutes) // pedidos realizados por el usuario, carrito pasa a estado Cerrado
     app.use('/api/chat', ChatRoutes) // mensajes del chat 
 
+    //documentacion
+    app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
+
     //routes not found
     app.use('/*', DefaultRoutes)
+
+
 
     return app
 

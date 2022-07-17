@@ -7,7 +7,7 @@
   "scripts": {
     "//": "test: nodemon --exec mocha // jest --detectOpenHandles",
     "test": "nodemon --exec mocha",
-    "start": "node .",
+    "start": "nodemon . -e 'yaml,ts,js,json'",
     "start:cluster": "node src/app.js --modo CLUSTER",
     "dev": "NODE_ENV=development nodemon ."
   },
@@ -49,6 +49,8 @@
     "passport-local": "^1.0.0",
     "socket.io": "^4.5.1",
     "supertest": "^6.2.4",
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.5.0",
     "twilio": "^3.77.3"
   },
   "devDependencies": {

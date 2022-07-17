@@ -1887,3 +1887,4 @@
 }
 [2022-07-16T23:09:51.622] [WARN] default - El token ha caducado, debe volver a loguearse para generar un nuevo token
 [2022-07-16T23:12:01.458] [WARN] default - Error al validar el esquema de carritos - Error: ValidationError: "emailUsuario" is required
+[2022-07-17T13:56:38.693] [WARN] default - No existe la ruta GET /api/docs
