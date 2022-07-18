@@ -8,7 +8,7 @@ const options = {
             description: "Documentación de las APIS realizadas para el proyecto Ecommerce",
         },
     },
-    apis: [ './docs/**/*.yaml' ],
+    apis: [ './src/docs/**/*.yaml' ],
 };
 
 const swaggerSpecs = swaggerJsdoc(options);
