@@ -512,3 +512,48 @@
     detalles: undefined
   }
 }
+[2022-07-25T10:04:38.124] [ERROR] default - TypeError: res.status is not a function
+    at Object.obtenerProductos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ProductosController.js:11:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Promise.all (index 0)
+    at async graphqlMiddleware (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express-graphql\index.js:125:26)
+[2022-07-25T10:08:48.237] [ERROR] default - TypeError: res.status is not a function
+    at Object.obtenerProductos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ProductosController.js:11:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Promise.all (index 0)
+    at async graphqlMiddleware (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express-graphql\index.js:125:26)
+[2022-07-25T10:10:09.509] [ERROR] default - TypeError: res.json is not a function
+    at Object.obtenerProductos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ProductosController.js:11:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Promise.all (index 0)
+    at async graphqlMiddleware (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express-graphql\index.js:125:26)
+[2022-07-25T10:10:14.193] [ERROR] default - TypeError: res.json is not a function
+    at Object.obtenerProductos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ProductosController.js:11:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Promise.all (index 0)
+    at async graphqlMiddleware (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express-graphql\index.js:125:26)
+[2022-07-25T10:10:15.615] [ERROR] default - TypeError: res.json is not a function
+    at Object.obtenerProductos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ProductosController.js:11:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Promise.all (index 0)
+    at async graphqlMiddleware (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express-graphql\index.js:125:26)
+[2022-07-25T10:55:36.236] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":{"id":"F613N6ZZYWJGM9WTDZC0OP"}}',
+  detalles: undefined
+}
+[2022-07-25T10:55:56.216] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":{"id":"F613N6ZZYWJGM9WTDZC0OP"}}',
+  detalles: undefined
+}
+[2022-07-25T11:05:44.630] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"F613N6ZZYWJGM9WTDZC0OP"}',
+  detalles: undefined
+}
+[2022-07-25T11:09:56.847] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"F613N6ZZYWJGM9WTDZC0OP"}',
+  detalles: undefined
+}

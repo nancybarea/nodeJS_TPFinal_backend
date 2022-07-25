@@ -17,7 +17,8 @@ export async function enviarSMS(from, to, body) {
     }
 
     try {
-        const message = await client.messages.create(options)
+        //const message = await client.messages.create(options)
+        const message = "deberia crear SMS pero no lo hace para no gastar dolares"
         logger.info(message)
     } catch (error) {
         logger.error(err)

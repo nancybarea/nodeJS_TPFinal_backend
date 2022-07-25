@@ -18,8 +18,8 @@ export async function enviarWhatsapp(from, to, body) {
     }
 
     try {
-        const message = await client.messages.create(options)
-        //const message = "ENVIARIA EL WHATSAPP PERO LO COMENTE PARA NO GASTAR DOLARES Y USARLO EN PRUEBAS PUNTUALES, SI HAGO MODIFICACION"
+        //const message = await client.messages.create(options)
+        const message = "ENVIARIA EL WHATSAPP PERO LO COMENTE PARA NO GASTAR DOLARES Y USARLO EN PRUEBAS PUNTUALES, SI HAGO MODIFICACION"
         logger.info(message)
     } catch (error) {
         logger.error(err)

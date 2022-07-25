@@ -10,6 +10,7 @@ import webRoutes from './routes/web.js';
 import DefaultRoutes from "./routes/default.js";
 import swaggerUi from "swagger-ui-express";
 import swaggerSpecs from './swaggerSpecs.js';
+import { graphqlMiddleware } from './graphqlMiddleware.js'
 
 export function crearServidor() {
 
@@ -33,6 +34,9 @@ export function crearServidor() {
 
     //documentacion
     app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
+
+    //Graphql
+    app.use('/graphql', graphqlMiddleware)
 
     //routes not found
     app.use('/*', DefaultRoutes)

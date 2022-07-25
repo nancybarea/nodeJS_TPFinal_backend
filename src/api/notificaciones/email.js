@@ -24,9 +24,10 @@ export async function enviarEmail(correoDestino, asunto, cuerpo) {
     }
 
     try{
-        let info = await transporter.sendMail(mailOptions)
-        logger.info(info)
-        return info.messageId;  
+        //let info = await transporter.sendMail(mailOptions)
+        //logger.info(info)
+        //return info.messageId;
+        return "no envia email para no gastar dolares"  
     }
     catch(err)
     {
