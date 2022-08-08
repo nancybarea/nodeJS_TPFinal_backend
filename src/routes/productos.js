@@ -6,28 +6,28 @@ import {mdwValidateSchemaNewProduct} from "../middleware/productosMDW.js"
 
 const ProductosRoutes = new Router();
 
-//GET '/producto' -> devuelve todos los productos
+//GET '/producto' -> return all products
 ProductosRoutes.get('/', 
         productosController.obtenerProductos)
-//GET '/producto/:idProducto' -> devuelve un producto según su idProducto.
-ProductosRoutes.get('/id/:idProducto', 
+//GET '/producto/:idProducto' -> returns a product by id
+ProductosRoutes.get('/:idProduct', 
         productosController.obtenerUnProducto)
-//GET '/producto/:categoria' -> devuelve todos los productos de una categoria.
-ProductosRoutes.get('/categoria/:categoria', 
+//GET '/producto/:categoria' -> returns all products in a category.
+ProductosRoutes.get('/category/:category', 
         productosController.obtenerProductosPorCategoria)
-//POST '/producto' -> recibe y agrega un producto, y lo devuelve con su id asignado
+//POST '/producto' -> create a product
 ProductosRoutes.post('/', 
         passport.authenticate('jwt', { session: false }), 
         esAdministrador,
         mdwValidateSchemaNewProduct,
         productosController.agregarProducto)
-//PUT '/producto/' -> recibe y actualiza un producto según su id.
-ProductosRoutes.put('/', 
+//PUT '/producto/' -> update a product by id
+ProductosRoutes.put('/:idProduct', 
         passport.authenticate('jwt', { session: false }), 
         esAdministrador,
         productosController.actualizarProducto)
-//DELETE '/producto/:id' -> elimina un producto según su id.
-ProductosRoutes.delete('/:idProducto', 
+//DELETE '/producto/:id' -> delete a product by id
+ProductosRoutes.delete('/:idProduct', 
         passport.authenticate('jwt', { session: false }), 
         esAdministrador,
         productosController.borrarProducto)

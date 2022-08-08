@@ -26,14 +26,14 @@ webRoutes.get('/', webController.getInicio);
 webRoutes.get('/registrarse', webController.getRegistrarse)
 // POST '/registrarse' -> genera un nuevo usuario y renderiza la pantalla de inicio logeado
 webRoutes.post('/registrarse',  
-    passport.authenticate('registro', {failureRedirect: '/failRegistro'}),    
+    passport.authenticate('registro', {failureRedirect: '/web/failRegistro'}),    
     webController.getLogin);
 
 //LOGUEARSE
 webRoutes.get('/login', webController.getLogin);
 //POST '/login' --> recibe email y password del usuario
 webRoutes.post('/login', passport.authenticate('login', {
-  failureRedirect: '/failLogin'}),
+  failureRedirect: '/web/failLogin'}),
   webController.postLogin
 );
 
@@ -43,14 +43,27 @@ webRoutes.get('/logout', webController.getLogout);
 //SUBIR ARCHIVOS
 webRoutes.get('/subirArchivos', webController.getSubirArchivo);
 webRoutes.post('/subirArchivos', upload.single('miArchivo'), (req, res, next) => {
-    logger.info(`POST /subirArchivos`)
+    logger.info(`POST /web/subirArchivos`)
     const file = req.file
     if (!file) {
       const error = new Error('Error subiendo archivo')
       error.httpStatusCode = 400
       return next(error)
     }
-    res.send(`Archivo <b>${file.originalname}</b> subido exitosamente`)
+    res.send(`<!DOCTYPE html>
+        <html lang="es">
+          <head>
+              <title>Subir Archivo</title>
+          </head>
+          <body class="fondo__degrade">
+              <br>
+              <div style="text-align: center;">
+                Archivo <b>${file.originalname}</b> subida exitosamente
+                <br><br>
+                Cierre la ventana y continue con el registro.
+              </div>
+        </body>
+      </html>`)
   })
 
 //CHAT

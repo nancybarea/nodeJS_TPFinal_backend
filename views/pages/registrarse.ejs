@@ -11,17 +11,17 @@
 
   <div class="container my-5">
     <div class=jumbotron>
-      <h2>Registrarse en Argentina Aventura</h2>
+      <h2>Registrase en Argentina Aventura</h2>
       <br>
 
-      <form action="/registrarse" method="post">
+      <form action="/web/registrarse" method="post">
         <!-- email -->
         <div class="input-group input-group-sm mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Correo: </span>
+            <span class="input-group-text" id="inputGroup-sizing-sm">Email: </span>
           </div>
           <input type="email" id="email" name="email" class="form-control" aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm" placeholder="Correo electrinico" required>
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your email" required>
         </div>
         <!-- password -->
         <div class="input-group input-group-sm mb-3">
@@ -29,7 +29,7 @@
             <span class="input-group-text" id="inputGroup-sizing-sm">clave: </span>
           </div>
           <input type="password" id="password" name="password" class="form-control" aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm" placeholder="Clave" required>
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your password" required>
         </div>
         <!-- username -->
         <div class="input-group input-group-sm mb-3">
@@ -37,47 +37,47 @@
             <span class="input-group-text" id="inputGroup-sizing-sm">username: </span>
           </div>
           <input type="text" name="username" id="username" class="form-control" aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm" placeholder="username" required>
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your username" required>
         </div>
         <!-- Nombre -->        
         <div class="input-group input-group-sm mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Nombre: </span>
+            <span class="input-group-text" id="inputGroup-sizing-sm">Name: </span>
           </div>
-          <input type="text" name="nombre" id="nombre" class="form-control" aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm" placeholder="Nombre" required>
+          <input type="text" name="name" id="name" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your name" required>
         </div>
         <!-- Apellido -->
         <div class="input-group input-group-sm mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Apellido: </span>
+            <span class="input-group-text" id="inputGroup-sizing-sm">Lastname: </span>
           </div>
-          <input type="text" id="apellido" name="apellido" class="form-control" aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm" placeholder="Apellido" required>
+          <input type="text" id="lastname" name="lastname" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your lastname" required>
         </div>
         <!-- Direccion -->
         <div class="input-group input-group-sm mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Direccion: </span>
+            <span class="input-group-text" id="inputGroup-sizing-sm">Address: </span>
           </div>
-          <input type="text" id="direccion" name="direccion" class="form-control" aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm" placeholder="direccion" required>
+          <input type="text" id="address" name="address" class="form-control" aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter your address" required>
         </div>     
         <!-- Fecha de Nacimiento -->
         <div class="input-group input-group-sm mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Fecha de Nacimiento: </span>
+                <span class="input-group-text" id="inputGroup-sizing-sm">Date Birth: </span>
             </div>
-            <input type="text" id="fechaNacimiento" name="fechaNacimiento" class="form-control" aria-label="Small"
-                aria-describedby="inputGroup-sizing-sm" placeholder="fechaNacimiento" required>
+            <input type="text" id="dateBirth" name="dateBirth" class="form-control" aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm" placeholder="Enter your date birth" required>
         </div>     
         <!-- Telefono -->
         <div class="input-group input-group-sm mb-3">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono: </span>
+                <span class="input-group-text" id="inputGroup-sizing-sm">Phone: </span>
             </div>
-            <input type="text" id="telefono" name="telefono" class="form-control" aria-label="Small"
-                aria-describedby="inputGroup-sizing-sm" placeholder="telefono" required>
+            <input type="text" id="phone" name="phone" class="form-control" aria-label="Small"
+                aria-describedby="inputGroup-sizing-sm" placeholder="enter your phone" required>
         </div>      
         <!-- Avatar -->
         <div class="input-group input-group-sm mb-3">
@@ -86,12 +86,13 @@
           </div>
          
           <input type="text" id="avatar" name="avatar" class="form-control" aria-label="Small"
-            aria-describedby="inputGroup-sizing-sm" placeholder="ingresar el nombre del archivo, ejemplo juan.png" required>
-            &nbsp;<a href="/subirArchivos/" target="_blank">Subir Archivo</a>&nbsp;
+            aria-describedby="inputGroup-sizing-sm" placeholder="Enter the name of the photo you uploaded, example marian.png" required>
+            &nbsp;<a href="/web/subirArchivos/" target="_blank"><button type="button" class="btn btn-primary">Subir Archivo</button></a>&nbsp;
+        
           </div>
         <!-- boton enviar -->
         <div class="form-group">
-          <input type="submit" value="Enviar" class="btn btn-success">
+          <input type="submit" value="Enviar" class="btn btn-primary">
         </div>
       </form>
   </div>

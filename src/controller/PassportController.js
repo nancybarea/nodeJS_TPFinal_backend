@@ -5,34 +5,34 @@ import logger from '../logger.js'
 import { jwtOpts } from '../../config/config.js'
 import UsuariosApi from '../api/UsuariosApi.js' 
 import {validarToken} from '../controller/UsuariosController.js' 
+import globals from 'globals';
 const users = new UsuariosApi();
 
-//creacion de las estragias de passport
+//creation of passport strategies
 
-//estragegia de registro
-passport.use('registro', new Strategy({passReqToCallback:true},async (req, username, password, done)=>{
+//registration strategy
+passport.use('registro', new Strategy({passReqToCallback:true, usernameField: 'email'}, async (req, username, password, done)=>{
     logger.info(`PassportController.js - passport.use --> registro`)
-    let usuario
-    //valido si existe el usuario
-    try{
-        await users.obtenerUsuarioPorEmail(username) //si encuentra usuario quiere decir q ya esta registrado
-        return done(null, false) //false pq no se genero ningun cambio en el registro
+    let usuario    
+    try{//valid if the user exists
+        await users.obtenerUsuarioPorEmail(username) //If you find a user, it means that you are already registered.
+        return done(null, false) //false: because no change was generated in the registry
     }catch(error){
-        //todo OK, o sea no encontro el usuario
-    }
-    //si no existe lo creo
-    try {
+        //all OK, that is, the user was not found
+    }    
+    try {//The user does not exist, I create it
         const datosUsuario = req.body
-        usuario = await  users.crearUsuario(datosUsuario) //crear usuario
+        usuario = await  users.crearUsuario(datosUsuario) //create user
     }catch(error){
         return done(error) 
     }
     done(null, usuario)
 }))
 
-//estrategia para login
-passport.use('login', new Strategy(async (email, password, done) => {
+//login strategy
+passport.use('login', new Strategy({usernameField: 'email'}, async (email, password, done) => {
     logger.info(`PassportController.js - passport.use --> login`)
+    globals.emailUser = email
     try{
         const user = await users.login(email, password)
         return done(null, user);
@@ -42,8 +42,8 @@ passport.use('login', new Strategy(async (email, password, done) => {
     }
 }))
 
-//informar de que manera va a manejar transformacion session-cookies
-passport.serializeUser((user, done) => {//recibe usuario que esta en la sesion y callback 
+//inform how it will handle transformation session-cookies
+passport.serializeUser((user, done) => {//receives user who is in the session and callback 
     logger.info(`PassportController.js - passport.serializeUser`)
     done(null, user) 
     //done(null, user.email) // en el caso que mande user.email, cuando hago la deserealizacion tengo q buscar x email y obtener el objeto usuario completo 

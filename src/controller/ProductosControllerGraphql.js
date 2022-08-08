@@ -5,7 +5,7 @@ const productos = new ProductosApi();
 
 //devuelve todos los productos de la coleccion
 export async function obtenerProductos() {
-    logger.info(`GET api/productos`)
+    logger.info(`GET api/products`)
     try{
         return await productos.getProductos()
     }
@@ -17,7 +17,7 @@ export async function obtenerProductos() {
 
 //dado un id devuelve los datos de ese producto
 export async function obtenerUnProducto(producto) {
-    logger.info(`GET api/productos/id/{idProducto}`)
+    logger.info(`GET api/products/{idProducto}`)
     try{
         return await productos.getProducto(producto.id)
     }
@@ -29,7 +29,7 @@ export async function obtenerUnProducto(producto) {
 
 //Con los datos del body agrega un producto a la coleccion y devuelve el id creado 
 export async function agregarProducto(producto) {
-    logger.info(`POST api/productos`)
+    logger.info(`POST api/products`)
     try{
         return await productos.addProducto(producto.datos)
     }
@@ -41,7 +41,7 @@ export async function agregarProducto(producto) {
 
 //dado un id por parametro borra el mismo de la coleccion
 export async function borrarProducto(producto) {
-    logger.info(`DELETE api/productos`)
+    logger.info(`DELETE api/products`)
     try{
        return await productos.deleteProducto(producto.id)
     }

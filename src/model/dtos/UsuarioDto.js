@@ -1,37 +1,47 @@
 import bCrypt from 'bcrypt';
+import NUID from 'nuid';
+import config from '../../../config/config.js'
 
 export default class UsuarioDto {
 
+    _id;
+    id;
     email;
     password;    
     roles;
     username;
-    nombre;
-    apellido;
-    direccion;
-    fechaNacimiento;
-    telefono;
+    name;
+    lastname;
+    address;
+    dateBirth;
+    phone;
     avatar;
 
-    constructor({ _id, email, password, roles, username, nombre, apellido, direccion, fechaNacimiento, telefono, avatar }) {
+    constructor({ _id, id, email, password, roles, username, name, lastname, address, dateBirth, phone, avatar }) {
         if (_id === undefined) {
             this._id = undefined;
-            this.roles = ["usuario"];
+            this.id = NUID.next();
+            if (email === config.EMAIL_ADMINISTRADOR){
+                this.roles = ["admin"];
+            }else{
+                this.roles = ["usuario"];
+            }            
             this.password = createHash(password)
         }
         else {
             this._id = _id;
+            this.id = id;
             this.roles = roles;
             this.password = password;
         }
 
         this.email = email;
         this.username = username;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.direccion = direccion;
-        this.fechaNacimiento = fechaNacimiento;
-        this.telefono = telefono;
+        this.name = name;
+        this.lastname = lastname;
+        this.address = address;
+        this.dateBirth = dateBirth;
+        this.phone = phone;
         this.avatar = avatar;
 
     }

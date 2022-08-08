@@ -2,15 +2,26 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <%- include('../partials/head') %>
     <title>Subir Archivo</title>
 </head>
 
-<body>
+<body class="fondo__degrade">
+    <!-- header -->
+    <%- include('../partials/header') %>
+
     <!--  SINGLE FILE -->
-    <form action="/subirArchivos" enctype="multipart/form-data" method="POST">
+    <form action="/web/subirArchivos" enctype="multipart/form-data" method="POST" style="text-align: center;">
+        <br>
         <input type="file" name="miArchivo" />
-        <input type="submit" value="Subir Archivo" />
+        <br><br>
+        <input type="submit" value=" Subir Archivo " />
+        <br>
     </form>
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+
 </body>
+
 </html>

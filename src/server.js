@@ -3,8 +3,8 @@ import passport from './controller/PassportController.js';
 // routes
 import UsersRoutes from './routes/usuarios.js';
 import ProductosRoutes from './routes/productos.js';
-import CarritosRoutes from './routes/carritos.js';
-import PedidosRoutes from './routes/pedidos.js';
+import ShoppingCartRoutes from './routes/shoppingCart.js';
+import OrdersRoutes from './routes/orders.js';
 import ChatRoutes from './routes/chat.js';
 import webRoutes from './routes/web.js';
 import DefaultRoutes from "./routes/default.js";
@@ -25,11 +25,11 @@ export function crearServidor() {
     app.use(passport.initialize()) 
 
     // routes apiRestFull
-    app.use('/', webRoutes)
-    app.use('/api/usuarios', UsersRoutes) //usuarios que realizan la compra de los productos
-    app.use('/api/productos', ProductosRoutes) //productos que tiene el sitio
-    app.use('/api/carritos', CarritosRoutes) //carritos de compras de los usuarios
-    app.use('/api/pedidos', PedidosRoutes) // pedidos realizados por el usuario, carrito pasa a estado Cerrado
+    app.use('/web', webRoutes) //Antes era / pero tuve q modificarlo por el TP final
+    app.use('/', UsersRoutes) //usuarios que realizan la compra de los productos. Antes era api/usuarios
+    app.use('/api/products', ProductosRoutes) //productos que tiene el sitio
+    app.use('/api/shoppingcartproducts', ShoppingCartRoutes) //shoppingCart de los usuarios    
+    app.use('/api/orders', OrdersRoutes) // ordenes realizadas por el usuario, carrito se borra
     app.use('/api/chat', ChatRoutes) // mensajes del chat 
 
     //documentacion
@@ -40,8 +40,6 @@ export function crearServidor() {
 
     //routes not found
     app.use('/*', DefaultRoutes)
-
-
 
     return app
 

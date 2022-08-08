@@ -4,21 +4,23 @@ import {obtenerProductos, obtenerUnProducto, agregarProducto, borrarProducto} fr
 
 const schema = buildSchema(`
   input ProductoInput {
-    nombre: String
-    descripcion: String
-    precio: Int
-    imagenURL: String
+    name: String
+    description: String
+    category: String
+    code: Int 
+    image: String
+    price: Int
     stock: Int
-    categoria: String
   }
   type Producto {
     id: ID!
-    nombre: String
-    descripcion: String
-    precio: Int    
-    imagenURL: String
+    name: String
+    description: String
+    category: String
+    code: Int  
+    image: String
+    price: Int    
     stock: Int
-    categoria: String
   }
   type Query {
     obtenerProductos: [Producto]

@@ -8,7 +8,6 @@ const PORT = config.PORT
 const modo = config.MODO
 const app = crearServidor()
 
-
 /*****************************************************************************************/
 // PARTE WEB
 import { createServer } from "http";

@@ -557,3 +557,587 @@
   descripcion: 'Document not found in undefined with that {"id":"F613N6ZZYWJGM9WTDZC0OP"}',
   detalles: undefined
 }
+[2022-07-25T13:05:34.543] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"F613N6ZZYWJGM9WTDZC0OP"}',
+  detalles: undefined
+}
+[2022-07-25T13:05:44.533] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"62b61ac298737ca836c85981"}',
+  detalles: undefined
+}
+[2022-07-25T16:43:11.727] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"B4LAB53LFYJMJSX7QO8NRP"}',
+  detalles: undefined
+}
+[2022-07-25T20:31:14.753] [ERROR] default - TypeError: this.collection.deleteOne(...).toArray is not a function
+    at ShoppingCartDao.deleteById (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:62:66)
+    at ShoppingCartDao.deleteByProductId (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ShoppingCartDao.js:10:24)
+    at ShoppingCartApi.deleteCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/ShoppingCartApi.js:24:43)
+    at borrarCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:37:44)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at complete (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\authenticator.js:450:5)
+[2022-07-25T20:31:14.756] [ERROR] default - CustomError {
+  estado: 500,
+  descripcion: 'Error when delete a documents in collection undefined',
+  detalles: TypeError: this.collection.deleteOne(...).toArray is not a function
+      at ShoppingCartDao.deleteById (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:62:66)
+      at ShoppingCartDao.deleteByProductId (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ShoppingCartDao.js:10:24)
+      at ShoppingCartApi.deleteCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/ShoppingCartApi.js:24:43)
+      at borrarCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:37:44)
+      at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+      at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+      at complete (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+      at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+      at pass (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\authenticator.js:428:14)
+      at Authenticator.transformAuthInfo (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\authenticator.js:450:5)
+}
+[2022-07-25T21:26:10.408] [ERROR] default - ReferenceError: globals is not defined
+    at ProductosApi.getProductos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/ProductosApi.js:14:17)
+    at obtenerProductos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ProductosController.js:10:45)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:174:3)
+[2022-07-25T21:34:22.476] [ERROR] default - TypeError: shoppingCart.getCarritosDelUsuario is not a function
+    at getCartUserLogged (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:11:49)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at complete (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\authenticator.js:450:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:275:22
+    at IncomingMessage.req.login.req.logIn (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\http\request.js:44:13)
+    at JwtStrategy.strategy.success (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:256:13)
+[2022-07-25T22:04:49.264] [ERROR] default - ReferenceError: err is not defined
+    at addProductIdToCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:46:24)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-07-25T22:16:10.653] [ERROR] default - CustomError {
+  estado: 500,
+  descripcion: 'Error when deleting a product to the cart',
+  detalles: ReferenceError: idUsuario is not defined
+      at CarritosDao.updateEliminarProductoAlCarritoByEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/CarritosDao.js:63:33)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+      at async CarritosApi.deleteProductoAlCarritoByEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/CarritosApi.js:46:16)
+      at async deleteProductInCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:69:25)
+}
+[2022-07-25T22:18:24.881] [ERROR] default - ReferenceError: productId is not defined
+    at CarritosDao.updateEliminarProductoAlCarritoByEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/CarritosDao.js:60:54)
+    at CarritosApi.deleteProductoAlCarritoByEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/CarritosApi.js:46:39)
+    at deleteProductInCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:69:40)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at complete (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:271:13)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:278:15
+    at pass (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\authenticator.js:428:14)
+    at Authenticator.transformAuthInfo (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\authenticator.js:450:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\passport\lib\middleware\authenticate.js:275:22
+[2022-07-25T22:25:52.339] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"9KOLJP118ZV1OFHMDSRUPS"}',
+  detalles: undefined
+}
+[2022-07-25T23:11:41.791] [ERROR] default - Error solicitar los pedidos de un usuario: [object Object]
+[2022-07-25T23:11:41.792] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error solicitar los pedidos de un usuario',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"admin@gmail.com"}',
+    detalles: undefined
+  }
+}
+[2022-07-25T23:36:33.275] [ERROR] default - MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+    at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:18:19)
+    at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+    at FindCursor.[kInit] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:435:14)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:505:22)
+    at fetchDocs (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:253:17)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:270:13
+    at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:410:5)
+    at FindCursor.toArray (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:248:41)
+    at PedidosDao.listByQuery (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:70:54)
+    at PedidosApi.getPedidosPorEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/PedidosApi.js:41:54) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2022-07-25T23:36:33.278] [ERROR] default - Error solicitar los pedidos de un usuario: [object Object]
+[2022-07-25T23:36:33.279] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error solicitar los pedidos de un usuario',
+  detalles: CustomError {
+    estado: 500,
+    descripcion: 'error getting all records in collection undefined',
+    detalles: MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+        at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:18:19)
+        at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+        at FindCursor.[kInit] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:435:14)
+        at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:505:22)
+        at fetchDocs (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:253:17)
+        at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:270:13
+        at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:410:5)
+        at FindCursor.toArray (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:248:41)
+        at PedidosDao.listByQuery (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:70:54)
+        at PedidosApi.getPedidosPorEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/PedidosApi.js:41:54) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  }
+}
+[2022-07-25T23:36:36.985] [ERROR] default - MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+    at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:18:19)
+    at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+    at FindCursor.[kInit] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:435:14)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:505:22)
+    at fetchDocs (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:253:17)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:270:13
+    at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:410:5)
+    at FindCursor.toArray (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:248:41)
+    at PedidosDao.listByQuery (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:70:54)
+    at PedidosApi.getPedidosPorEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/PedidosApi.js:41:54) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2022-07-25T23:36:36.986] [ERROR] default - Error solicitar los pedidos de un usuario: [object Object]
+[2022-07-25T23:36:36.986] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error solicitar los pedidos de un usuario',
+  detalles: CustomError {
+    estado: 500,
+    descripcion: 'error getting all records in collection undefined',
+    detalles: MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+        at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:18:19)
+        at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+        at FindCursor.[kInit] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:435:14)
+        at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:505:22)
+        at fetchDocs (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:253:17)
+        at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:270:13
+        at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:410:5)
+        at FindCursor.toArray (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:248:41)
+        at PedidosDao.listByQuery (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:70:54)
+        at PedidosApi.getPedidosPorEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/PedidosApi.js:41:54) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  }
+}
+[2022-07-25T23:37:58.153] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: "El campo 'email' es obligatorio ",
+  detalles: undefined
+}
+[2022-07-25T23:38:18.192] [ERROR] default - MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+    at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:18:19)
+    at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+    at FindCursor.[kInit] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:435:14)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:505:22)
+    at fetchDocs (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:253:17)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:270:13
+    at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:410:5)
+    at FindCursor.toArray (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:248:41)
+    at PedidosDao.listByQuery (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:70:54)
+    at PedidosApi.getPedidosPorEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/PedidosApi.js:41:54) {
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[2022-07-25T23:38:18.194] [ERROR] default - Error solicitar los pedidos de un usuario: [object Object]
+[2022-07-25T23:38:18.194] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error solicitar los pedidos de un usuario',
+  detalles: CustomError {
+    estado: 500,
+    descripcion: 'error getting all records in collection undefined',
+    detalles: MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+        at new FindOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\find.js:18:19)
+        at FindCursor._initialize (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\find_cursor.js:49:31)
+        at FindCursor.[kInit] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:435:14)
+        at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:505:22)
+        at fetchDocs (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:253:17)
+        at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:270:13
+        at maybePromise (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\utils.js:410:5)
+        at FindCursor.toArray (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:248:41)
+        at PedidosDao.listByQuery (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ContainerDao.js:70:54)
+        at PedidosApi.getPedidosPorEmail (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/PedidosApi.js:41:54) {
+      [Symbol(errorLabels)]: Set(0) {}
+    }
+  }
+}
+[2022-07-25T23:39:25.391] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: "El campo 'email' es obligatorio ",
+  detalles: undefined
+}
+[2022-07-25T23:44:45.977] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: "El campo 'email' es obligatorio ",
+  detalles: undefined
+}
+[2022-07-25T23:48:00.242] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: "El campo 'email' es obligatorio ",
+  detalles: undefined
+}
+[2022-07-26T09:29:33.575] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-26T09:29:33.627] [ERROR] default - Falló al validar si el username ya existe en la Base de datos - error:[object Object]
+[2022-07-26T09:35:07.317] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"alyson.fritsch37@ethereal.email\"}"}
+[2022-07-26T09:35:07.318] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T09:35:36.018] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"alyson.fritsch37@ethereal.email\"}"}
+[2022-07-26T09:35:36.019] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T09:35:53.447] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"alyson.fritsch37@ethereal.email\"}"}
+[2022-07-26T09:35:53.448] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T09:37:59.609] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"admin@gmail.comw\"}"}
+[2022-07-26T09:37:59.610] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"admin@gmail.comw"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T09:38:14.882] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"alyson.fritsch37@ethereal.email\"}"}
+[2022-07-26T09:38:14.883] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T09:40:12.885] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"alyson.fritsch37@ethereal.email\"}"}
+[2022-07-26T09:40:12.886] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T09:53:36.287] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"admin@admin.com\"}"}
+[2022-07-26T09:53:36.288] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"admin@admin.com"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T09:54:04.709] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"admin@admin.com\"}"}
+[2022-07-26T09:54:04.710] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"admin@admin.com"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T09:54:06.654] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"admin@admin.com\"}"}
+[2022-07-26T09:54:06.655] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"admin@admin.com"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T10:07:38.160] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-26T10:07:38.212] [ERROR] default - Falló al validar si el username ya existe en la Base de datos - error:[object Object]
+[2022-07-26T10:18:37.498] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"alyson.fritsch37@ethereal.email\"}"}
+[2022-07-26T10:18:37.499] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T10:23:02.700] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"alyson.fritsch37@ethereal.email\"}"}
+[2022-07-26T10:23:02.701] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T10:24:29.740] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"alyson.fritsch37@ethereal.email\"}"}
+[2022-07-26T10:24:29.741] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T10:29:21.926] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"alyson.fritsch37@ethereal.email\"}"}
+[2022-07-26T10:29:21.926] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T10:40:29.322] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-26T10:40:29.375] [ERROR] default - Falló al validar si el username ya existe en la Base de datos - error:[object Object]
+[2022-07-26T10:42:33.820] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-26T10:42:33.873] [ERROR] default - Falló al validar si el username ya existe en la Base de datos - error:[object Object]
+[2022-07-26T10:44:02.514] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-26T10:44:44.658] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-26T10:45:16.375] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-26T10:45:32.125] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-26T10:46:53.859] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:[object Object]
+[2022-07-26T10:47:26.355] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error:Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}
+[2022-07-26T10:47:40.864] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}
+[2022-07-26T10:49:20.957] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}
+[2022-07-26T10:49:46.295] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T10:51:08.642] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T10:52:28.789] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T10:52:42.741] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T10:52:54.239] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T10:53:05.071] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T10:53:22.403] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T10:55:16.061] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T11:04:04.132] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T11:09:17.704] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T11:10:02.909] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T11:10:26.873] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}
+[2022-07-26T11:11:09.539] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T11:11:44.578] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}
+[2022-07-26T11:11:47.468] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T11:49:15.952] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T12:09:31.225] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: "El campo 'email' es obligatorio ",
+  detalles: undefined
+}
+[2022-07-26T12:09:37.173] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: "El campo 'email' es obligatorio ",
+  detalles: undefined
+}
+[2022-07-26T12:11:26.592] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: "El campo 'email' es obligatorio. Puede pasar que se haya deslogueado porque vencio el token,vuelva a loguearse. ",
+  detalles: undefined
+}
+[2022-07-26T12:25:55.909] [ERROR] default - Error al solicitar el pedido {{ID_PEDIDO}}: [object Object]
+[2022-07-26T12:25:55.910] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al solicitar el pedido {{ID_PEDIDO}}',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"id":"{{ID_PEDIDO}}"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T12:33:40.061] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"admin@admin.com"}',
+  detalles: undefined
+}
+[2022-07-26T20:35:10.890] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"9KOLJP118ZV1OFHMDSRUPS"}',
+  detalles: undefined
+}
+[2022-07-26T20:44:24.614] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"admin@admin.com\"}"}
+[2022-07-26T20:44:24.615] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"admin@admin.com"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T20:44:53.545] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-07-26T22:16:07.990] [ERROR] default - Error al loguearse: {"estado":404,"descripcion":"Document not found in undefined with that {\"email\":\"admin@admin.com\"}"}
+[2022-07-26T22:16:07.992] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error al loguearse',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in undefined with that {"email":"admin@admin.com"}',
+    detalles: undefined
+  }
+}
+[2022-07-26T22:16:17.420] [ERROR] default - Falló al validar si el email ya existe en la Base de datos - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-08-03T14:52:52.388] [ERROR] default - Failed to validate if the email already exists in the Database - error: Document not found in undefined with that {"email":"nancybarea@admin.com"}
+[2022-08-03T14:53:57.450] [ERROR] default - Failed to validate if the email already exists in the Database - error: Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}
+[2022-08-03T14:57:56.024] [ERROR] default - Failed to validate if the email already exists in the Database - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-08-03T15:03:34.049] [ERROR] default - Failed to validate if the email already exists in the Database - error: Document not found in undefined with that {"email":"alyson.fritsch37@ethereal.email"}
+[2022-08-03T15:03:37.282] [ERROR] default - Failed to validate if the email already exists in the Database - error: Document not found in undefined with that {"email":"admin@admin.com"}
+[2022-08-03T15:12:12.565] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in undefined with that {"id":"2Y86U2VCO1FJLU5XPAOSIW"}',
+  detalles: undefined
+}
+[2022-08-03T15:21:32.622] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in productos with that {"id":"2Y86U2VCO1FJLU5XPAOSIW"}',
+  detalles: undefined
+}
+[2022-08-03T15:22:17.400] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection productos with that {"id":"2Y86U2VCO1FJLU5XPAOSIW"}',
+  detalles: undefined
+}
+[2022-08-03T15:29:48.299] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection productos with that {"id":"3JSKTGOV1CPCLYLYQO3IPF"}',
+  detalles: undefined
+}
+[2022-08-03T16:15:24.121] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection productos with that {"id":"N9OUIBMZD1PSKB09KLJTB7"}',
+  detalles: undefined
+}
+[2022-08-03T17:03:16.486] [ERROR] default - TypeError: shoppingCart.addCarrito is not a function
+    at addProductIdToCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:44:50)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-03T17:06:57.283] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'add')
+    at ShoppingCartApi.addCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/ShoppingCartApi.js:12:32)
+    at addProductIdToCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:44:50)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-03T17:35:08.046] [ERROR] default - ReferenceError: ProductID is not defined
+    at ShoppingCartApi.getProductoDelCarrito (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/ShoppingCartApi.js:30:21)
+    at addProductIdToCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:47:59)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-03T18:08:36.878] [ERROR] default - TypeError: shoppingCart.updateCantidadInProductsCart is not a function
+    at addProductIdToCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:56:54)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-03T18:10:44.554] [ERROR] default - TypeError: shoppingCart.updateCantidadInProductsCart is not a function
+    at addProductIdToCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:56:54)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-03T18:13:33.496] [ERROR] default - ReferenceError: log is not defined
+    at CarritosDao.updateCantidadInProductsCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ShoppingCartDao.js:44:5)
+    at ShoppingCartApi.updateCantidadInProductsCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/ShoppingCartApi.js:30:43)
+    at addProductIdToCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:56:54)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-03T18:14:12.917] [ERROR] default - CustomError {
+  estado: 500,
+  descripcion: 'Error adding product to cart',
+  detalles: MongoInvalidArgumentError: Update document requires atomic operators
+      at new UpdateOneOperation (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\operations\update.js:72:19)
+      at Collection.updateOne (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\mongodb\lib\collection.js:170:78)
+      at CarritosDao.updateCantidadInProductsCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/model/daos/ShoppingCartDao.js:46:41)
+      at ShoppingCartApi.updateCantidadInProductsCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/api/ShoppingCartApi.js:30:43)
+      at addProductIdToCart (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:56:54)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+    [Symbol(errorLabels)]: Set(0) {}
+  }
+}
+[2022-08-03T19:40:30.787] [ERROR] default - TypeError: shoppingCart.deleteCarrito is not a function
+    at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:37:28)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-03T19:55:05.255] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'productos')
+    at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:32:43)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-03T20:00:00.802] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'productos')
+    at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:32:43)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-03T20:40:47.745] [ERROR] default - Error logging in: {"estado":404,"descripcion":"Document not found in the collection users with that {\"email\":\"alyson.fritsch37@ethereal.email\"}"}
+[2022-08-03T20:40:47.746] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error logging in',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in the collection users with that {"email":"alyson.fritsch37@ethereal.email"}',
+    detalles: undefined
+  }
+}
+[2022-08-03T20:40:54.619] [ERROR] default - Failed to validate if the email already exists in the Database - error: Document not found in the collection users with that {"email":"alyson.fritsch37@ethereal.email"}
+[2022-08-03T20:41:00.420] [ERROR] default - Failed to validate if the email already exists in the Database - error: Document not found in the collection users with that {"email":"admin@admin.com"}
+[2022-08-04T10:38:49.456] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"XP9E89RMGNFBQ5OK2QZ6TT"}',
+  detalles: undefined
+}
+[2022-08-04T11:00:34.024] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"200RHTQ24MRA5XMU9MEGWP"}',
+  detalles: undefined
+}
+[2022-08-04T11:01:21.071] [ERROR] default - Failed to validate if the email already exists in the Database - error: Document not found in the collection users with that {"email":"alyson.fritsch37@ethereal.email"}
+[2022-08-04T11:01:44.422] [ERROR] default - Failed to validate if the email already exists in the Database - error: Document not found in the collection users with that {"email":"admin@admin.com"}
+[2022-08-04T16:58:15.345] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"200RHTQ24MRA5XMU9MEH56ss"}',
+  detalles: undefined
+}
+[2022-08-04T17:01:04.690] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"200RHTQ24MRA5XMU9MEH56s"}',
+  detalles: undefined
+}
+[2022-08-05T15:57:22.999] [ERROR] default - ReferenceError: oderCart is not defined
+    at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:38:26)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-05T16:00:33.427] [ERROR] default - ReferenceError: array is not defined
+    at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:32:9)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-05T16:55:27.102] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'id')
+    at getProductWithDetails (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:28:48)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-05T16:56:50.921] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'id')
+    at getProductWithDetails (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/ShoppingCartController.js:34:62)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-05T17:17:15.316] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'productos')
+    at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:28:55)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-05T18:05:18.184] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: "The 'email' field is required. It may happen that you have logged out because the token expired, log in again. ",
+  detalles: undefined
+}
+[2022-08-05T18:42:28.600] [ERROR] default - The sending of the email of the new order failed - error:TypeError: Cannot read properties of undefined (reading 'productos')
+[2022-08-07T18:55:46.231] [ERROR] default - The sending of the email of the new order failed - error:ReferenceError: i is not defined
+[2022-08-07T19:07:35.829] [ERROR] default - Failed to validate if the email already exists in the Database - error: Document not found in the collection users with that {"email":"alyson.fritsch37@ethereal.email"}
+[2022-08-08T00:50:38.289] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: "The 'email' field is required. It may happen that you have logged out because the token expired, log in again. ",
+  detalles: undefined
+}
+[2022-08-08T00:50:43.435] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'productos')
+    at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:28:55)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)

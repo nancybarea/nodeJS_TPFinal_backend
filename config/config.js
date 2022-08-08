@@ -30,5 +30,6 @@ export default {
   PORT: puerto || process.env.PORT,
   MODO: modo,
   MONGO_URL: process.env.MONGO_URL||'noURL',
-  MONGO_DB: process.env.MONGO_BASE||'ecommerce' 
+  MONGO_DB: process.env.MONGO_BASE||'ecommerce', 
+  EMAIL_ADMINISTRADOR: "admin@admin.com"
 }

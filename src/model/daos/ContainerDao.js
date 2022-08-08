@@ -19,8 +19,7 @@ export default class ContainerDao {
 
     async getAll() {
         try {
-            const array = await this.collection.find().toArray()
-            return array
+            return await this.collection.find().toArray()
         }
         catch (err) {
             logger.error(err)
@@ -29,7 +28,6 @@ export default class ContainerDao {
     }
 
     async getById(query) {
-        console.log(query)
         let respuesta       
         try {
             respuesta = await this.collection.findOne(query);
@@ -40,7 +38,7 @@ export default class ContainerDao {
         }
 
         if (!respuesta) {
-            throw new CustomError(404, `Document not found in ${this.coleccionName} with that ${JSON.stringify(query)}`)
+            throw new CustomError(404, `Document not found in the collection ${this.collectionName} with that ${JSON.stringify(query)}`)
         }
         return respuesta
     }
@@ -58,21 +56,22 @@ export default class ContainerDao {
    
     async deleteById(query) {
 
-        await this.collection.deleteOne(query, function (err, obj) {
-            if (err) {
-                logger.error(err)
-                throw new CustomError(500, `Error when delete a documents in collection ${this.collectionName}`, err)
-            } 
-        });
+        try {
+            return await this.collection.deleteOne(query)
+        }
+        catch (err) {
+            logger.error(err)
+            throw new CustomError(500, `Error when delete a documents in collection ${this.collectionName}`, err)
+        }
     }
 
     async listByQuery(query){
         try {
-            const array = await this.collection.find(query).toArray()
-            return array
+            return await this.collection.find(query).toArray()
         }
         catch (err) {
-            throw new CustomError(500, `error getting all records in collection ${this.coleccionName}`, err)
+            logger.error(err)
+            throw new CustomError(500, `error getting all records in collection ${this.collectionName}`, err)
         }
 
     }

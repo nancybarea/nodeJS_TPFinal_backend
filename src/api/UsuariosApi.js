@@ -3,6 +3,7 @@ import UsuarioDto from '../model/dtos/UsuarioDto.js';
 import CustomError from '../errores/CustomError.js'
 import logger from '../logger.js'
 import { enviarEmail } from './notificaciones/email.js'
+import config from '../../config/config.js'
 
 export default class UsuariosApi {
 
@@ -10,35 +11,33 @@ export default class UsuariosApi {
         this.usuariosDao = new UsuariosDao();
     }
 
-    async getUsuarios() {
-        logger.info(`UsuariosApi.js - getUsuarios`);
-        const usuariosObj = await this.usuariosDao.getAll();
-        return usuariosObj;
+    async getUsers() {
+        logger.info(`UsuariosApi.js - getUsers`);
+        return this.usuariosDao.getAll();
     }   
 
     //obtiene los datos de un usuario segun email ingresado
     async getUsuario(email) {
         logger.info(`UsuariosApi.js - getUsuario(${email})`);
-        const usuariosObj = await this.usuariosDao.getByEmail(email);
-        return usuariosObj;
+        return this.usuariosDao.getByEmail(email);
     }   
 
     //alta de usuario nuevo
     async crearUsuario(objetoUsuario){
         logger.info(`UsuariosApi.js - crearUsuario`);
-        if (!objetoUsuario.username) throw new CustomError(404, `El campo 'email' es obligatorio `)
-        if (!objetoUsuario.password) throw new CustomError(404, `El campo 'password' es obligatorio `)
+        if (!objetoUsuario.email) throw new CustomError(404, `The 'email' field is required `)
+        if (!objetoUsuario.password) throw new CustomError(404, `The 'password' field is required`)
         
         try{
             const usuario = new UsuarioDto(objetoUsuario)
             usuario._id = await this.usuariosDao.add(usuario)
-            logger.info(`Registro de Usuario Ok `);
+            logger.info(`User Registration Ok`);
             await this.enviarEmailNuevoUsuario(usuario)
             return usuario.get()
         }
         catch (err){
-            logger.error(`Error al crear el usuario: ${err}`);
-            throw new CustomError(401, `Error al crear el usuario`, err)
+            logger.error(`Error creating user: ${err}`);
+            throw new CustomError(401, `Error creating user`, err)
         }
     }
 
@@ -50,8 +49,8 @@ export default class UsuariosApi {
             return await this.usuariosDao.deleteByEmail(email);
         }
         catch (err){
-            logger.error(`Error al borrar el usuario con email: ${email}: ${err}`);
-            throw new CustomError(401, `Error al borrar el usuario con email: ${email}`, err)
+            logger.error(`Error when deleting the user with email: ${email}: ${err}`);
+            throw new CustomError(401, `Error when deleting the user with email: ${email}`, err)
         }
     }  
 
@@ -67,8 +66,8 @@ export default class UsuariosApi {
                 return usuario.get();
         }
         catch(err){            
-             logger.error(`Error al loguearse: ${JSON.stringify(err)}`)    
-             throw new CustomError(401, `Error al loguearse`, err)         
+             logger.error(`Error logging in: ${JSON.stringify(err)}`)    
+             throw new CustomError(401, `Error logging in`, err)         
         }
     }
 
@@ -76,21 +75,21 @@ export default class UsuariosApi {
     async enviarEmailNuevoUsuario(objetoUsuario){
         logger.info(`UsuariosApi.js - enviarEmailNuevoUsuario`);
         try {
-            let correoDestino = process.env.MAIL_USER_ADMIN
-            let asunto = 'Nuevo registro'
-            let cuerpo = `<h1> Nuevo Registro </h1>
+            let correoDestino = config.EMAIL_ADMINISTRADOR
+            let asunto = 'New register'
+            let cuerpo = `<h1> New register </h1>
             <p><strong>Email: </strong>${objetoUsuario.email}</p>
             <p><strong>Username: </strong>${objetoUsuario.username}</p>
-            <p><strong>Nombre: </strong>${objetoUsuario.nombre}</p>
-            <p><strong>Apellido: </strong>${objetoUsuario.apellido}</p>
-            <p><strong>Direccion: </strong>${objetoUsuario.direccion}</p>
-            <p><strong>Fecha de Nacimiento: </strong>${objetoUsuario.fechaNacimiento}</p>
-            <p><strong>Teléfono: </strong>${objetoUsuario.telefono}</p>
+            <p><strong>Name: </strong>${objetoUsuario.name}</p>
+            <p><strong>LastName: </strong>${objetoUsuario.lastname}</p>
+            <p><strong>Address: </strong>${objetoUsuario.address}</p>
+            <p><strong>Date of Birth: </strong>${objetoUsuario.dateBirth}</p>
+            <p><strong>Phone: </strong>${objetoUsuario.phone}</p>
             <p><strong>Avatar: </strong>${objetoUsuario.imagenUrl}</p>
             <p><strong>Roles: </strong>${objetoUsuario.roles}</p>`
             await enviarEmail(correoDestino, asunto, cuerpo)         
         } catch (err) { 
-            logger.error(`Falló el envio de mail - error:${err}`) 
+            logger.error(`Sending email failed - error:${err}`) 
         }
     }   
 
@@ -101,7 +100,7 @@ export default class UsuariosApi {
             return true;
         }
         catch (err) {
-            logger.error(`Falló al validar si el email ya existe en la Base de datos - error:${err}`)
+            logger.info(`the email don't exists in the Database - msg: ${err.descripcion}`)
             if (err.estado == 404) return false;
             else throw err
         }
@@ -114,7 +113,7 @@ export default class UsuariosApi {
             return true;
         }
         catch (err) {
-            logger.error(`Falló al validar si el username ya existe en la Base de datos - error:${err}`)
+            logger.error(`Failed to validate if the username already exists in the Database - error:${err}`)
             if (err.estado == 404) return false;
             else throw err
         }

@@ -5,36 +5,38 @@ export default class ProductoDto {
 
     _id;
     id;
-    fechaHora;
-    nombre;
-    descripcion;
-    precio;
-    imagenURL;
+    code;
+    dateHour;
+    name;
+    description;
+    price;
+    image;
     stock;
-    categoria;
-    caracteristicas;
+    category;
+    features;
 
-    constructor({ _id, id, fechaHora, nombre, descripcion, precio, imagenURL, stock, categoria, caracteristicas}) {
+    constructor({ _id, id, code, dateHour, name, description, price, image, stock, category, features}) {
 
 
         if (_id === undefined) {
             this._id = undefined;
             this.id = NUID.next();
-            this.fechaHora = moment(new Date()).format('DD/MM/YYYY HH:MM:SS');
+            this.dateHour = moment(new Date()).format('DD/MM/YYYY HH:MM:SS');
         }
         else {
             this._id = _id
-            this.id = id;    
-            this.fechaHora = fechaHora;     
+            this.id = id;       
+            this.dateHour = dateHour;     
         }
         
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.precio = precio;
-        this.imagenURL = imagenURL;
+        this.code = code
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.image = image;
         this.stock = stock;
-        this.categoria = categoria;
-        this.caracteristicas = caracteristicas;
+        this.category = category;
+        this.features = features;
     }
 
     get() {
@@ -44,14 +46,15 @@ export default class ProductoDto {
     getforCarrito(){
         return {
             id: this.id,
-            fechaHora: this.fechaHora,
-            nombre: this.nombre,
-            descripcion: this.descripcion,
-            precio: this.precio,
-            imagenURL: this.imagenURL,
+            code: this.code,
+            dateHour: this.dateHour,
+            name: this.name,
+            description: this.description,
+            price: this.price,
+            image: this.image,
             stock: this.stock,
-            categoria: this.categoria,
-            caracteristicas: this.caracteristicas
+            category: this.category,
+            features: this.features
         }
     }
 

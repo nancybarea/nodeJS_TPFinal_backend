@@ -4,32 +4,34 @@ import CustomError from '../../errores/CustomError.js'
 export default class ProductosDao extends ContainerDao {
 
   constructor() {
-    super('productos')
+    super('products')
   }
   
   async getById(id) {
-    return await super.getById({ id: id })
+    return super.getById({ id: id })
   }
 
-  async getByCategoria(categoria) {
-    return await super.listByQuery({ categoria: categoria })
+  async getByCategoria(category) {
+    return super.listByQuery({ category: category })
   }
   
   async deleteById(id) {
-    return await super.deleteById({ id: id })
+    return super.deleteById({ id: id })
   }
 
   async searchByName(name) {
-    return await super.listByQuery({ nombre: name })
+    return super.listByQuery({ name: name })
   }
 
-  async update({
-    id,
-    nombre,
-    descripcion,
-    precio,
-    imagenURL,
-    stock
+  async update(id, {
+    code,
+    name,
+    description,
+    price,
+    image,
+    stock,
+    category,
+    features
   }) {
 
     try {
@@ -40,11 +42,14 @@ export default class ProductosDao extends ContainerDao {
         {
           '$set':
           {
-            nombre: nombre,
-            descripcion: descripcion,
-            precio: precio,
-            imagenURL: imagenURL,
-            stock: stock
+            code: code,
+            name: name,
+            description: description,
+            price: price,
+            image: image,
+            stock: stock,
+            category: category,
+            features: features
           }
         })
 

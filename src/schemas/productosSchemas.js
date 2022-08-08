@@ -2,21 +2,27 @@ import Joi from 'joi'
 
 const schemaNewProduct = Joi.object(
     {
-        nombre: Joi.string()
+        id: Joi.string(),
+        code: Joi.number()
             .required(),
-        descripcion: Joi.string(),
-        precio: Joi.number()
+        name: Joi.string()
+            .required(),
+        description: Joi.string()
+            .required(),
+        price: Joi.number()
             .precision(2)
             .positive()
             .required(),
-        imagenURL: Joi.string(),
+        image: Joi.string()
+            .required(),
         stock: Joi.number()
             .integer()
             .positive()
             .required(),
-        categoria: Joi.string(),
-        caracteristicas: Joi.array().items( Joi.object(
-            {talle: Joi.string().required(), colores: Joi.string().required() }
+        category: Joi.string()
+            .required(),
+        features: Joi.array().items( Joi.object(
+            {waist: Joi.string().required(), colors: Joi.string().required() }
             )
         )
     }

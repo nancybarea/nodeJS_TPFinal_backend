@@ -6,19 +6,19 @@ const schemaNewUser = Joi.object(
             .email()
             .required(),
         password:Joi.string()
-            .min(6)
+            .min(2)
             .max(15)
             .required(),
         username: Joi.string()
-            .max(15)
+            .max(15),
+        name: Joi.string()
             .required(),
-        nombre: Joi.string()
+        lastname: Joi.string()
             .required(),
-        apellido: Joi.string()
+        address: Joi.string(),        
+        dateBirth: Joi.string(),
+        phone: Joi.string()
             .required(),
-        direccion: Joi.string(),        
-        fechaNacimiento: Joi.string(),
-        telefono: Joi.string(),
         avatar: Joi.string()
     }
 )

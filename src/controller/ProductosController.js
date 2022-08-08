@@ -1,14 +1,14 @@
 import ProductosApi from '../api/ProductosApi.js'
 import logger from '../logger.js'
 
-const productos = new ProductosApi();
+const products = new ProductosApi();
 
-//devuelve todos los productos de la coleccion
+//returns all products in the collection
 export async function obtenerProductos(req, res) {
-    logger.info(`GET api/productos`)
+    logger.info(`GET api/products`)
     try{
-        const productosList = await productos.getProductos()
-        res.status(200).json(productosList)
+        const productsList = await products.getProductos()
+        res.status(200).json(productsList)
     }
     catch (err){
         logger.error(err);
@@ -16,13 +16,13 @@ export async function obtenerProductos(req, res) {
     }
 }
 
-//dado un id devuelve los datos de ese producto
+//given an id returns the data of that product
 export async function obtenerUnProducto(req, res) {
-    logger.info(`GET api/productos/id/{idProducto}`)
+    logger.info(`GET api/products/{idProduct}`)
     try{
-        let id = req.params.idProducto;
-        const producto = await productos.getProducto(id)
-        res.status(200).json(producto)
+        let id = req.params.idProduct;
+        const product = await products.getProducto(id)
+        res.status(200).json(product)
     }
     catch (err){
         logger.error(err);
@@ -30,13 +30,13 @@ export async function obtenerUnProducto(req, res) {
     }
 }
 
-//obtenerProductosPorCategoria --> devuelve todos los productos de una categoria
+//returns all products in a category
 export async function obtenerProductosPorCategoria(req, res) {
-    let categoria = req.params.categoria;
-    logger.info(`GET api/productos/categoria/${categoria}`)
+    let category = req.params.category;
+    logger.info(`GET api/products/feature/${category}`)
     try{
-        const producto = await productos.getProductoPorCategoria(categoria)
-        res.status(200).json(producto)
+        const product = await products.getProductoPorCategoria(category)
+        res.status(200).json(product)
     }
     catch (err){
         logger.error(err);
@@ -44,13 +44,13 @@ export async function obtenerProductosPorCategoria(req, res) {
     }
 }
 
-//Con los datos del body agrega un producto a la coleccion y devuelve el id creado 
+//With the body data add a product to the collection 
 export async function agregarProducto(req, res) {
-    logger.info(`POST api/productos`)
+    logger.info(`POST api/products`)
     try{
         let objeto = req.body;
-        const producto = await productos.addProducto(objeto)
-        res.status(200).json(producto)
+        const product = await products.addProducto(objeto)
+        res.status(201).json(product)
     }
     catch (err){
         logger.error(err);
@@ -58,13 +58,14 @@ export async function agregarProducto(req, res) {
     }
 }
 
-//dado un id producto por parametro actualiza el producto con los datos enviados en el body
+//given a product id by parameter updates the product with the data sent in the body
 export async function actualizarProducto(req, res) {
-    logger.info(`PUT api/productos`)
+    let id = req.params.idProduct;
+    logger.info(`PUT api/products/${id}`)
     try{
-        let objeto = req.body;
-        const producto = await productos.putProducto(objeto);
-        res.status(200).json(producto);
+        let object = req.body;
+        const product = await products.putProducto(id, object);
+        res.status(200).json(product);
     }
     catch (err){
         logger.error(err);
@@ -72,13 +73,13 @@ export async function actualizarProducto(req, res) {
     }
 }
 
-//dado un id por parametro borra el mismo de la coleccion
+//given an id by parameter deletes the same from the collection
 export async function borrarProducto(req, res) {
-    logger.info(`DELETE api/productos`)
+    logger.info(`DELETE api/products/`)
     try{
-        let id = req.params.idProducto;
-        const producto = await productos.deleteProducto(id)
-        res.status(200).json(producto)
+        let id = req.params.idProduct;
+        await products.deleteProducto(id)
+        res.status(204).json({msg: 'the product was removed successfully'}) //the message will not be displayed because the code is 204 and it does not return content. If I want to show put 200
     }
     catch (err){
         logger.error(err);

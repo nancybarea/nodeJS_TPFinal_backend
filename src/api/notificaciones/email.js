@@ -14,7 +14,7 @@ transporter.verify(function (error, success) {
 
 export async function enviarEmail(correoDestino, asunto, cuerpo) {
 
-    logger.info("Enviando email con la notificación del nuevo pedido ...")
+    logger.info(`Enviando email con la notificación del nuevo pedido a ${correoDestino}`)
 
     const mailOptions = {
         from:'Servidor NodeJS',
@@ -24,10 +24,9 @@ export async function enviarEmail(correoDestino, asunto, cuerpo) {
     }
 
     try{
-        //let info = await transporter.sendMail(mailOptions)
-        //logger.info(info)
-        //return info.messageId;
-        return "no envia email para no gastar dolares"  
+        let info = await transporter.sendMail(mailOptions)
+        logger.info(info)
+        return info.messageId;
     }
     catch(err)
     {

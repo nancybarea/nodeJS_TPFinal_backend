@@ -35,7 +35,7 @@ export async function agregarMensajesChat(req, res) {
     logger.info(`POST api/chat`)
     try{
         const mensajesChatList = await chat.addMensajeChat(req.body)
-        res.status(200).json(mensajesChatList)
+        res.status(201).json(mensajesChatList)
     }
     catch (err){
         logger.error(err);
@@ -49,7 +49,7 @@ export async function borrarMensajeChat(req, res) {
     logger.info(`DELETE /api/chat/${idMensajeChat}`)
     try{
         const mensajesChatList = await chat.deleteMensajesChat(idMensajeChat)
-        res.status(200).json(mensajesChatList)
+        res.status(204).json(mensajesChatList)
     }
     catch (err){
         logger.error(err);

@@ -10,7 +10,7 @@
             <ul class="navbar-nav ms-auto p-12">
 
                 <!--menus para clientes (cualquier visitante del sitio sin loguearse)-->
-                <li class="nav-item"><a class="nav-link" href="/">Inicio</a>
+                <li class="nav-item"><a class="nav-link" href="/web">Inicio</a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#">Calendario</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Paquetes</a></li>
@@ -19,10 +19,10 @@
 
                 <!--menus para cualquier usuario, caso contrario aparece link login-->
                 <% if(rol!==undefined){ %>
-                    <li class="nav-item"><a class="nav-link" href="/chat">Chat</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/web/chat">Chat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/web/logout">Logout</a></li>
                 <% } else { %>
-                    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/web/login">Login</a></li>
                 <% } %>               
 
                 <!--menus BACKEND solo para administradores-->
@@ -33,13 +33,13 @@
                         BACKEND
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown1">                    
-                            <a class="dropdown-item" href="/abmUsuarios">ABM Usuarios</a>
-                            <a class="dropdown-item" href="/abmProductos">ABM Productos</a>
-                            <a class="dropdown-item" href="/abmCarritos">ABM Carritos</a>
-                            <a class="dropdown-item" href="/abmPedidos">ABM Pedidos</a>
-                            <a class="dropdown-item" href="/abmMensajes">ABM Mensajes</a>
+                            <a class="dropdown-item" href="/web/abmUsuarios">ABM Usuarios</a>
+                            <a class="dropdown-item" href="/web/abmProductos">ABM Productos</a>
+                            <a class="dropdown-item" href="/web/abmCarritos">ABM Carritos</a>
+                            <a class="dropdown-item" href="/web/abmPedidos">ABM Pedidos</a>
+                            <a class="dropdown-item" href="/web/abmMensajes">ABM Mensajes</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/infoServer">Info Servidor</a>
+                            <a class="dropdown-item" href="/web/infoServer">Info Servidor</a>
                         </div>
                     </li>
                 <% } %>

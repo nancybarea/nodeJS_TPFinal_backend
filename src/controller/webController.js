@@ -1,8 +1,8 @@
 import logger from '../logger.js'
-import UsuariosApi from '../api/UsuariosApi.js'
-import ProductosApi from '../api/ProductosApi.js'
-import CarritosApi from '../api/CarritosApi.js'
-import PedidosApi from '../api/PedidosApi.js'
+import UsersApi from '../api/UsuariosApi.js'
+import ProductsApi from '../api/ProductosApi.js'
+import ShoppingCartApi from '../api/ShoppingCartApi.js'
+import OrdersApi from '../api/OrdersApi.js'
 import ChatApi from '../api/ChatApi.js'
 import jwt from 'jsonwebtoken'
 import { jwtOpts } from '../../config/config.js'
@@ -10,10 +10,10 @@ import { jwtOpts } from '../../config/config.js'
 import os  from 'os'
 const cantidadDeCPUs = os.cpus().length
 
-const usuarios = new UsuariosApi();
-const productos = new ProductosApi();
-const carritos = new CarritosApi();
-const pedidos = new PedidosApi();
+const users = new UsersApi();
+const products = new ProductsApi();
+const shoppingCarts = new ShoppingCartApi();
+const orders = new OrdersApi();
 const chat = new ChatApi();
 let rolUsuario = undefined
 let nombreUsuario = ""
@@ -50,9 +50,9 @@ export async function getLogin(req, res) {
 //postlogin
 export async function postLogin(req, res) {
   logger.info(`webController.js: postLogin`)
-  emailUsuario = req.body.username;
-  const usuario = await usuarios.getUsuario(emailUsuario)
-  nombreUsuario = usuario.nombre
+  emailUsuario = req.body.email;
+  const usuario = await users.getUsuario(emailUsuario)
+  nombreUsuario = usuario.name
   let rolesUsuario = usuario.roles
   if (rolesUsuario.includes("admin")){rolUsuario="admin"}else{rolUsuario="usuario"}
   const title = 'ecomerce'
@@ -133,7 +133,7 @@ export async function abmUsuarios(req, res) {
 
   try{
     const title = 'ABM de Usuarios'
-    const usuariosList = await usuarios.getUsuarios()
+    const usuariosList = await users.getUsers()
     res.render('pages/abmUsuarios', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, usuariosList })
   }
   catch (err){
@@ -150,7 +150,7 @@ export async function amUsuario(req, res) {
     const title = 'AM de Usuario'
     const email = req.params.email
     let usuario = []
-    if (email != undefined) { usuario = await usuarios.getUsuario(email)}    
+    if (email != undefined) { usuario = await users.getUsuario(email)}    
     res.render('pages/amUsuario', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, usuario })
   }
   catch (err){
@@ -167,8 +167,8 @@ export async function usuarioBorrar(req, res) {
 
   try{
     const title = 'ABM de Usuarios'
-    await usuarios.deleteUsuario(email)
-    const usuariosList = await usuarios.getUsuarios()
+    await users.deleteUsuario(email)
+    const usuariosList = await users.getUsers()
     res.render('pages/abmUsuarios', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, usuariosList })
   }
   catch (err){
@@ -184,7 +184,7 @@ export async function abmProductos(req, res) {
 
   try{
     const title = 'ABM de Productos'
-    const productosList = await productos.getProductos()
+    const productosList = await products.getProductos()
     res.render('pages/abmProductos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, productosList })
   }
   catch (err){
@@ -200,8 +200,8 @@ export async function productoBorrar(req, res) {
 
   try{
     const title = 'ABM de Productos'
-    await productos.deleteProducto(id)
-    const productosList = await productos.getProductos()
+    await products.deleteProducto(id)
+    const productosList = await products.getProductos()
     res.render('pages/abmProductos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, productosList })
   }
   catch (err){
@@ -216,7 +216,7 @@ export async function abmCarritos(req, res) {
 
   try{
     const title = 'ABM de Carritos'
-    const carritosList = await carritos.getCarritos()
+    const carritosList = await shoppingCarts.getCarritos()
     res.render('pages/abmCarritos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, carritosList })
   }
   catch (err){
@@ -232,8 +232,8 @@ export async function carritoBorrar(req, res) {
 
   try{
     const title = 'ABM de Carritos'
-    await carritos.deleteCarrito(id)
-    const carritosList = await carritos.getCarritos()
+    await shoppingCarts.deleteCarrito(id)
+    const carritosList = await shoppingCarts.getCarritos()
     res.render('pages/abmCarritos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, carritosList })
   }
   catch (err){
@@ -248,7 +248,7 @@ export async function abmPedidos(req, res) {
 
   try{
     const title = 'ABM de Pedidos'
-    const pedidosList = await pedidos.getPedidos()
+    const pedidosList = await orders.getPedidos()
     res.render('pages/abmPedidos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, pedidosList })
   }
   catch (err){
@@ -264,8 +264,8 @@ export async function pedidoBorrar(req, res) {
 
   try{
     const title = 'ABM de Pedidos'
-    await pedidos.deletePedido(id)
-    const pedidosList = await pedidos.getPedidos()
+    await orders.deletePedido(id)
+    const pedidosList = await orders.getPedidos()
     res.render('pages/abmPedidos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, pedidosList })
   }
   catch (err){
