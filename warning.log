@@ -2781,3 +2781,4 @@
 [2022-08-09T00:26:39.950] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'productos')
     at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:28:55)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-09T12:31:46.045] [WARN] default - No existe la ruta GET /

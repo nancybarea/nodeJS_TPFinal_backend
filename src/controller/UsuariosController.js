@@ -2,6 +2,7 @@ import UsersApi from '../api/UsuariosApi.js'
 import logger from '../logger.js'
 import jwt from 'jsonwebtoken'
 import { jwtOpts } from '../../config/config.js'
+import globals from 'globals';
 
 const users = new UsersApi();
 
@@ -22,6 +23,7 @@ export async function obtenerUsuarios(req, res) {
 export function logout(req, res){
     logger.info(`UsuariosController.js: logout`)
     if (req.isAuthenticated()){
+        globals.emailUser = ""
         req.logout()
     }
     res.status(200).json({msg: `The user is already logged out.`})
