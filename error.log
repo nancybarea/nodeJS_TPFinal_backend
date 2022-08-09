@@ -1238,3 +1238,11 @@
   descripcion: 'Document not found in the collection products with that {"id":"5H6AKK8QWH0JGXJMIJHYBT"}',
   detalles: undefined
 }
+[2022-08-09T00:26:15.820] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"5H6AKK8QWH0JGXJMIJHYF9"}',
+  detalles: undefined
+}
+[2022-08-09T00:26:39.950] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'productos')
+    at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:28:55)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
