@@ -32,7 +32,6 @@ function agregarMensaje(e) {
 //------------------------------------------------------------
 //--------------------  PRINCIPAL-----------------------------
 socket.on('listadoMensajesChat', async mensajesChat => {
-    console.log("entro a socket on main.js")
     const plantilla = await buscarPlantillaMensajes()
     const html = armarHTMLChat(plantilla, mensajesChat)
     document.getElementById('listadoDeMensajes').innerHTML = html;

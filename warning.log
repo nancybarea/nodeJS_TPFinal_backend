@@ -2741,3 +2741,35 @@
 [2022-08-08T23:08:40.990] [WARN] default - No existe la ruta GET /carrito/borrar/DK3GLAOLOXP0YR1TUZ9QHP
 [2022-08-08T23:09:27.337] [WARN] default - No existe la ruta GET /pedido/borrar/8QWU5NBO4PQ89O7IVP75PW
 [2022-08-08T23:09:57.920] [WARN] default - No existe la ruta GET /pedido/borrar/8QWU5NBO4PQ89O7IVP75PW
+[2022-08-08T23:30:26.074] [WARN] default - The token has expired, you must log in again to generate a new token
+[2022-08-08T23:30:38.779] [ERROR] default - Error logging in: {"estado":404,"descripcion":"Document not found in the collection users with that {\"email\":\"admin@admin.com\"}"}
+[2022-08-08T23:30:38.780] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error logging in',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in the collection users with that {"email":"admin@admin.com"}',
+    detalles: undefined
+  }
+}
+[2022-08-08T23:32:14.869] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"5H6AKK8QWH0JGXJMIJHYBT"}',
+  detalles: undefined
+}
+[2022-08-08T23:32:25.611] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"5H6AKK8QWH0JGXJMIJHYBT"}',
+  detalles: undefined
+}
+[2022-08-08T23:32:35.973] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"5H6AKK8QWH0JGXJMIJHYBT"}',
+  detalles: undefined
+}
+[2022-08-08T23:32:38.949] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"5H6AKK8QWH0JGXJMIJHYBT"}',
+  detalles: undefined
+}
+[2022-08-08T23:34:57.639] [WARN] default - the user alyson.fritsch37@ethereal.email do not have administrator permissions and wanted to access an unauthorized route.

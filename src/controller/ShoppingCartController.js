@@ -113,8 +113,7 @@ export async function deleteProductInCart(req, res) {
                         existeProducto = true
                         cantidad = product.cantidad
                     }                    
-                })                 
-                console.log("cantidd", cantidad);
+                })      
                 if (existeProducto) {//If the product exists, Rest 1 in quantity and delete de product in cart
                     logger.info(`Rest amount 1 to the product ${productId}, to the cart of ${globals.emailUser}`)
                     cantidad = cantidad - 1
