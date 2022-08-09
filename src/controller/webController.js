@@ -6,6 +6,7 @@ import OrdersApi from '../api/OrdersApi.js'
 import ChatApi from '../api/ChatApi.js'
 import jwt from 'jsonwebtoken'
 import { jwtOpts } from '../../config/config.js'
+import globals from 'globals';
 
 import os  from 'os'
 const cantidadDeCPUs = os.cpus().length
@@ -33,11 +34,18 @@ export async function getInicio(req, res) {
   }
 }
 
+//getRegistrarsePaso1
+export async function getRegistrarsePaso1(req, res) {
+  logger.info(`webController.js: getRegistrarsePaso1`)
+  const title = 'Registrarse - Paso 1'
+  res.render('pages/registrarsePaso1', { titulo: title, rol: rolUsuario, nombre: nombreUsuario })
+}
+
 //getRegistrarse
-export async function getRegistrarse(req, res) {
-  logger.info(`webController.js: getRegistrarse`)
-  const title = 'Registrarse'
-  res.render('pages/registrarse', { titulo: title, rol: rolUsuario, nombre: nombreUsuario })
+export async function getRegistrarsePaso2(req, res) {
+  logger.info(`webController.js: getRegistrarsePaso2`)
+  const title = 'Registrarse - paso 2'
+  res.render('pages/registrarsePaso2', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, avatar: req.file.filename })
 }
 
 //getlogin
@@ -216,7 +224,7 @@ export async function abmCarritos(req, res) {
 
   try{
     const title = 'ABM de Carritos'
-    const carritosList = await shoppingCarts.getCarritos()
+    const carritosList = await shoppingCarts.getCarritosDelUsuario(globals.emailUser)
     res.render('pages/abmCarritos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, carritosList })
   }
   catch (err){
@@ -232,8 +240,8 @@ export async function carritoBorrar(req, res) {
 
   try{
     const title = 'ABM de Carritos'
-    await shoppingCarts.deleteCarrito(id)
-    const carritosList = await shoppingCarts.getCarritos()
+    await shoppingCarts.deleteProductoAlCarritoByEmail(globals.emailUser, id)
+    const carritosList = await shoppingCarts.getCarritosDelUsuario(globals.emailUser)
     res.render('pages/abmCarritos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, carritosList })
   }
   catch (err){
@@ -248,7 +256,7 @@ export async function abmPedidos(req, res) {
 
   try{
     const title = 'ABM de Pedidos'
-    const pedidosList = await orders.getPedidos()
+    const pedidosList = await orders.getOrders()
     res.render('pages/abmPedidos', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, pedidosList })
   }
   catch (err){

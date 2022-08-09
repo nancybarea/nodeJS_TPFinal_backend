@@ -1141,3 +1141,70 @@
 [2022-08-08T00:50:43.435] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'productos')
     at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:28:55)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-08T22:15:43.833] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"Z4PLU7V8PFS1SBS23PTKAT"}',
+  detalles: undefined
+}
+[2022-08-08T22:16:50.717] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"Z4PLU7V8PFS1SBS23PTKAT"}',
+  detalles: undefined
+}
+[2022-08-08T22:16:59.765] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"Z4PLU7V8PFS1SBS23PTKAT"}',
+  detalles: undefined
+}
+[2022-08-08T22:29:20.322] [ERROR] default - Error logging in: {"estado":404,"descripcion":"Document not found in the collection users with that {\"email\":\"alyson.fritsch37@ethereal.emailm\"}"}
+[2022-08-08T22:29:20.323] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error logging in',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in the collection users with that {"email":"alyson.fritsch37@ethereal.emailm"}',
+    detalles: undefined
+  }
+}
+[2022-08-08T22:29:28.160] [ERROR] default - Error logging in: {"estado":404,"descripcion":"Document not found in the collection users with that {\"email\":\"nancybarea@gmail.com\"}"}
+[2022-08-08T22:29:28.161] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error logging in',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in the collection users with that {"email":"nancybarea@gmail.com"}',
+    detalles: undefined
+  }
+}
+[2022-08-08T22:31:12.285] [ERROR] default - Error logging in: {"estado":404,"descripcion":"Document not found in the collection users with that {\"email\":\"Admin@admin.com\"}"}
+[2022-08-08T22:31:12.286] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error logging in',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in the collection users with that {"email":"Admin@admin.com"}',
+    detalles: undefined
+  }
+}
+[2022-08-08T22:59:52.548] [ERROR] default - TypeError: shoppingCarts.getCarritos is not a function
+    at abmCarritos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/webController.js:226:46)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:47:12)
+[2022-08-08T23:02:13.557] [ERROR] default - TypeError: orders.getPedidos is not a function
+    at abmPedidos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/webController.js:258:38)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:47:12)

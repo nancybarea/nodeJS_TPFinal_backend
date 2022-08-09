@@ -31,10 +31,10 @@ async function desconectar() {
 describe('servidor Mongo', () => {
 
     const url = "http://localhost:3000"
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkNC5NbjBpRkxORXJlR0ZLRGNOSXJndUFsd01TTTNpakl0Qi9LWjlOWGRIVjdPbjNsVVhhV1MiLCJyb2xlcyI6WyJhZG1pbiJdLCJ1c2VybmFtZSI6ImVsQWRtaW5pc3RyYWRvciIsIm5vbWJyZSI6IkFuaWJhbCIsImFwZWxsaWRvIjoiQWRtaW4iLCJkaXJlY2Npb24iOiJBZG1pcmFudGUgQnJvd24gMTIzNCIsImZlY2hhTmFjaW1pZW50byI6IjIyLzIvMTA4MCIsInRlbGVmb25vIjoiMTE2NTkyMjkwMSIsImF2YXRhciI6Imh0dHA6Ly9pbWFnZW5lcy9hZG1pbi5wbmciLCJfaWQiOiI2MmMwZWVkNzcyMGE5MzhhMDE4MTQ5NWIifSwiaWF0IjoxNjU4MDIyOTMwLCJleHAiOjE2NTgwMjY1MzB9.3iLRIxe2ZCPd9dpOjDS7Kh1e8va_hIDk6wcF3wmB7gw"
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyZjAzYTgzNzZlYWJhOGQ1NWQzMmI2YSIsImlkIjoiNkdUVFJRUzlVT05SREtJMkxITFJLSyIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkajhJTDZaVFRqTUNqeXhubkEyVk16LkVIQy5SbFJlRU56RUZCMmxEUG5ZZE16YnVDcEw5cWkiLCJyb2xlcyI6WyJhZG1pbiJdLCJ1c2VybmFtZSI6bnVsbCwibmFtZSI6ImFkbWluIiwibGFzdG5hbWUiOiJhZG1pbiIsImFkZHJlc3MiOm51bGwsImRhdGVCaXJ0aCI6bnVsbCwicGhvbmUiOiIrNTQxMTQ0NDQxMjM0IiwiYXZhdGFyIjpudWxsfSwiaWF0IjoxNjYwMDA3OTAzLCJleHAiOjE2NjAwMTE1MDN9.7OkHEsb5rOjQJo33QZ2wzp7JbGBowLi39jg0i2HQUBA"
     const username = "admin@admin.com"
     const password = "1234"
-    const productoID = "Z4PLU7V8PFS1SBS23PTKAT"
+    const productoID = "200RHTQ24MRA5XMU9MEH56"
     const productoNuevo = {                    
                             "name": "Papa Noel del test",
                             "description": "El mejor Papa Noel",
@@ -61,7 +61,7 @@ describe('servidor Mongo', () => {
         describe('API GET /login', () => {
             it('deberia loguear al usuario y obtener el token', async () => {
                 const { data } = await axios.post( url + '/login', {
-                    "username":username,
+                    "email":username,
                     "password":password
                 })
                 assert.ok(data.msg)
@@ -77,23 +77,23 @@ describe('servidor Mongo', () => {
             })
         })
 
-        describe('API GET api/productos/id/{idProducto}', () => {
+        describe('API GET api/products/{PRODUCT_ID}', () => {
             it('deberia devolver la informacion del producto indicado', async () => {
                 const { data } = await axios.get( url + '/api/products/' + productoID)
                 assert.ok(data.id)
-                assert.ok(data.nombre)
-                assert.ok(data.precio)
+                assert.ok(data.name)
+                assert.ok(data.price)
                 assert.ok(data.stock)
             })
         })
 
-        describe('API GET api/productos/id/{idProducto}', () => {
+        describe('API GET api/productos/{PRODUCT_ID}', () => {
             it('deberia devolver la informacion del producto indicado', async () => {
                 axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
                 const { data } = await axios.post(url + '/api/products',productoNuevo)
                 assert.ok(data.id)
-                assert.ok(data.nombre)
-                assert.ok(data.precio)
+                assert.ok(data.name)
+                assert.ok(data.price)
                 assert.ok(data.stock)
             })
         })

@@ -2614,3 +2614,130 @@
 [2022-08-08T00:50:43.435] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'productos')
     at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:28:55)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-08T13:58:44.131] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T13:59:22.600] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:02:05.029] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:11:00.099] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:11:45.797] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:12:35.540] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:13:19.526] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:14:02.067] [WARN] default - No existe la ruta GET /
+[2022-08-08T14:24:10.854] [WARN] default - No existe la ruta GET /webb
+[2022-08-08T14:24:36.115] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:25:11.717] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:25:15.726] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:25:17.542] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:27:26.394] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:27:29.058] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:27:30.924] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:27:32.945] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:28:22.323] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T14:28:46.109] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T15:57:50.914] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T15:57:52.325] [WARN] default - No existe la ruta GET /web/registrarse_paso1
+[2022-08-08T15:59:33.268] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T15:59:34.424] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T15:59:36.051] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T15:59:55.247] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:00:45.468] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:00:55.626] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:02:05.992] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:02:16.796] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:02:25.700] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:02:35.095] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:03:12.728] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:03:33.265] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:03:42.162] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:03:44.019] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:07:29.083] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:07:30.805] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:07:32.791] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:08:11.932] [WARN] default - No existe la ruta GET /web/subirArchivo
+[2022-08-08T16:08:15.490] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:08:17.148] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:08:18.619] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:08:25.668] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:11:39.775] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:11:41.414] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:11:48.655] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:18:38.466] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:18:39.313] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T16:18:40.669] [WARN] default - No existe la ruta GET /styles/styles.css.map
+[2022-08-08T22:09:44.238] [WARN] default - The token has expired, you must log in again to generate a new token
+[2022-08-08T22:15:43.833] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"Z4PLU7V8PFS1SBS23PTKAT"}',
+  detalles: undefined
+}
+[2022-08-08T22:15:43.840] [WARN] default - The token has expired, you must log in again to generate a new token
+[2022-08-08T22:16:50.717] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"Z4PLU7V8PFS1SBS23PTKAT"}',
+  detalles: undefined
+}
+[2022-08-08T22:16:59.765] [ERROR] default - CustomError {
+  estado: 404,
+  descripcion: 'Document not found in the collection products with that {"id":"Z4PLU7V8PFS1SBS23PTKAT"}',
+  detalles: undefined
+}
+[2022-08-08T22:29:20.322] [ERROR] default - Error logging in: {"estado":404,"descripcion":"Document not found in the collection users with that {\"email\":\"alyson.fritsch37@ethereal.emailm\"}"}
+[2022-08-08T22:29:20.323] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error logging in',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in the collection users with that {"email":"alyson.fritsch37@ethereal.emailm"}',
+    detalles: undefined
+  }
+}
+[2022-08-08T22:29:28.160] [ERROR] default - Error logging in: {"estado":404,"descripcion":"Document not found in the collection users with that {\"email\":\"nancybarea@gmail.com\"}"}
+[2022-08-08T22:29:28.161] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error logging in',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in the collection users with that {"email":"nancybarea@gmail.com"}',
+    detalles: undefined
+  }
+}
+[2022-08-08T22:31:12.285] [ERROR] default - Error logging in: {"estado":404,"descripcion":"Document not found in the collection users with that {\"email\":\"Admin@admin.com\"}"}
+[2022-08-08T22:31:12.286] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error logging in',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in the collection users with that {"email":"Admin@admin.com"}',
+    detalles: undefined
+  }
+}
+[2022-08-08T22:50:27.540] [WARN] default - No existe la ruta GET /usuario/borrar/nancybare2222a@gmail.com
+[2022-08-08T22:50:34.370] [WARN] default - No existe la ruta GET /usuario/modificar/nancybare2222a@gmail.com
+[2022-08-08T22:53:23.637] [WARN] default - No existe la ruta GET /usuario/alta?nuevoUsuario=Nuevo+Usuario
+[2022-08-08T22:54:49.580] [WARN] default - No existe la ruta GET /deleteUser/nancybare2222a@gmail.com
+[2022-08-08T22:57:12.594] [WARN] default - No existe la ruta GET /usuario/borrar/nancybare2222a@gmail.com
+[2022-08-08T22:59:52.548] [ERROR] default - TypeError: shoppingCarts.getCarritos is not a function
+    at abmCarritos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/webController.js:226:46)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:47:12)
+[2022-08-08T23:01:38.811] [WARN] default - No existe la ruta GET /mensajeChat/borrar/F0Q0KREDG1BRBR1OSUYCQ0
+[2022-08-08T23:02:13.557] [ERROR] default - TypeError: orders.getPedidos is not a function
+    at abmPedidos (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/webController.js:258:38)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:341:12)
+    at next (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:174:3)
+    at router (C:\_repositorios\nodeJS_TPFinal_backend\node_modules\express\lib\router\index.js:47:12)
+[2022-08-08T23:08:40.990] [WARN] default - No existe la ruta GET /carrito/borrar/DK3GLAOLOXP0YR1TUZ9QHP
+[2022-08-08T23:09:27.337] [WARN] default - No existe la ruta GET /pedido/borrar/8QWU5NBO4PQ89O7IVP75PW
+[2022-08-08T23:09:57.920] [WARN] default - No existe la ruta GET /pedido/borrar/8QWU5NBO4PQ89O7IVP75PW

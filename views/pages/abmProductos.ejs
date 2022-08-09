@@ -34,14 +34,14 @@
                         <% for (const item of productosList) {%>
                             <tr>
                                 <td id="idProducto"><%= item.id %></td>
-                                <td><%= item.nombre %></td>
-                                <td><%= item.descripcion %></td>
-                                <td><%= item.precio %></td>
+                                <td><%= item.name %></td>
+                                <td><%= item.description %></td>
+                                <td><%= item.price %></td>
                                 <td><%= item.stock %></td>
-                                <td><%= item.imagenURL %></td>
+                                <td><%= item.image %></td>
                                 <td>
                                     <a href="#">modificar</a>
-                                    &nbsp;&nbsp;<a href='/producto/borrar/<%= item.id %>'>borrar</a>
+                                    &nbsp;&nbsp;<a href='#'>borrar</a>
                                 </td>
                             </tr>
                         <%};%>

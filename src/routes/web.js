@@ -4,6 +4,7 @@ import passport from '../controller/PassportController.js'
 import logger from '../logger.js'
 
 const webRoutes = new Router();
+let avatar = "avatarPorDefecto.jpg"
 
 /* ------------------------------------------------------ */
 import multer from 'multer'
@@ -23,7 +24,10 @@ const storage = multer.diskStorage({
 webRoutes.get('/', webController.getInicio);
 
 //REGISTRARSE
-webRoutes.get('/registrarse', webController.getRegistrarse)
+webRoutes.get('/registrarsePaso1', webController.getRegistrarsePaso1)
+//REGISTRARSE
+webRoutes.get('/registrarsePaso2', webController.getRegistrarsePaso2)
+
 // POST '/registrarse' -> genera un nuevo usuario y renderiza la pantalla de inicio logeado
 webRoutes.post('/registrarse',  
     passport.authenticate('registro', {failureRedirect: '/web/failRegistro'}),    
@@ -42,29 +46,21 @@ webRoutes.get('/logout', webController.getLogout);
 
 //SUBIR ARCHIVOS
 webRoutes.get('/subirArchivos', webController.getSubirArchivo);
-webRoutes.post('/subirArchivos', upload.single('miArchivo'), (req, res, next) => {
-    logger.info(`POST /web/subirArchivos`)
-    const file = req.file
-    if (!file) {
-      const error = new Error('Error subiendo archivo')
-      error.httpStatusCode = 400
-      return next(error)
-    }
-    res.send(`<!DOCTYPE html>
-        <html lang="es">
-          <head>
-              <title>Subir Archivo</title>
-          </head>
-          <body class="fondo__degrade">
-              <br>
-              <div style="text-align: center;">
-                Archivo <b>${file.originalname}</b> subida exitosamente
-                <br><br>
-                Cierre la ventana y continue con el registro.
-              </div>
-        </body>
-      </html>`)
-  })
+webRoutes.post('/subirArchivos', 
+    upload.single('miArchivo'), 
+    (req, res, next) => {
+        logger.info(`POST /web/subirArchivos`)
+        const file = req.file        
+        avatar = file.filename
+        if (!file) {
+          const error = new Error('Error subiendo archivo')
+          error.httpStatusCode = 400
+          return next(error)
+        }
+        return next()
+      },
+      webController.getRegistrarsePaso2
+  )
 
 //CHAT
 webRoutes.get('/chat', webController.mensajesChat);
