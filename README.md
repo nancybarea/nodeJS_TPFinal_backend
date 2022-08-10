@@ -9,7 +9,7 @@ To clone this repository:
 ```
 $ cd <folder to clone>
 
-$ git clone https://github.com/nancybarea/nodeJS_TPFinal_backend.git .
+$ git clone https://github.com/nancybarea/nodeJS_TPFinal_backend.git
 
 ```
 
@@ -20,7 +20,7 @@ To run this app:
 ### `npm start`
 
 Config user with rol: "admin":
-<img src='https://github.com/nancybarea/nodeJS_TPFinal_backend/readme/configAdmin.png' alt='config admin'/>
+<img src='./readme/configAdmin.png' alt='config admin'/>
 
 #
 ## Application specifications
