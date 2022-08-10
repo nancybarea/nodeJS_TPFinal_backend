@@ -1,5 +1,5 @@
-# PROYECTO FINAL  "Ecommerce"
-- Course: Coderhouse - desarrollador backend NodeJS
+# FINAL PROJECT  "Ecommerce"
+- Course: Coderhouse - developer backend NodeJS
 - Commission: 23250
 - Professor: Mariano Aquino
 - Tutor: Mauricio Di Pietro
