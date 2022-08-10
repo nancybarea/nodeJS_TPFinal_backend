@@ -64,7 +64,7 @@ The box below is for writing the messages
 
 <img src='./readme/heroku_chat.png' alt='chat'/>
 
-### `Subir Archivo (registro de usuario)`
+### `Upload File (user register)`
 The example to upload file will be found in the registration of the new user
 
 <img src='./readme/heroku_menuLogin.png' alt='registrarse paso 1'/>
@@ -83,7 +83,7 @@ The example to upload file will be found in the registration of the new user
 It is observed that it was uploaded in the public folder
 
 
-### `Información del Servidor`
+### `Server Information`
 
 <img src='./readme/heroku_menuInfoServer.png' alt='info Server paso 1'/>
 
