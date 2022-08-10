@@ -2,6 +2,7 @@ import { Router } from 'express'
 import passport from '../controller/PassportController.js'
 import  * as userController from '../controller/UsuariosController.js'
 import {mdwValidateSchemaNewUsuario} from "../middleware/usuariosMDW.js"
+import {uploadUsers} from "../multer.js"
 
 const UsersRoutes = new Router();
 
@@ -35,5 +36,11 @@ UsersRoutes.get('/logout', userController.logout);
 
 //DELETE /deleteUser/{emailUser} --> to delete a user by email
 UsersRoutes.delete('/deleteUser/:email', userController.borrarUsuario);
+
+//SUBIR ARCHIVOS
+UsersRoutes.post('/uploadFile', 
+    uploadUsers.single("image"), 
+    userController.uploadFile
+  )
 
 export default UsersRoutes 

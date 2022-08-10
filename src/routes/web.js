@@ -1,24 +1,9 @@
 import { Router } from 'express'
 import * as webController from '../controller/webController.js'
 import passport from '../controller/PassportController.js'
-import logger from '../logger.js'
+import {uploadUsers} from "../multer.js"
 
 const webRoutes = new Router();
-let avatar = "avatarPorDefecto.jpg"
-
-/* ------------------------------------------------------ */
-import multer from 'multer'
-/* Multer config */
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, 'public/uploads')
-    },
-    filename: function (req, file, cb) {
-      cb(null, `${Date.now()}-${file.originalname}`)
-    }
-  })
-  const upload = multer({ storage: storage })
-/* ------------------------------------------------------ */
 
 //GET '/' -> Pantalla de inicio
 webRoutes.get('/', webController.getInicio);
@@ -47,19 +32,8 @@ webRoutes.get('/logout', webController.getLogout);
 //SUBIR ARCHIVOS
 webRoutes.get('/subirArchivos', webController.getSubirArchivo);
 webRoutes.post('/subirArchivos', 
-    upload.single('miArchivo'), 
-    (req, res, next) => {
-        logger.info(`POST /web/subirArchivos`)
-        const file = req.file        
-        avatar = file.filename
-        if (!file) {
-          const error = new Error('Error subiendo archivo')
-          error.httpStatusCode = 400
-          return next(error)
-        }
-        return next()
-      },
-      webController.getRegistrarsePaso2
+    uploadUsers.single('miArchivo'), 
+    webController.getRegistrarsePaso2
   )
 
 //CHAT

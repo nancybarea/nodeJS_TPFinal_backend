@@ -86,3 +86,11 @@ export async function borrarProducto(req, res) {
         res.status(err.estado).json(err)
     }
 }
+
+export async function uploadFile(req, res) {    
+    let image = "product_default.png"
+    if (req.file !== undefined){
+        image = req.file.filename
+    }
+    res.status(200).json({url: `public/uploads/products/${image}`})
+}

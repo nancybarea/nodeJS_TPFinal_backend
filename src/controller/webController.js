@@ -44,8 +44,14 @@ export async function getRegistrarsePaso1(req, res) {
 //getRegistrarse
 export async function getRegistrarsePaso2(req, res) {
   logger.info(`webController.js: getRegistrarsePaso2`)
-  const title = 'Registrarse - paso 2'
-  res.render('pages/registrarsePaso2', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, avatar: req.file.filename })
+  if (req.file === undefined){
+    const title = 'Registrarse - Paso 2'
+    res.render('pages/registrarsePaso2', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, avatar: "user_default.png" })
+  
+  }else{
+    const title = 'Registrarse - paso 2'
+    res.render('pages/registrarsePaso2', { titulo: title, rol: rolUsuario, nombre: nombreUsuario, avatar: req.file.filename }) 
+  }
 }
 
 //getlogin

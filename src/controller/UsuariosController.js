@@ -95,3 +95,12 @@ export function failLogin(req, res){
     logger.info(`UsuariosController.js: failLogin`)
     res.status(401).json({err: 'Error logging in. The email or password is incorrect'}) //401 error autenticacion
 }
+
+
+export async function uploadFile(req, res) {    
+    let image = "user_default.png"
+    if (req.file !== undefined){
+        image = req.file.filename
+    }
+    res.status(200).json({url: `public/uploads/users/${image}`})
+}

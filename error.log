@@ -1246,3 +1246,19 @@
 [2022-08-09T00:26:39.950] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'productos')
     at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:28:55)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-09T14:47:03.768] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'productos')
+    at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:28:55)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-09T14:49:53.011] [ERROR] default - TypeError: Cannot read properties of undefined (reading 'productos')
+    at createOrder (file:///C:/_repositorios/nodeJS_TPFinal_backend/src/controller/OrdersController.js:28:55)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[2022-08-09T22:42:51.120] [ERROR] default - Error logging in: {"estado":404,"descripcion":"Document not found in the collection users with that {\"email\":\"admin@gmail.com\"}"}
+[2022-08-09T22:42:51.121] [ERROR] default - CustomError {
+  estado: 401,
+  descripcion: 'Error logging in',
+  detalles: CustomError {
+    estado: 404,
+    descripcion: 'Document not found in the collection users with that {"email":"admin@gmail.com"}',
+    detalles: undefined
+  }
+}
