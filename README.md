@@ -1,6 +1,9 @@
 # PROYECTO FINAL  "Ecommerce"
-- Curso: Coderhouse - desarrollador backend NodeJS
-- Alumna: Nancy Barea
+- Course: Coderhouse - desarrollador backend NodeJS
+- Commission: 23250
+- Professor: Mariano Aquino
+- Tutor: Mauricio Di Pietro
+- Pupil: Nancy Barea
 #
 ## Let's start 🚀
 
@@ -26,42 +29,43 @@ Config user with rol: "admin":
 #
 ## Heroku
 [link index](https://ecommerce-bac.herokuapp.com/web/)
-(está conectado con el repositorio de github)
+(is connected to the github repository)
 
 <img src='./readme/heroku.png' alt='config admin'/>
 
 
-A continuación se detalla solo las funcionalidades más relevantes para este proyecto
-- Menú: como se modifica el menú según el rol del usuario logueado.
-- Chat: se solicito realizar un chat con socket donde pueden hablar todos los usuarios.
-- Subir Archivo : subir imagen con multer y lo guarde en carpeta public
-- Información servidor: solicitada en el proyecto con el uso de plantillas.
+Only the most relevant functionalities for this project are detailed below.
+- Menu: how the menu is modified according to the role of the logged in user.
+- Chat: it was requested to make a chat with socket where all users can talk.
+- Upload File : upload image with multer and save it in public folder
+- Server information: requested in the project with the use of templates.
 
 ### `MENU`
-- Menu Sin usuario logueado
+- Menu No user logged in
 
 <img src='./readme/heroku_menuLogin.png' alt='menu sin logueo'/>
 
-- Menu con usuario logueado y rol “usuario”
+- Menu with logged in user and “user” role
 
 <img src='./readme/heroku_menuRolUsuario.png' alt='menu sin logueo'/>
 
-Siendo “alyson” el nombre del usuario logueado
+"alyson" the name of the logged in user
 
-- Menu con usuario logueado y rol “admin”
+- Menu with logged in user and “admin” role
 
 <img src='./readme/heroku_menuRolAdmin.png' alt='menu sin logueo'/>
 
-Siendo “admin” el nombre del usuario logueado
+"admin" the name of the logged in user
 
 ### `CHAT`
-El cuadro de email aparecerá sin poder editar el email del usuario logueado.
-El cuadro de abajo es para escribir los mensajes
+The email box will appear without being able to edit the email of the logged in user.
+
+The box below is for writing the messages
 
 <img src='./readme/heroku_chat.png' alt='chat'/>
 
 ### `Subir Archivo (registro de usuario)`
-El ejemplo para subir archivo se va a encontrar en el registro del nuevo usuario
+The example to upload file will be found in the registration of the new user
 
 <img src='./readme/heroku_menuLogin.png' alt='registrarse paso 1'/>
 
@@ -76,7 +80,7 @@ El ejemplo para subir archivo se va a encontrar en el registro del nuevo usuario
 <img src='./readme/heroku_formRegistrarse.png' alt='registrarse paso 6'/>
 
 <img src='./readme/vsc_uploadUser.png' alt='vsc upload'/>
-Se observa que se subio en la carpeta public
+It is observed that it was uploaded in the public folder
 
 
 ### `Información del Servidor`
@@ -88,26 +92,26 @@ Se observa que se subio en la carpeta public
 #
 ## Postman – carga de archivo
 
-### `Usuario – registro nuevo usuario`
+### `Users – upload user image`
 
-Imagen por defecto (cuando el usuario no lo sube) 
+Default image (when the user does not upload it)
 
 <img src='./readme/postman_userDefault.png' alt='postman UploadFile Defect'/>
 
-Imagen subida por el usuario
+User Uploaded Image
 
 <img src='./readme/postman_userSelect.png' alt='postman UploadFile byUser'/>
 
 <img src='./readme/vsc_uploadUserOfPostman.png' alt='vsc UploadFile byUser'/>
 
 
-### `Producto – alta de nuevo producto`
+### `Products – upload product image`
 
-Imagen por defecto (cuando el usuario no lo sube) 
+Default image (when the user does not upload it)
 
 <img src='./readme/postman_productDefault.png' alt='postman UploadFile Defect'/>
 
-Imagen subida por el usuario
+User Uploaded Image
 
 <img src='./readme/postman_productSelect.png' alt='postman UploadFile byUser'/>
 
@@ -133,7 +137,7 @@ Imagen subida por el usuario
 
 [link Graphl](https://ecommerce-bac.herokuapp.com/graphql)
 
-Ejemplo 
+Example 
 
 <img src='./readme/graphql.png' alt='example Graphl'/>
 
