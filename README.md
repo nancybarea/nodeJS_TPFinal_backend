@@ -162,4 +162,52 @@ query{
 <img src='./readme/vsc_ejecucionTest2.png' alt='Testing 2'/>
 
 
+#
+## Example file .env 
+
+the data are examples, they are not valid
+
+// development / production
+
+NODE_ENV=development
+
+HOST=localhost
+
+PORT=8080
+
+//JWT
+
+SECRET='PALABRA_SECRET'
+
+JWT_IGNORE_EXPIRE=false
+
+JWT_TIME_EXPIRE=3600
+
+//Configuracion de persistencia PRODUCCION
+
+MONGO_URL='mongodb+srv://user:password@cluster0.2ycpm.mongodb.net/?retryWrites=true&w=majority'
+
+MONGO_BASE=ecommerce
+
+
+//configuracion del correo para enviar emails, whatsapp y sms
+
+MAIL_SMTP = 'gmail'
+
+MAIL_PORT = 555
+
+MAIL_USER = 'email@gmail.com'
+
+MAIL_PASS = 'kkkkkkkkkkkkkkkk'
+
+MAIL_USER_ADMIN = 'email@gmail.com'
+
+
+WHATSAPP_USER_ADMIN = 'whatsapp:+5491111111111'
+
+TWILIO_ACCOUNTSID = 'AC37e209999999999296970fff'
+
+TWILIO_AUTHTOKEN = 'd99999g99999999g99999g'
+
+
 
