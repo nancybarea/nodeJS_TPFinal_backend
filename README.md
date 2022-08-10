@@ -77,3 +77,72 @@ El ejemplo para subir archivo se va a encontrar en el registro del nuevo usuario
 
 <img src='./readme/vsc_uploadUser.png' alt='vsc upload'/>
 Se observa que se subio en la carpeta public
+
+
+### `Información del Servidor`
+
+<img src='./readme/heroku_menuInfoServer.png' alt='info Server paso 1'/>
+
+<img src='./readme/heroku_infoServer.png' alt='info Server paso 2'/>
+
+#
+## Postman – carga de archivo
+
+### `Usuario – registro nuevo usuario`
+
+Imagen por defecto (cuando el usuario no lo sube) 
+
+<img src='./readme/postman_userDefault.png' alt='postman UploadFile Defect'/>
+
+Imagen subida por el usuario
+
+<img src='./readme/postman_userSelect.png' alt='postman UploadFile byUser'/>
+
+<img src='./readme/vsc_uploadUserOfPostman.png' alt='vsc UploadFile byUser'/>
+
+
+### `Producto – alta de nuevo producto`
+
+Imagen por defecto (cuando el usuario no lo sube) 
+
+<img src='./readme/postman_productDefault.png' alt='postman UploadFile Defect'/>
+
+Imagen subida por el usuario
+
+<img src='./readme/postman_productSelect.png' alt='postman UploadFile byUser'/>
+
+<img src='./readme/vsc_uploadProductOfPostman.png' alt='vsc UploadFile byUser'/>
+
+#
+## Swagger
+
+[link swagger](https://ecommerce-bac.herokuapp.com/api/docs/)
+
+<img src='./readme/swagger1.png' alt='swagger 1'/>
+
+<img src='./readme/swagger2.png' alt='swagger 2'/>
+
+<img src='./readme/swagger3.png' alt='swagger 3'/>
+
+<img src='./readme/swagger4.png' alt='swagger 4'/>
+
+<img src='./readme/swagger5.png' alt='swagger 5'/>
+
+#
+## Graphl
+
+[link Graphl](https://ecommerce-bac.herokuapp.com/graphql)
+
+Ejemplo 
+
+<img src='./readme/graphql.png' alt='example Graphl'/>
+
+#
+## Testing en VSC
+
+<img src='./readme/vsc_ejecucionTest.png' alt='Testing 1'/>
+
+<img src='./readme/vsc_ejecucionTest2.png' alt='Testing 2'/>
+
+
+
