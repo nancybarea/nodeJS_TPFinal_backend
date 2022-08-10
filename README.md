@@ -90,7 +90,7 @@ It is observed that it was uploaded in the public folder
 <img src='./readme/heroku_infoServer.png' alt='info Server paso 2'/>
 
 #
-## Postman – carga de archivo
+## Postman – upload file
 
 ### `Users – upload user image`
 
