@@ -37,5 +37,43 @@ A continuación se detalla solo las funcionalidades más relevantes para este pr
 - Subir Archivo : subir imagen con multer y lo guarde en carpeta public
 - Información servidor: solicitada en el proyecto con el uso de plantillas.
 
+### `MENU`
+- Menu Sin usuario logueado
 
+<img src='./readme/heroku_menuLogin.png' alt='menu sin logueo'/>
 
+- Menu con usuario logueado y rol “usuario”
+
+<img src='./readme/heroku_menuRolUsuario.png' alt='menu sin logueo'/>
+
+Siendo “alyson” el nombre del usuario logueado
+
+- Menu con usuario logueado y rol “admin”
+
+<img src='./readme/heroku_menuRolAdmin.png' alt='menu sin logueo'/>
+
+Siendo “admin” el nombre del usuario logueado
+
+### `CHAT`
+El cuadro de email aparecerá sin poder editar el email del usuario logueado.
+El cuadro de abajo es para escribir los mensajes
+
+<img src='./readme/heroku_chat.png' alt='chat'/>
+
+### `Subir Archivo (registro de usuario)`
+El ejemplo para subir archivo se va a encontrar en el registro del nuevo usuario
+
+<img src='./readme/heroku_menuLogin.png' alt='registrarse paso 1'/>
+
+<img src='./readme/heroku_linkRegistrase.png' alt='registrarse paso 2'/>
+
+<img src='./readme/heroku_subirArchivo.png' alt='registrarse paso 3'/>
+
+<img src='./readme/heroku_subirArchivo2.png' alt='registrarse paso 4'/>
+
+<img src='./readme/heroku_subirArchivo3.png' alt='registrarse paso 5'/>
+
+<img src='./readme/heroku_formRegistrarse.png' alt='registrarse paso 6'/>
+
+<img src='./readme/vsc_uploadUser.png' alt='vsc upload'/>
+Se observa que se subio en la carpeta public
