@@ -2,11 +2,14 @@ import { MongoClient } from 'mongodb';
 import logger from '../../logger.js'
 import CustomError from '../../errores/CustomError.js'
 
-const mongo_url = process.env.MONGO_URL
+let mongo_url = process.env.MONGO_URL //config production o developement en .env
 const base = process.env.MONGO_BASE
 
-const client = new MongoClient(mongo_url, { serverSelectionTimeOutMS: 5000 });
+if (process.env.NODE_ENV === "developement"){
+    mongo_url = process.env.MONGO_URL_DEVELOPEMENT
+}
 
+const client = new MongoClient(mongo_url, { serverSelectionTimeOutMS: 5000 });
 await client.connect();
 
 export default class ContainerDao {

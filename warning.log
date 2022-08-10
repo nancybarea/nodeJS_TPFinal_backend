@@ -2801,3 +2801,5 @@
 }
 [2022-08-09T23:38:55.221] [WARN] default - No existe la ruta POST /products/uploadFile
 [2022-08-09T23:40:20.272] [WARN] default - No existe la ruta POST /products/uploadFile
+[2022-08-10T00:35:05.819] [WARN] default - No existe la ruta GET /web/readme
+[2022-08-10T00:54:25.160] [WARN] default - No existe la ruta GET /readme.md
