@@ -139,6 +139,19 @@ User Uploaded Image
 
 Example 
 
+```
+query{
+  obtenerUnProducto(id: "5H6AKK8QWH0JGXJMIJHYDJ"){
+    id
+    name
+    description
+    price
+    image
+    stock
+  }
+}
+```
+
 <img src='./readme/graphql.png' alt='example Graphl'/>
 
 #
